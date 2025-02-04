@@ -31,3 +31,16 @@ h1, h2, h3 {
 .font-inter {
   font-family: "Inter", sans-serif;
 }
+.bg-custom {
+  background-image: url('/bg.png'); /* Ensure the path is correct */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+}
+
+
+/* Dark Mode Background */
+.dark .bg-custom {
+  background-image: url('/bg_d.png'); /* Dark mode background */
+}
