@@ -51,31 +51,35 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
            <Image src={assets.header_bg_color} alt='' className='w-full' />
         </div>
 
-            {/* Water Brush Effect Image */}
-            <AnimatePresence>
-                {showEffect && (
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.2 }}
-                        animate={{ opacity: 1, scale: 0.5 }}
-                        exit={{ opacity: 0, scale: 1.1 }}
-                        transition={{ duration: 0.6, ease: 'easeOut' }}
-                        style={{
-                            position: 'fixed',
-                            top: `${effectPosition.y - 70}px`,
-                            left: `${effectPosition.x - 80}px`,
-                            transform: 'translate(-50%, -50%)',
-                            zIndex: 1000,
-                        }}
-                        className="pointer-events-none"
-                    >
-                        <Image src={assets.circle_s} alt="Brush Effect" className="w-32 opacity-70" />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+          {/* Water Brush Effect Image */}
+<AnimatePresence>
+    {showEffect && (
+        <motion.div
+            initial={{ opacity: 0, scale: 0.2 }}
+            animate={{ opacity: 1, scale: 0.5 }}
+            exit={{ opacity: 0, scale: 1.1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            style={{
+                position: 'fixed',
+                top: `${effectPosition.y - 70}px`,
+                left: `${effectPosition.x - 80}px`,
+                transform: 'translate(-50%, -50%)',
+                zIndex: 1000,
+            }}
+            className="pointer-events-none"
+        >
+            <Image 
+                src={isDarkMode ? assets.circle_s_white : assets.circle_s}  
+                alt="Brush Effect" 
+                className="w-32 opacity-70"
+            />
+        </motion.div>
+    )}
+</AnimatePresence>
 
 
             <nav className={`fixed top-0 left-0 right-0 border-[1px] border-black bg-white shadow-md rounded-none 
-    dark:bg-gray-900 dark:border-white dark:shadow-white/20 transition-colors duration-300 z-[100]
+    dark:bg-gray-800 dark:border-white dark:shadow-white/20 transition-colors duration-300 z-[100]
     ${isScroll ? "bg-opacity-50 backdrop-blur-lg dark:bg-opacity-50" : ""}`}>
     
     <div className="max-w-screen-lg mx-auto flex items-center justify-between px-6 lg:px-8 py-3">
@@ -86,7 +90,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </a>
 
         {/* Navigation Menu - Centered on Large Screens */}
-        <ul className="hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-Nora">
+        <ul className="hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-ovo">
             <li><a href="#top" onClick={handleNavClick}>Home</a></li>
             <li><a href="#about" onClick={handleNavClick}>About me</a></li>
             <li><a href="#services" onClick={handleNavClick}>Services</a></li>

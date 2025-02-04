@@ -45,3 +45,7 @@ h1, h2, h3 {
 .dark .bg-custom {
   background-image: url('/bg_d.png'); /* Dark mode background */
 }
+
+.dark .circle-effect {
+  filter: invert(1); /* Turns black to white */
+}

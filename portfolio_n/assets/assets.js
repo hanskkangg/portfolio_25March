@@ -40,6 +40,7 @@ import hans_logo2 from './hans_logo2.png';
 import circle_s from './circle_s.png';
 import bg from './bg.png';
 import hans_logo3 from './hans_logo3.png';
+import circle_s_white from './circle_s_white.png';
 
 
 export const assets = {
@@ -85,6 +86,7 @@ export const assets = {
     circle_s,
     bg,
     hans_logo3,
+    circle_s_white
 };
 
 export const workData = [
@@ -110,11 +112,12 @@ export const workData = [
     },
 ]
 
+
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Web Development', description: 'Web development is the process of building, programming...', link: '' },
+    { icon: assets.mobile_icon, title: 'Sosftware Development', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
+    { icon: assets.ui_icon, title: 'Database administrator', description: 'Utilies mySQL and MongoDB mariaDB', link: '' },
+    { icon: assets.graphics_icon, title: 'System administrator', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
 
 export const infoList = [

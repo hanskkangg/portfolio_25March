@@ -49,7 +49,7 @@ const Header = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-montserrat'
+        className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
       >
         Hi! I'm Hans Kang <Image src={assets.hand_icon} alt='' className='w-6' />
       </motion.h3>
@@ -59,7 +59,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className='text-3xl sm:text-6xl lg:text-[66px] font-ovos'
+        className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'
       >
         {displayedText}
         <span className="blinking-cursor">|</span>
