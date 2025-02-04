@@ -55,14 +55,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 <AnimatePresence>
     {showEffect && (
         <motion.div
-            initial={{ opacity: 0, scale: 0.2 }}
+            initial={{ opacity: 0, scale: 0.3 }}
             animate={{ opacity: 1, scale: 0.5 }}
-            exit={{ opacity: 0, scale: 1.1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             style={{
                 position: 'fixed',
-                top: `${effectPosition.y - 70}px`,
-                left: `${effectPosition.x - 80}px`,
+                top: `${effectPosition.y - 60}px`,
+                left: `${effectPosition.x - 63}px`,
                 transform: 'translate(-50%, -50%)',
                 zIndex: 1000,
             }}
@@ -119,7 +119,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     </div>
 
     {/* Mobile Menu - Lower Z-Index */}
-    <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-16 px-8 fixed top-0 right-0 w-60 z-[90] h-screen bg-rose-50 dark:bg-gray-800 dark:text-white transition-transform duration-500 transform translate-x-full border-l border-gray-300 dark:border-white/20'>
+    <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-16 px-8 fixed top-0 right-0 w-60 z-[90] h-screen bg-rose-50 dark:bg-gray-900 dark:text-white transition-transform duration-500 transform translate-x-full border-l border-gray-300 dark:border-white/20'>
         <div className='absolute right-5 top-5' onClick={closeMenu}>
             <Image src={isDarkMode ? assets.close_white : assets.close_black} alt='' className='w-5 cursor-pointer' />
         </div>
