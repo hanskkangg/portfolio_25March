@@ -35,6 +35,9 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import hans_logo1 from './hans_logo1.png';
+import hans_logo2 from './hans_logo2.png'
+
 
 export const assets = {
     user_image,
@@ -73,7 +76,9 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    hans_logo1,
+    hans_logo2
 };
 
 export const workData = [

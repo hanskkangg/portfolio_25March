@@ -14,15 +14,15 @@ const About = ({isDarkMode}) => {
       <motion.h4 
       initial={{opacity: 0, y: -20}}
       whileInView={{opacity: 1, y: 0}}
-      transition={{duration: 0.5, delay: 0.3}}
-      className='text-center mb-2 text-lg font-Ovo'>
+      transition={{duration: 0.1, delay: 0.1}}
+      className='text-center mb-2 text-lg'>
         Introduction</motion.h4>
 
       <motion.h2 
       initial={{opacity: 0, y: -20}}
       whileInView={{opacity: 1, y: 0}}
       transition={{duration: 0.5, delay: 0.5}}
-      className='text-center text-5xl font-Ovo'>
+      className='text-center text-5xl'>
         About me</motion.h2>
 
         <motion.div 
@@ -42,7 +42,7 @@ const About = ({isDarkMode}) => {
             whileInView={{opacity: 1}}
             transition={{duration: 0.6, delay: 0.8}}
             className='flex-1'>
-                <p className='mb-10 max-w-2xl font-Ovo'
+                <p className='mb-10 max-w-2xl'
                 >I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.</p>
 
                 <motion.ul
@@ -66,7 +66,7 @@ const About = ({isDarkMode}) => {
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.3, duration: 0.5 }}
-                className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I use</motion.h4>
+                className='my-6 text-gray-700  dark:text-white/80'>Tools I use</motion.h4>
 
                 <motion.ul
                 initial={{ opacity: 0 }}

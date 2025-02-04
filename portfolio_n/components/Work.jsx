@@ -16,27 +16,27 @@ const Work = ({isDarkMode}) => {
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.3, duration: 0.5 }}
-      className='text-center mb-2 text-lg font-Ovo'>
+      className='text-center mb-2 text-lg'>
       My portfolio</motion.h4>
 
       <motion.h2
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className='text-center text-5xl font-Ovo'>
+      className='text-center text-5xl'>
       My latest work</motion.h2>
 
       <motion.p
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.7, duration: 0.5 }}
-      className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+      transition={{ delay: 0.2, duration: 0.2 }}
+      className='text-center max-w-2xl mx-auto mt-5 mb-12'>
       Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</motion.p>
 
     <motion.div
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.9, duration: 0.6 }}
+    transition={{ delay: 0.8, duration: 0.6 }}
     className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
         {workData.map((project, index)=>(
             <motion.div
@@ -62,7 +62,7 @@ const Work = ({isDarkMode}) => {
     <motion.a 
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
-    transition={{ delay: 1.1, duration: 0.5 }}
+    transition={{ delay: 1.0, duration: 0.5 }}
     href="" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover'>
         Show more 
         <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='Right arrow' className='w-4'/>

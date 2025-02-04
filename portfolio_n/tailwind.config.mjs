@@ -14,7 +14,8 @@ export default {
       },
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
-        Ovo: ["Ovo", "serif"]
+        Ovo: ["Ovo", "serif"],
+        Lora: ["Lora", "serif"]
       },
       boxShadow: {
         'black' : '4px 4px 0 #000',
