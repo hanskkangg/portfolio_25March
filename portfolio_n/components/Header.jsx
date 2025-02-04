@@ -36,7 +36,7 @@ const Header = () => {
   }, [charIndex, currentMessageIndex]);
 
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 mt-10'>
+    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 mt-10 font-montserrat'>
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -49,7 +49,7 @@ const Header = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className='flex items-end gap-2 text-xl md:text-2xl mb-3'
+        className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-montserrat'
       >
         Hi! I'm Hans Kang <Image src={assets.hand_icon} alt='' className='w-6' />
       </motion.h3>
@@ -59,7 +59,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className='text-3xl sm:text-6xl lg:text-[66px]'
+        className='text-3xl sm:text-6xl lg:text-[66px] font-ovos'
       >
         {displayedText}
         <span className="blinking-cursor">|</span>
@@ -69,7 +69,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
-        className='max-w-2xl mx-auto'
+        className='max-w-2xl mx-auto font-montserrat font-semi'
       >I am a Full-Stack Developer from Ottawa, Canada with 2 years of experience in full-stack development.
       </motion.p>
 

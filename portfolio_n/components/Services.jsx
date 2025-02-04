@@ -15,21 +15,21 @@ const Services = () => {
        initial={{ y: -20, opacity: 0 }} 
        whileInView={{ y: 0, opacity: 1 }} 
        transition={{ delay: 0.3, duration: 0.5 }}
-       className='text-center mb-2 text-lg'>
+       className='text-center mb-2 text-lg font-montserrat'>
        What I offer</motion.h4>
 
       <motion.h2 
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className='text-center text-5xl font-nora'>
+      className='text-center text-5xl font-montserrat'>
       Services</motion.h2>
 
       <motion.p 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.7, duration: 0.5 }}
-      className='text-center max-w-2xl mx-auto mt-5 mb-12'>
+      className='text-center max-w-2xl mx-auto mt-5 mb-12 font-montserrat'>
         I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.</motion.p>
 
         <motion.div

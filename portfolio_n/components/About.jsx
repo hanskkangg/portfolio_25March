@@ -15,21 +15,22 @@ const About = ({isDarkMode}) => {
       initial={{opacity: 0, y: -20}}
       whileInView={{opacity: 1, y: 0}}
       transition={{duration: 0.1, delay: 0.1}}
-      className='text-center mb-2 text-lg'>
+      className='text-center mb-2 text-lg font-montserrat'>
         Introduction</motion.h4>
 
       <motion.h2 
       initial={{opacity: 0, y: -20}}
       whileInView={{opacity: 1, y: 0}}
       transition={{duration: 0.5, delay: 0.5}}
-      className='text-center text-5xl'>
-        About me</motion.h2>
+      className='text-center text-5xl font-montserrat'>
+
+        ABOUT ME</motion.h2>
 
         <motion.div 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.8}}
-        className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+        className='flex w-full flex-col lg:flex-row items-center gap-20 my-20 '>
             <motion.div
             initial={{opacity: 0, scale: 0.9}}
             whileInView={{opacity: 1, scale: 1}}
@@ -42,7 +43,7 @@ const About = ({isDarkMode}) => {
             whileInView={{opacity: 1}}
             transition={{duration: 0.6, delay: 0.8}}
             className='flex-1'>
-                <p className='mb-10 max-w-2xl'
+                <p className='mb-10 max-w-2xl font-montserrat'
                 >I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.</p>
 
                 <motion.ul
