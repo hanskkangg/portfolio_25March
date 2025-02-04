@@ -36,7 +36,9 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import hans_logo1 from './hans_logo1.png';
-import hans_logo2 from './hans_logo2.png'
+import hans_logo2 from './hans_logo2.png';
+import circle_s from './circle_s.png';
+import bg from './bg.png'
 
 
 export const assets = {
@@ -78,7 +80,9 @@ export const assets = {
     right_arrow_bold,
     right_arrow_bold_dark,
     hans_logo1,
-    hans_logo2
+    hans_logo2,
+    circle_s,
+    bg
 };
 
 export const workData = [
