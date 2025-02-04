@@ -4,7 +4,7 @@
 
 /* Global Typography */
 h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* Custom Font Classes */
@@ -31,6 +31,8 @@ h1, h2, h3 {
 .font-inter {
   font-family: "Inter", sans-serif;
 }
+
+/* Light Mode Background */
 .bg-custom {
   background-image: url('/bg.png'); /* Ensure the path is correct */
   background-size: cover; /* Ensures the image covers the entire page */
@@ -38,7 +40,6 @@ h1, h2, h3 {
   background-repeat: no-repeat; /* Prevents tiling */
   background-attachment: fixed; /* Keeps the background fixed when scrolling */
 }
-
 
 /* Dark Mode Background */
 .dark .bg-custom {

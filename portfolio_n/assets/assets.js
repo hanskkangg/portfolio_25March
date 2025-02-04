@@ -38,7 +38,8 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import hans_logo1 from './hans_logo1.png';
 import hans_logo2 from './hans_logo2.png';
 import circle_s from './circle_s.png';
-import bg from './bg.png'
+import bg from './bg.png';
+import hans_logo3 from './hans_logo3.png';
 
 
 export const assets = {
@@ -82,7 +83,8 @@ export const assets = {
     hans_logo1,
     hans_logo2,
     circle_s,
-    bg
+    bg,
+    hans_logo3,
 };
 
 export const workData = [

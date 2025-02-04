@@ -86,7 +86,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </a>
 
         {/* Navigation Menu - Centered on Large Screens */}
-        <ul className="hidden md:flex items-center gap-5 lg:gap-6 dark:text-white">
+        <ul className="hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-Nora">
             <li><a href="#top" onClick={handleNavClick}>Home</a></li>
             <li><a href="#about" onClick={handleNavClick}>About me</a></li>
             <li><a href="#services" onClick={handleNavClick}>Services</a></li>

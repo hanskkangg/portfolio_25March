@@ -22,8 +22,8 @@ const Services = () => {
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className='text-center text-5xl'>
-      My Services</motion.h2>
+      className='text-center text-5xl font-nora'>
+      Services</motion.h2>
 
       <motion.p 
       initial={{ opacity: 0 }}
