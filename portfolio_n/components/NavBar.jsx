@@ -86,11 +86,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     dark:bg-gray-800 dark:border-white dark:shadow-white/20 transition-colors duration-300 z-[100]
     ${isScroll ? "bg-opacity-50 backdrop-blur-lg dark:bg-opacity-50" : ""}`}>
     
-    <div className="max-w-screen-lg mx-auto flex items-center justify-between px-6 lg:px-8 py-3">
+    <div className="max-w-screen-lg mx-auto flex items-center justify-between px-8 lg:px-0 py-3">
         {/* Logo - Moved Slightly to the Left */}
         <a href="#top">
             <Image src={isDarkMode ? assets.hans_logo1 : assets.hans_logo2} 
-                alt='' className='w-24 cursor-pointer' />
+                alt='' className='w- cursor-pointer w-40' />
         </a>
 
         <ul className={`hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-ovo text-lg lg:text-lg`}>

@@ -39,7 +39,6 @@ import hans_logo1 from './hans_logo1.png';
 import hans_logo2 from './hans_logo2.png';
 import circle_s from './circle_s.png';
 import bg from './bg.png';
-import hans_logo3 from './hans_logo3.png';
 import circle_s_white from './circle_s_white.png';
 
 
@@ -85,7 +84,6 @@ export const assets = {
     hans_logo2,
     circle_s,
     bg,
-    hans_logo3,
     circle_s_white
 };
 
@@ -114,10 +112,15 @@ export const workData = [
 
 
 export const skillData = [
-    { icon: assets.web_icon, title: 'Web Development', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Sosftware Development', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'Database administrator', description: 'Utilies mySQL and MongoDB mariaDB', link: '' },
-    { icon: assets.graphics_icon, title: 'System administrator', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Languages', description: ['- Java', '- Javascript', '- PHP','- HTML/CSS', '- Tailwind CSS'], link: '' },
+
+
+    { icon: assets.mobile_icon, title: 'Framework & Libraries', description: ['- React.js', '- Node.js', '- Express.js','- Next.js', '- jQuery'], link: '' },
+
+
+    { icon: assets.ui_icon, title: 'Database & Database Management', description: ['- MySQL','- MongoDB','- MariaDB','- Oracle','- SQL Server','- MS Access','- ODBC','- SSMS'], link: '' },
+
+    { icon: assets.graphics_icon, title: 'Web Servers & Hosting', description: ['- XAMPP','- Azure Web Hosting','- Netlify','- Vercel','- Apache HTTP','- Apache Tomcat',], link: '' },
 ]
 export const infoList = [
     {

@@ -24,7 +24,7 @@ const Cover = () => {
         {/* First Background - Always Present */}
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/bg_5.png')" }}
+          style={{ backgroundImage: "url('/bg_6.png')" }}
         />
         
         {/* Second Background - Fades in Over First */}
@@ -51,10 +51,10 @@ const Cover = () => {
         <span className="text-[100px] leading-none ml-2">ans Kang</span>
         
 
-        <div className="flex justify-end items-end h-full w-full absolute bottom-2 left-50 right-0 p-10">
+        <div className="flex justify-end items-end h-full w-full absolute top-8 left-6 right-0 p-10">
   <motion.p
     className={`${protestRevolution.className} text-lg sm:text-xl z-10 transition-colors duration-1500 whitespace-nowrap ${
-      isBg1 ? "text-white" : "text-black"
+      isBg1 ? "text-white" : "text-black" 
     }`}
     style={{ fontSize: "35px" }}
     initial={{ opacity: 0 }}
