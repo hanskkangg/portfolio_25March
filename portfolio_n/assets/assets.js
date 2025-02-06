@@ -113,18 +113,58 @@ export const workData = [
 ]
 
 
-export const serviceData = [
+export const skillData = [
     { icon: assets.web_icon, title: 'Web Development', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Sosftware Development', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'Database administrator', description: 'Utilies mySQL and MongoDB mariaDB', link: '' },
     { icon: assets.graphics_icon, title: 'System administrator', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
-
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    {
+        icon: assets.edu_icon, 
+        iconDark: assets.edu_icon_dark, 
+        title: 'Education:', 
+        description: [
+            "Computer Programming:",
+            "- Algonquin College, Ottawa, Ontario",
+            "\u00A0",
+            "GPA:", "- 3.7/4 (Dean's Honor List)"
+        ]
+    },
+    {
+        icon: assets.project_icon,
+        iconDark: assets.project_icon_dark,
+        title: 'Professional Experience:',
+        description: [
+            "Full-Stack Web Developer", "- Delivery Sushi (2022 - Present)",
+            "\u00A0",
+            "Freelance Web Developer", "- Specializing in custom web solutions and client-based projects"
+        ]
+    }
 ];
+
+
+export const infoList2 = [
+    { 
+        icon: assets.code_icon, 
+        iconDark: assets.code_icon_dark, 
+        title: 'Programming Languages:', 
+        description: ['Java', 'JavaScript', 'PHP', 'SQL', 'Bash Script']
+    },
+    { 
+        icon: assets.edu_icon, 
+        iconDark: assets.edu_icon_dark, 
+        title: 'Frameworks & Libraries:', 
+        description: ['React.js', 'Next.js', 'Express.js', 'Node.js', 'jQuery']
+    },
+    { 
+        icon: assets.project_icon, 
+        iconDark: assets.project_icon_dark, 
+        title: 'Databases & Database Management:', 
+        description: ['MongoDB', 'MySQL', 'Oracle Database', 'MariaDB', 'SQL Server']
+    }
+];
+
 
 export const toolsData = [
     assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git

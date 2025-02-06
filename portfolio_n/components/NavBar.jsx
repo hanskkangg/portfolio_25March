@@ -2,6 +2,10 @@ import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Kolker_Brush, Protest_Revolution } from "next/font/google"; // Import Fonts
+
+const kolkerBrush = Kolker_Brush({ weight: "400", subsets: ["latin"] });
+const protestRevolution = Protest_Revolution({ weight: "400", subsets: ["latin"] });
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [isScroll, setIsScroll] = useState(false);
@@ -89,12 +93,12 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                 alt='' className='w-24 cursor-pointer' />
         </a>
 
-        {/* Navigation Menu - Centered on Large Screens */}
-        <ul className="hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-ovo">
+        <ul className={`hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-ovo text-lg lg:text-lg`}>
+
             <li><a href="#top" onClick={handleNavClick}>Home</a></li>
             <li><a href="#about" onClick={handleNavClick}>About me</a></li>
-            <li><a href="#services" onClick={handleNavClick}>Services</a></li>
-            <li><a href="#work" onClick={handleNavClick}>Work</a></li>
+            <li><a href="#services" onClick={handleNavClick}>Skill</a></li>
+            <li><a href="#work" onClick={handleNavClick}>Project</a></li>
             <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
         </ul>
 

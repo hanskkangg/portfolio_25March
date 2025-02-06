@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Cover from "@/components/Cover";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -39,6 +40,7 @@ export default function Home() {
     <div className="bg-custom min-h-screen">
       <div id="top"></div>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Cover/>
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
       <Services isDarkMode={isDarkMode} />

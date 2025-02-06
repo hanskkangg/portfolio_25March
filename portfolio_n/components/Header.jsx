@@ -51,7 +51,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
       >
-        Hi! I'm Hans Kang <Image src={assets.hand_icon} alt='' className='w-6' />
+        Welcome! I'm Hans Kang <Image src={assets.hand_icon} alt='' className='w-6' />
       </motion.h3>
 
       {/* Typing effect message */}
@@ -70,7 +70,7 @@ const Header = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
         className='max-w-2xl mx-auto font-montserrat font-semi'
-      >I am a Full-Stack Developer from Ottawa, Canada with 2 years of experience in full-stack development.
+      >I am a Full-Stack Developer based in Ottawa, Canada.
       </motion.p>
 
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>

@@ -1,4 +1,4 @@
-import { assets, serviceData } from '@/assets/assets'
+import { assets, skillData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion";
@@ -16,14 +16,14 @@ const Services = () => {
        whileInView={{ y: 0, opacity: 1 }} 
        transition={{ delay: 0.3, duration: 0.5 }}
        className='text-center mb-2 text-lg font-montserrat'>
-       What I offer</motion.h4>
+       What I can offer</motion.h4>
 
       <motion.h2 
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
       className='text-center text-5xl font-montserrat'>
-      Services</motion.h2>
+      Skills</motion.h2>
 
       <motion.p 
       initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ const Services = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}
         className='grid grid-cols-auto gap-6 my-10'>
-            {serviceData.map(({icon, title, description, link}, index)=>(
+            {skillData.map(({icon, title, description, link}, index)=>(
                 <motion.div 
                 whileHover={{scale: 1.05}}
                 key={index}
