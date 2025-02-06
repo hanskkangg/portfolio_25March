@@ -62,14 +62,16 @@ const Services = () => {
                 <motion.div 
                 whileHover={{scale: 1.05}}
                 key={index}
-                className='border-2 border-gray-400 rounded-lg bg-[#FFFFF0] dark:bg-gray-700 px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-gray-800 dark:hover:shadow-white font-ovo'>
+                className='border-2 border-gray-400 rounded-lg bg-[#FFFFF0] dark:bg-gray-700 px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-gray-800 dark:hover:shadow-white'>
                     <Image src={icon} alt='' className='w-10'/>
-                    <h3 className='text-lg my-4 text-gray-700 dark:text-white' >{title}</h3>
-                    <p className='text-gray-600 text-md dark:text-white/80'>
+                    <h3 className='text-lg my-4 text-gray-700 dark:text-white font-montserrat font-semibold'>{title}</h3>
+
+                    <p className='text-gray-600 text-md dark:text-white/80 text-lg'>
                         {description.map((line, i) => (
                           <span key={i} className="block text-black dark:text-white font-ovo">
                             {line}
                           </span>
+                          
                         ))}
                     </p>
                   
