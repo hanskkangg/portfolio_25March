@@ -60,7 +60,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         handleScroll(); 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
     const handleNavClick = (event) => {
         event.preventDefault();
     
@@ -76,16 +75,21 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         const targetSection = document.getElementById(targetId);
     
         if (targetSection) {
-            // Scroll to the target section
+            // Smooth scroll to the target section
             window.scrollTo({
                 top: targetSection.offsetTop - 60,
                 behavior: "smooth",
             });
     
-            // Add an event listener to detect when scrolling stops
+            // Close the mobile menu if open
+            if (window.innerWidth < 768) { // Check if the screen size is small
+                closeMenu();
+            }
+    
+            // Handle active section update
             const onScroll = () => {
                 const sectionTop = targetSection.getBoundingClientRect().top;
-                const offset = 70; // Tweak this offset as needed
+                const offset = 70;
                 if (sectionTop <= offset && sectionTop >= -offset) {
                     setActiveSection(targetId);
                     window.removeEventListener("scroll", onScroll);
@@ -95,7 +99,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             window.addEventListener("scroll", onScroll);
         }
     };
-
+    
     
 
     return (
@@ -143,26 +147,26 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </a>
 
                     <ul className="hidden md:flex items-center gap-8 font-ovo text-lg text-gray-800 dark:text-white">
-                        {['home', 'about', 'services', 'work', 'contact'].map((section) => (
-                            <li key={section} className="relative">
-                                <a
-                                    href={`#${section}`}
-                                    onClick={handleNavClick}
-                                    className="px-2 py-1 relative hover:text-blue-500 transition-colors"
-                                >
-                                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                                    {activeSection === section && (
-    <span
-        className="absolute left-0 bottom-[-4px] block h-[4px] bg-black dark:bg-white 
-        transition-all duration-500 ease-in-out"
-        style={{ width: activeSection === section ? '100%' : '0%' }}
-    />
-)}
+                    {['home', 'about', 'services', 'work', 'contact'].map((section) => (
+    <li key={section} className="relative">
+        <a
+            href={`#${section}`}
+            onClick={handleNavClick}
+            className="px-2 py-1 relative hover:text-blue-500 transition-colors"
+        >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+            
+            {activeSection === section && (
+                <span
+                    className={`absolute left-0 bottom-[-1px] w-full h-[2px] transition-all duration-300 
+                    ${isDarkMode ? 'bg-gray-200' : 'bg-black'}`}
+                ></span>
+            )}
+        </a>
+    </li>
+))}
 
 
-                                </a>
-                            </li>
-                        ))}
                     </ul>
 
         {/* Right-Aligned Icons */}
