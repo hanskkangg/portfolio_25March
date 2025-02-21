@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="bg-custom min-h-screen">
-      <div id="top"></div>
+      <div id="home"></div>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Cover/>
       <Header isDarkMode={isDarkMode} />

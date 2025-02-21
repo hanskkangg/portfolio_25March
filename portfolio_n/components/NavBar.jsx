@@ -11,6 +11,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [isScroll, setIsScroll] = useState(false);
     const [showEffect, setShowEffect] = useState(false);
     const [effectPosition, setEffectPosition] = useState({ x: 0, y: 0 });
+    const [activeSection, setActiveSection] = useState('home');
     const sideMenuRef = useRef();
 
     const openMenu = () => {
@@ -31,23 +32,71 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         });
     }, []);
 
+
+
+    useEffect(() => {
+
+
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'services', 'work', 'contact'];
+            const scrollPosition = window.pageYOffset;
+
+            sections.forEach((section) => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const offsetTop = element.offsetTop - 100;
+                    const offsetBottom = offsetTop + element.offsetHeight;
+
+                    if (scrollPosition < 50) {
+                        setActiveSection('home');
+                    } else if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+                        setActiveSection(section);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); 
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const handleNavClick = (event) => {
         event.preventDefault();
-
+    
         const x = event.clientX;
         const y = event.clientY;
-
+    
         setEffectPosition({ x, y });
         setShowEffect(true);
-
+    
         setTimeout(() => setShowEffect(false), 800);
-
+    
         const targetId = event.target.getAttribute("href").substring(1);
         const targetSection = document.getElementById(targetId);
+    
         if (targetSection) {
-            window.scrollTo({ top: targetSection.offsetTop - 60, behavior: "smooth" });
+            // Scroll to the target section
+            window.scrollTo({
+                top: targetSection.offsetTop - 60,
+                behavior: "smooth",
+            });
+    
+            // Add an event listener to detect when scrolling stops
+            const onScroll = () => {
+                const sectionTop = targetSection.getBoundingClientRect().top;
+                const offset = 70; // Tweak this offset as needed
+                if (sectionTop <= offset && sectionTop >= -offset) {
+                    setActiveSection(targetId);
+                    window.removeEventListener("scroll", onScroll);
+                }
+            };
+    
+            window.addEventListener("scroll", onScroll);
         }
     };
+
+    
 
     return (
         <>
@@ -88,19 +137,33 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     
     <div className="max-w-screen-lg mx-auto flex items-center justify-between px-8 lg:px-0 py-3">
         {/* Logo - Moved Slightly to the Left */}
-        <a href="#top">
+        <a href="#home">
             <Image src={isDarkMode ? assets.hans_logo1 : assets.hans_logo2} 
                 alt='' className='w- cursor-pointer w-40' />
         </a>
 
-        <ul className={`hidden md:flex items-center gap-5 lg:gap-6 dark:text-white font-ovo text-lg lg:text-lg`}>
+                    <ul className="hidden md:flex items-center gap-8 font-ovo text-lg text-gray-800 dark:text-white">
+                        {['home', 'about', 'services', 'work', 'contact'].map((section) => (
+                            <li key={section} className="relative">
+                                <a
+                                    href={`#${section}`}
+                                    onClick={handleNavClick}
+                                    className="px-2 py-1 relative hover:text-blue-500 transition-colors"
+                                >
+                                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                                    {activeSection === section && (
+    <span
+        className="absolute left-0 bottom-[-4px] block h-[4px] bg-black dark:bg-white 
+        transition-all duration-500 ease-in-out"
+        style={{ width: activeSection === section ? '100%' : '0%' }}
+    />
+)}
 
-            <li><a href="#top" onClick={handleNavClick}>Home</a></li>
-            <li><a href="#about" onClick={handleNavClick}>About me</a></li>
-            <li><a href="#services" onClick={handleNavClick}>Skill</a></li>
-            <li><a href="#work" onClick={handleNavClick}>Project</a></li>
-            <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
-        </ul>
+
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
         {/* Right-Aligned Icons */}
         <div className="flex items-center gap-3">
@@ -128,7 +191,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <Image src={isDarkMode ? assets.close_white : assets.close_black} alt='' className='w-5 cursor-pointer' />
         </div>
 
-        <li><a onClick={handleNavClick} href="#top">Home</a></li>
+        <li><a onClick={handleNavClick} href="#home">Home</a></li>
         <li><a onClick={handleNavClick} href="#about">About me</a></li>
         <li><a onClick={handleNavClick} href="#services">Services</a></li>
         <li><a onClick={handleNavClick} href="#work">My Work</a></li>
