@@ -35,7 +35,7 @@ const prata = Prata({
 });
 
 export const metadata = {
-  title: "Portfolio - GreatStack",
+  title: "HansKang",
   description: "",
 };
 
