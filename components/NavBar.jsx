@@ -38,7 +38,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
 
         const handleScroll = () => {
-            const sections = ['home', 'about', 'services', 'work', 'contact'];
+            const sections = ['home', 'about', 'skills', 'projects', 'contact'];
             const scrollPosition = window.pageYOffset;
 
             sections.forEach((section) => {
@@ -107,8 +107,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
            <Image src={assets.header_bg_color} alt='' className='w-full' />
         </div>
-
-          {/* Water Brush Effect Image */}
+{/* 
+          Water Brush Effect Image
 <AnimatePresence>
     {showEffect && (
         <motion.div
@@ -132,7 +132,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             />
         </motion.div>
     )}
-</AnimatePresence>
+</AnimatePresence> */}
 
 
             <nav className={`fixed top-0 left-0 right-0 border-[1px] border-black bg-white shadow-md rounded-none 
@@ -147,7 +147,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </a>
 
                     <ul className="hidden md:flex items-center gap-8 font-ovo text-lg text-gray-800 dark:text-white">
-                    {['home', 'about', 'services', 'work', 'contact'].map((section) => (
+                    {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
     <li key={section} className="relative">
         <a
             href={`#${section}`}
@@ -197,8 +197,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         <li><a onClick={handleNavClick} href="#home">Home</a></li>
         <li><a onClick={handleNavClick} href="#about">About me</a></li>
-        <li><a onClick={handleNavClick} href="#services">Services</a></li>
-        <li><a onClick={handleNavClick} href="#work">My Work</a></li>
+        <li><a onClick={handleNavClick} href="#skills">Skills</a></li>
+        <li><a onClick={handleNavClick} href="#projects">My Project</a></li>
         <li><a onClick={handleNavClick} href="#contact">Contact me</a></li>
     </ul>
 </nav>
