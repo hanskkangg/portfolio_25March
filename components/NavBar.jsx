@@ -13,13 +13,16 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [effectPosition, setEffectPosition] = useState({ x: 0, y: 0 });
     const [activeSection, setActiveSection] = useState('home');
     const sideMenuRef = useRef();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const openMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(0)';
+        setIsMenuOpen(true);
     };
 
     const closeMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(100%)';
+        setIsMenuOpen(false);
     };
 
     useEffect(() => {
@@ -170,16 +173,16 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </ul>
 
         {/* Right-Aligned Icons */}
-        <div className="flex items-center gap-3">
-            {/* Dark Mode Toggle */}
-            <button onClick={() => setIsDarkMode(prev => !prev)} className="z-[110]">
-                <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
-            </button>
+        <div className={`flex items-center gap-3 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
+    {/* Dark Mode Toggle */}
+    <button onClick={() => setIsDarkMode(prev => !prev)} className="z-[110]">
+        <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
+    </button>
 
-            {/* Menu Button - Visible Only on Small Screens */}
-            <button className='block md:hidden z-[110]' onClick={openMenu}>
-                <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='' className='w-7' />
-            </button>
+          {/* Menu Button - Visible Only on Small Screens */}
+    <button className='block md:hidden z-[110]' onClick={openMenu}>
+        <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='' className='w-7' />
+    </button>
 
             {/* Contact Button - Visible Only on Large Screens */}
             <a href="#contact" className='hidden lg:flex items-center gap-3 px-5 py-2 border border-gray-400 dark:border-white rounded-md'>
