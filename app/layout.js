@@ -42,10 +42,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased leading-8 overflow-auto dark:bg-gray-800 dark:text-white`}>
-        
+     <body className={`${inter.className} antialiased leading-8 overflow-auto bg-custom dark:bg-gray-900 dark:text-white`}>
+
         {/* Border Container with Proper Size */}
-        <div className="min-h-screen relative mx-5 my-5 border-2 border-gray-900 dark:border-white  box-border">
+        <div className="w-full min-h-screen dark:border-white  box-border">
           {children}
         </div>
 

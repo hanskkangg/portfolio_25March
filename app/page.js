@@ -40,8 +40,8 @@ export default function Home() {
     <div className="bg-custom min-h-screen">
       <div id="home"></div>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Cover/>
-      <Header isDarkMode={isDarkMode} />
+      {/* <Cover/> */}
+      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <About isDarkMode={isDarkMode} />
       <Services isDarkMode={isDarkMode} />
       <Work isDarkMode={isDarkMode} />
