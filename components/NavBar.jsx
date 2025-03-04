@@ -67,15 +67,17 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </ul>
 
                     {/* Spotify Playlist Embed */}
-                    <div className="mt-3 w-full flex justify-center w-[340px] ml-[-30px]">
-                        <iframe 
-                            className="rounded-xl w-full h-[352px]"  
-                            src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
-                            frameBorder="0"
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy">
-                        </iframe>
-                    </div>
+               {/* Spotify Playlist Embed */}
+<div className="mt-3 flex justify-center">
+    <iframe 
+        className="rounded-xl w-[320px] h-[352px]"  
+        src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+</div>
+
 
                 </div>
             </nav>
