@@ -10,6 +10,19 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [showIcons, setShowIcons] = useState(true); // State to track icons visibility
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setShowIcons(currentScrollPos < prevScrollPos || currentScrollPos < 50); // Hide icons when scrolling down
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
 
   useEffect(() => {
     const currentMessage = messages[currentMessageIndex];
@@ -32,8 +45,9 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>
-      {/* Social Icons & Dark Mode Toggle (Top Right) */}
-      <div className="fixed top-4 right-[120px] flex items-center gap-4 z-50">
+      {/* Social Icons & Dark Mode Toggle (Disappear on Scroll) */}
+      <div className={`fixed top-4 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
+                      ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex`}>
         <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
           <FaGithub className="w-7 h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
