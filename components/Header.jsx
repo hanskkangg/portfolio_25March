@@ -2,10 +2,11 @@ import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaMoon, FaSun } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaMoon, FaSun , FaReact, FaNodeJs, FaDatabase, FaServer} from 'react-icons/fa';
+
 
 const Header = ({ isDarkMode, setIsDarkMode }) => {
-  const messages = ["Web Developer", "Full-Stack Developer", "Software Developer"];
+  const messages = ["HI THERE!", "I'M HANS"];
   
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -73,21 +74,24 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
       <div className="ml-[460px] mr-[120px] mt-[130px] max-w-5xl text-center h-screen flex flex-col items-center justify-center gap-4 
                 bg-white dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg rounded-xl p-8">
 
+        {/* Profile Image Positioned at Top Left Inside Border */}
         <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-        >
-          <Image src={assets.profile_img} alt="Profile" className="rounded-full w-40" />
-        </motion.div>
-
-        <motion.h3
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+        className="absolute top-[180px] left-[510px] border-4 border-white dark:border-gray-600 rounded-full"
+    >
+        <Image src={assets.profile_img} alt="Profile" className="rounded-full w-32 sm:w-32 md:w-60" />
+    </motion.div>
+    
+     {/* About Me Title */}
+     <motion.h3
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo text-gray-900 dark:text-white"
+          className="absolute top-[180px] left-[800px] text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
         >
-          Welcome! I'm Hans Kang <Image src={assets.hand_icon} alt="Hand" className="w-6" />
+          🚀 ABOUT ME
         </motion.h3>
 
         {/* Typing effect message */}
@@ -95,7 +99,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-3xl sm:text-6xl lg:text-[66px] font-ovo text-gray-900 dark:text-white"
+          className="absolute top-[380px] left-[500px] text-sm sm:text-sm lg:text-[20px] font-ovo text-gray-900 dark:text-white"
         >
           {displayedText}
           <span className="blinking-cursor">|</span>
@@ -105,13 +109,85 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="max-w-2xl mx-auto font-montserrat font-semi text-gray-700 dark:text-gray-300"
-        >
-          I am a Full-Stack Developer based in Ottawa, Canada.
+          className="absolute top-[250px] left-[800px] items-end gap-2 text-sm md:text-5xl mb-3 font-ovo text-gray-900 dark:text-white"
+          >
+          Full Stack Developer.
         </motion.p>
 
+
+        {/* Developer Tagline */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="absolute top-[450px] left-[800px] text-left text-lg md:text-xl font-semibold text-gray-700 dark:text-gray-300"
+        >
+          Coding wizard 🧑🏽‍💻 on a mission to make a difference,<br/> one line of code at a time! 💻 ✨
+        </motion.p>
+
+        {/* Tech Stack */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.9 }}
+  className="absolute top-[350px] left-[800px] flex flex-wrap gap-4"
+>
+  {/* React */}
+  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
+    <FaReact className="text-blue-500 text-4xl" title="React" />
+    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">React</span>
+  </div>
+
+  {/* Node.js */}
+  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
+    <FaNodeJs className="text-green-500 text-4xl" title="Node.js" />
+    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">Node.js</span>
+  </div>
+
+  {/* MongoDB */}
+  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
+    <FaDatabase className="text-gray-500 text-4xl" title="MongoDB" />
+    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">MongoDB</span>
+  </div>
+
+  {/* Jest */}
+  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
+    <FaServer className="text-yellow-600 text-4xl" title="Jest" />
+    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">Jest</span>
+  </div>
+</motion.div>
+
+
+
+        {/* Experience Stats */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="absolute top-[550px] left-[600px] flex flex-wrap gap-20 text-gray-800 dark:text-gray-200"
+        >
+          <div className="text-7xl font-bold">
+            8<span className="text-lg">+</span>
+            <p className="text-sm text-gray-600">Years of Experience</p>
+          </div>
+          <div className="text-7xl font-bold">
+            18<span className="text-lg">k</span>
+            <p className="text-sm text-gray-600">Hours of Working</p>
+          </div>
+          <div className="text-7xl font-bold">
+            66<span className="text-lg">+</span>
+            <p className="text-sm text-gray-600">Projects Done</p>
+          </div>
+        </motion.div>
+
+
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-          <motion.a
+
+
+
+
+
+          {/* <motion.a
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
@@ -130,7 +206,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
             className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:bg-gray-900 dark:border-gray-600 dark:text-white"
           >
             My resume <Image src={assets.download_icon} alt="Download" className="w-4" />
-          </motion.a>
+          </motion.a> */}
         </div>
       </div>
     </>
