@@ -12,7 +12,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             const scrollPosition = window.pageYOffset;
 
             // Check when to fix navbar at the top
-            setIsScrolled(scrollPosition > 100); // Change 100 to the point where you want it to start sticking
+            setIsScrolled(scrollPosition > 100);
 
             sections.forEach((section) => {
                 const element = document.getElementById(section);
@@ -36,9 +36,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     return (
         <>
             {/* Sticky & Scrolling Navbar */}
-            <nav className={`w-80 h-1/2 border-r border-gray-300 dark:border-gray-700 
+            <nav className={`w-[300px] h-1/2 border-r border-gray-300  dark:border-gray-700 
                              bg-white dark:bg-gray-900 shadow-md transition-all duration-300 z-[100] rounded-xl
-                             fixed left-[110px] ${isScrolled ? 'top-[10px]' : 'top-[130px]'}`}>
+                             fixed left-[110px] ${isScrolled ? 'top-[20px]' : 'top-[130px]'}`}>
                 <div className="flex flex-col items-center py-6 px-4">
                     
                     {/* Logo */}
@@ -63,9 +63,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </ul>
 
                     {/* Spotify Playlist Embed */}
-                    <div className="mt-2 w-full flex justify-center">
+                    <div className="mt-3 w-full flex justify-center ml-10px  w-[300px]">
                         <iframe 
-                            className="rounded-xl w-[100%] max-w-[500px] h-[352px]"  
+                            className="rounded-xl w-full h-[352px]"  
                             src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
                             frameBorder="0"
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -77,7 +77,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </nav>
 
             {/* Main Content Wrapper - Pushes Content Right */}
-            <div className="ml-[320px]">
+            <div className="ml-[500px]">
                 {/* Your Page Content Goes Here */}
             </div>
         </>
