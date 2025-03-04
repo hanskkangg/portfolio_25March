@@ -49,3 +49,20 @@ h1, h2, h3 {
 .dark .circle-effect {
   filter: invert(1); /* Turns black to white */
 }
+
+
+/* Ensure Navbar Uses Noto Sans */
+.navbar {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400; /* ✅ ExtraLight weight */
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px black; /* White outline */
+  color: transparent; /* Make text transparent */
+}
+
+
+.dark .stroke-text {
+  -webkit-text-stroke: 1.5px black; /* Dark mode */
+}

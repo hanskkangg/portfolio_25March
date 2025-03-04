@@ -15,7 +15,15 @@ export default {
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
         Ovo: ["Ovo", "serif"],
-        Lora: ["Lora", "serif"]
+        Lora: ["Lora", "serif"],
+        noto: ["Noto Sans", "sans-serif"]
+      },
+      fontWeight: {
+        thin: "100", // ✅ Thin weight
+        extralight: "200",
+        light: "300",
+        normal: "400",
+        bold: "700",
       },
       boxShadow: {
         'black' : '4px 4px 0 #000',
@@ -26,6 +34,6 @@ export default {
       }
     },
   },
-  darkMode: 'selector',
+  darkMode: 'class',
   plugins: [],
 };

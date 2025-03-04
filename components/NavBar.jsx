@@ -1,6 +1,12 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import "@fontsource/noto-sans"; // Defaults to weight 400
+import "@fontsource/noto-sans/700.css"; // Bold
+import "@fontsource/noto-sans/100.css"; // Thin 100
+import "@fontsource/noto-sans/200.css"; // ExtraLight 200
+import "@fontsource/noto-sans/300.css"; // Light 300
+import "@fontsource/noto-sans/400.css"; // Regular 400
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [activeSection, setActiveSection] = useState('home');
@@ -35,30 +41,26 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
     return (
         <>
-         {/* Name on Top Left Corner */}
-         <div className="absolute top-7 left-[110px] text-7xl font-bold text-gray-900 dark:text-white">
-                HANS KANG
+            {/* Name on Top Left Corner */}
+            <div className="absolute top-7 left-[110px] text-7xl font-bold text-gray-900 dark:text-white">
+                Hans <span className="stroke-text">Kang</span>
             </div>
+
             {/* Sticky & Scrolling Navbar */}
-            <nav className={`w-[320px] h-1/2 border-r border-gray-300  dark:border-gray-700 
-                             bg-white dark:bg-gray-900 shadow-md transition-all duration-300 z-[100] rounded-xl
-                             fixed left-[110px] ${isScrolled ? 'top-[20px]' : 'top-[130px]'}`}>
+            <nav className={`navbar w-[320px] h-[330px] border-r dark:border-gray-700 
+                            bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
+                            fixed left-[110px] ${isScrolled ? 'top-[20px]' : 'top-[130px]'} font-noto font-normal`}>
                 <div className="flex flex-col items-center py-6 px-4">
-                    
-                    {/* Logo */}
-                    <a href="#home">
-                        <Image src={isDarkMode ? assets.hans_logo1 : assets.hans_logo2} 
-                            alt="Logo" className='w-32 cursor-pointer mb-6' />
-                    </a>
 
                     {/* Navigation Menu */}
-                    <ul className="flex flex-col gap-1 w-full text-gray-800 dark:text-white">
+                    <ul className="flex flex-col gap-1 w-full">
                         {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
                             <li key={section} className="w-full">
                                 <a
                                     href={`#${section}`}
-                                    className={`block w-full text-center py-3 rounded-lg transition-colors
-                                               ${activeSection === section ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}`}
+                                    className={`block w-full text-left ml-5 py-3 rounded-lg transition-colors 
+                                    text-gray-100 hover:text-white 
+                                    ${activeSection === section ? 'text-white font-bold' : ''}`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
                                 </a>
@@ -67,18 +69,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </ul>
 
                     {/* Spotify Playlist Embed */}
-               {/* Spotify Playlist Embed */}
-<div className="mt-3 flex justify-center">
-    <iframe 
-        className="rounded-xl w-[320px] h-[352px]"  
-        src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-    </iframe>
-</div>
-
-
+                    <div className="mt-10 flex justify-center">
+                        <iframe 
+                            className="rounded-xl w-[320px] h-[352px]"  
+                            src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
             </nav>
 
