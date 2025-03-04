@@ -33,7 +33,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       {/* Social Icons & Dark Mode Toggle (Top Right) */}
-      <div className="fixed top-4 right-6 flex items-center gap-4 z-50">
+      <div className="fixed top-4 right-[120px] flex items-center gap-4 z-50">
         <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
           <FaGithub className="w-7 h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>

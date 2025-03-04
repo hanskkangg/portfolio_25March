@@ -35,8 +35,12 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
     return (
         <>
+         {/* Name on Top Left Corner */}
+         <div className="absolute top-7 left-[110px] text-7xl font-bold text-gray-900 dark:text-white">
+                HANS KANG
+            </div>
             {/* Sticky & Scrolling Navbar */}
-            <nav className={`w-[300px] h-1/2 border-r border-gray-300  dark:border-gray-700 
+            <nav className={`w-[320px] h-1/2 border-r border-gray-300  dark:border-gray-700 
                              bg-white dark:bg-gray-900 shadow-md transition-all duration-300 z-[100] rounded-xl
                              fixed left-[110px] ${isScrolled ? 'top-[20px]' : 'top-[130px]'}`}>
                 <div className="flex flex-col items-center py-6 px-4">
@@ -63,7 +67,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </ul>
 
                     {/* Spotify Playlist Embed */}
-                    <div className="mt-3 w-full flex justify-center ml-10px  w-[300px]">
+                    <div className="mt-3 w-full flex justify-center w-[320px] ml-[-30px]">
                         <iframe 
                             className="rounded-xl w-full h-[352px]"  
                             src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
