@@ -1,15 +1,18 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [activeSection, setActiveSection] = useState('home');
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['home', 'about', 'skills', 'projects', 'contact'];
             const scrollPosition = window.pageYOffset;
+
+            // Check when to fix navbar at the top
+            setIsScrolled(scrollPosition > 100); // Change 100 to the point where you want it to start sticking
 
             sections.forEach((section) => {
                 const element = document.getElementById(section);
@@ -27,17 +30,17 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
         <>
-            {/* Sticky Sidebar Navbar with Custom Spacing */}
-        {/* Sticky Sidebar Navbar with Custom Spacing */}
-<nav className={`fixed top-[135px] left-[110px] w-80 h-1/2 border-r border-gray-300 dark:border-gray-700 
-                 bg-white dark:bg-gray-900 shadow-md transition-all duration-300 z-[100] rounded-xl`}>
-    <div className="flex flex-col items-center py-6 px-4">
+            {/* Sticky & Scrolling Navbar */}
+            <nav className={`w-80 h-1/2 border-r border-gray-300 dark:border-gray-700 
+                             bg-white dark:bg-gray-900 shadow-md transition-all duration-300 z-[100] rounded-xl
+                             fixed left-[110px] ${isScrolled ? 'top-[10px]' : 'top-[130px]'}`}>
+                <div className="flex flex-col items-center py-6 px-4">
+                    
                     {/* Logo */}
                     <a href="#home">
                         <Image src={isDarkMode ? assets.hans_logo1 : assets.hans_logo2} 
@@ -58,6 +61,18 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                             </li>
                         ))}
                     </ul>
+
+                    {/* Spotify Playlist Embed */}
+                    <div className="mt-2 w-full flex justify-center">
+                        <iframe 
+                            className="rounded-xl w-[100%] max-w-[500px] h-[352px]"  
+                            src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
                 </div>
             </nav>
 

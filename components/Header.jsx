@@ -48,15 +48,16 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         </a>
 
         {/* Dark Mode Toggle */}
-              <button 
-                              onClick={() => setIsDarkMode(prev => !prev)} 
-                              className="mt-auto p-2 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors">
-                              <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-6' />
-                          </button>
+        <button 
+          onClick={() => setIsDarkMode(prev => !prev)} 
+          className="mt-auto p-2 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors">
+          <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-6' />
+        </button>
       </div>
 
-      {/* Header Section */}
-      <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+      {/* Header Section with Border and Positioning */}
+      <div className="ml-[460px] mr-[120px] mt-[130px] max-w-5xl text-center h-screen flex flex-col items-center justify-center gap-4 
+                bg-white dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg rounded-xl p-8">
 
         <motion.div
           initial={{ scale: 0 }}
