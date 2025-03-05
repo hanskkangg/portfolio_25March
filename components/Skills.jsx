@@ -4,7 +4,7 @@ import { SiTailwindcss, SiNextdotjs, SiJquery, SiExpress, SiMysql, SiMongodb, Si
 
 const Skills = () => {
   return (
-    <div className="ml-[460px] mr-[100px] mt-[100px] max-w-5xl text-center 
+    <div id='skills' className="ml-[460px] mr-[100px] mt-[100px] max-w-5xl text-center 
                 min-h-[500px] flex flex-col items-center justify-center gap-4 
                 bg-[url('@/assets/about_bg.png')] bg-cover bg-center dark:bg-gray-900 
                 border-2 border-white dark:border-gray-700 shadow-lg rounded-xl p-6">
