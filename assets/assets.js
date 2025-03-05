@@ -42,6 +42,8 @@ import bg from './bg.png';
 import circle_s_white from './circle_s_white.png';
 import prof from './prof.png';
 import about_bg from './about_bg.png';
+import skills_bg from './skills_bg.png';
+
 
 
 
@@ -89,7 +91,8 @@ export const assets = {
     bg,
     circle_s_white,
     prof,
-    about_bg
+    about_bg,
+    skills_bg
 };
 
 export const workData = [
