@@ -83,7 +83,7 @@ const SpotifyEmbed = () => {
                                 <span className={`absolute left-[220px] flex items-center justify-center
                                     transition-all duration-300
                                     ${activeSection === section 
-                                        ? 'left-[230px] w-6 h-6 border-2 border-dashed border-white animate-spin-slow'  // Active: Spins & Bigger
+                                        ? 'left-[230px] w-6 h-6 border-2 border-dashed border-yellow-300 animate-spin-slow'  // Active: Spins & Bigger
                                         : 'left-[240px] w-1 h-1 bg-white opacity-70'} // Inactive: Small & Static
                                 `}></span>
                             </li>
