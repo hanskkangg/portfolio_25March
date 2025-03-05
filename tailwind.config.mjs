@@ -20,7 +20,15 @@ export default {
         Lora: ["Lora", "serif"],
         noto: ["Noto Sans", "sans-serif"],
         arvo: ['Arvo', 'serif'],
-        poppins: ["Poppins", "sans-serif"], 
+        playfair: ["Playfair Display", "serif"],
+        garamond: ["Cormorant Garamond", "serif"],
+        merriweather: ["Merriweather", "serif"],
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        lora: ["Lora", "serif"],
+        dmserif: ["DM Serif Display", "serif"],
+        garamond: ["EB Garamond", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       fontWeight: {
         thin: "100", // ✅ Thin weight
