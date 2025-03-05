@@ -57,26 +57,26 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
 
         <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="w-6 h-6 -mt-1 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+          <FaGithub className="w-5 h-5 -mt-3 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
         <a href="https://www.linkedin.com/in/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="w-6 h-6 -mt-1 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+          <FaLinkedin className="w-5 h-5 -mt-3 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
         <a href="https://www.instagram.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="w-6 h-6 -mt-1  text-gray-800 dark:text-white hover:text-pink-500 transition-colors" />
+          <FaInstagram className="w-5 h-5 -mt-3  text-gray-800 dark:text-white hover:text-pink-500 transition-colors" />
         </a>
         <a href="https://www.facebook.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaFacebook className="w-6 h-6  -mt-1 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+          <FaFacebook className="w-5 h-5  -mt-3 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
 
 
         {/* Dark Mode Toggle */}
        {/* Dark Mode Toggle with Black Border */}
-<div className="p-2 border-1 border-black rounded-md bg-gray-800 dark:bg-gray-700 ml-1 -mt-2">
+<div className="p-2 border-1 border-black rounded-md bg-gray-800 dark:bg-gray-700 ml-1 -mt-3">
   <button 
     onClick={() => setIsDarkMode(prev => !prev)} 
     className="p-2 transition-colors h-[40px]">
-    <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-5' />
+    <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-5 h-5' />
   </button>
 </div>
 
