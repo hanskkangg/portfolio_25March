@@ -1,3 +1,5 @@
+import { Poppins } from 'next/font/google';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -16,7 +18,9 @@ export default {
         Outfit: ["Outfit", "sans-serif"],
         Ovo: ["Ovo", "serif"],
         Lora: ["Lora", "serif"],
-        noto: ["Noto Sans", "sans-serif"]
+        noto: ["Noto Sans", "sans-serif"],
+        arvo: ['Arvo', 'serif'],
+        poppins: ["Poppins", "sans-serif"], 
       },
       fontWeight: {
         thin: "100", // ✅ Thin weight

@@ -50,27 +50,34 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       {/* Social Icons & Dark Mode Toggle (Disappear on Scroll) */}
-      <div className={`fixed top-4 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
+      <div className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
                       ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex`}>
+
+
         <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="w-7 h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+          <FaGithub className="w-6 h-6 -mt-1 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
         <a href="https://www.linkedin.com/in/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="w-7 h-7 text-blue-700 dark:text-white hover:text-blue-500 transition-colors" />
+          <FaLinkedin className="w-6 h-6 -mt-1 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
         <a href="https://www.instagram.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="w-7 h-7 text-pink-600 dark:text-white hover:text-pink-500 transition-colors" />
+          <FaInstagram className="w-6 h-6 -mt-1  text-gray-800 dark:text-white hover:text-pink-500 transition-colors" />
         </a>
         <a href="https://www.facebook.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaFacebook className="w-7 h-7 text-blue-600 dark:text-white hover:text-blue-500 transition-colors" />
+          <FaFacebook className="w-6 h-6  -mt-1 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>
 
+
         {/* Dark Mode Toggle */}
-        <button 
-          onClick={() => setIsDarkMode(prev => !prev)} 
-          className="mt-auto p-2 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors">
-          <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-6' />
-        </button>
+       {/* Dark Mode Toggle with Black Border */}
+<div className="p-2 border-1 border-black rounded-md bg-gray-800 dark:bg-gray-700 ml-1 -mt-2">
+  <button 
+    onClick={() => setIsDarkMode(prev => !prev)} 
+    className="p-2 transition-colors h-[40px]">
+    <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-5' />
+  </button>
+</div>
+
       </div>
 
       {/* Header Section with Border and Positioning */}
@@ -100,20 +107,19 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           🚀 ABOUT ME
         </motion.h3>
 
+{/* Typing Effect */}
+<motion.div
+  initial={{ opacity: 1, y: -10 }}
+  animate={{ opacity: 2, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeInOut" }}
+  className="absolute top-[370px] left-[520px] flex items-center gap-2 px-4 py-1 rounded-3xl 
+             bg-black/20 dark:bg-black/90 backdrop-blur-2xl shadow-2xl ">
+  <span id="hero-avatar-text" className="text-sm sm:text-md font-normal text-white dark:text-white">
+    {displayedText}
+  </span>
+  <span className="text-lg sm:text-2xl font-normal text-orange-500 animate-blink">_</span>
+</motion.div>
 
-        {/* Typing Effect */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="absolute top-[370px] left-[520px] flex items-center gap-2 px-4 py-1 rounded-3xl 
-                      bg-gray-100/40 dark:bg-gray-700/40 
-                      backdrop-blur-md shadow-lg">
-          <span id="hero-avatar-text" className="text-sm sm:text-md font-bold text-black dark:text-white">
-            {displayedText}
-          </span>
-          <span className="text-lg sm:text-2xl font-bold text-orange-500 animate-blink">_</span>
-        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -172,17 +178,17 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="absolute top-[500px] left-[600px] flex flex-wrap gap-40 text-gray-800 dark:text-gray-200"
+          className="absolute top-[480px] left-[600px] flex flex-wrap gap-40 text-gray-800 dark:text-gray-200"
         >
-          <div className="text-7xl font-bold">
+          <div className="text-8xl font-bold stroke-text">
             1<span className="text-lg">+</span>
             <p className="text-sm text-gray-600">Years of Experience</p>
           </div>
-          <div className="text-7xl font-bold">
+          <div className="text-8xl font-bold stroke-text">
             4<span className="text-lg">+</span>
             <p className="text-sm text-gray-600">Happy Customers</p>
           </div>
-          <div className="text-7xl font-bold">
+          <div className="text-8xl font-bold stroke-text">
             10<span className="text-lg">+</span>
             <p className="text-sm text-gray-600">Projects Done</p>
           </div>
