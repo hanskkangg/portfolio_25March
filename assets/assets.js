@@ -41,6 +41,7 @@ import circle_s from './circle_s.png';
 import bg from './bg.png';
 import circle_s_white from './circle_s_white.png';
 import prof from './prof.png';
+import about_bg from './about_bg.png';
 
 
 
@@ -87,7 +88,8 @@ export const assets = {
     circle_s,
     bg,
     circle_s_white,
-    prof
+    prof,
+    about_bg
 };
 
 export const workData = [

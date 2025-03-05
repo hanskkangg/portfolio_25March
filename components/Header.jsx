@@ -82,10 +82,13 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
       {/* Header Section with Border and Positioning */}
   {/* Header Section with Border and Positioning */}
+{/* Header Section with Border and Positioning */}
 <div className="ml-[460px] mr-[120px] mt-[130px] max-w-5xl text-center 
                 min-h-[500px] flex flex-col items-center justify-center gap-4 
-                bg-white dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg 
+                bg-[url('@/assets/about_bg.png')]
+ bg-cover bg-center dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg 
                 rounded-xl p-8">
+
 
         {/* Profile Image Positioned at Top Left Inside Border */}
         <motion.div
@@ -102,9 +105,9 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="absolute top-[200px] left-[800px] text-xl md:text-sm font-bold text-gray-900 dark:text-white"
+          className="absolute top-[210px] left-[810px] font-ovo text-xl md:text-sm font-bold text-gray-900 dark:text-white"
         >
-          🚀 ABOUT ME
+          //   ABOUT ME
         </motion.h3>
 
 {/* Typing Effect */}
