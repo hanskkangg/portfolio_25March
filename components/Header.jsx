@@ -140,7 +140,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
   className="absolute top-[390px] left-[800px] text-left text-md md:text-lg 
              font-lora text-gray-700 dark:text-gray-300 leading-relaxed"
 >
-  Coding wizard 🧑🏽‍💻 on a mission to make a difference, one line of <br/> code at a time! 💻 ✨
+  Based in Ottawa 🧑🏽‍💻 on a mission to make a difference, one line of <br/> code at a time! 💻 ✨
 </motion.p>
 
 

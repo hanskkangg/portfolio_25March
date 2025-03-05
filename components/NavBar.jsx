@@ -55,7 +55,7 @@ const SpotifyEmbed = () => {
         <>
             {/* Name on Top Left Corner */}
             <div className="absolute top-7 left-[110px] text-7xl font-bold text-gray-900 dark:text-white font-ovo">
-                Hans <span className="stroke-text">Kang</span>
+                Hans <span className="stroke-text">Kang</span><span className="stroke-text absolute -top-8 left-[350px] text-9xl font-bold text-gray-900 dark:text-white font-ovo">.</span>
             </div>
             
             {/* Sticky Navbar */}

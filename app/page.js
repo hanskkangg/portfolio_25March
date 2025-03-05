@@ -8,6 +8,7 @@ import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Cover from "@/components/Cover";
+import CursorEffect from "@/components/CursorEffect"; // Import
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -37,8 +38,10 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <div className="bg-custom min-h-screen">
-      <div id="home"></div>
+    <div className="bg-custom min-h-screen"> 
+    
+    <CursorEffect /> {/* Add the effect here */}
+      <div id="about"></div>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       {/* <Cover/> */}
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
