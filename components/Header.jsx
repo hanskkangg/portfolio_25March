@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaMoon, FaSun , FaReact,
 
 
 const Header = ({ isDarkMode, setIsDarkMode }) => {
-  const messages = ["HI THERE!", "I'M HANS"];
+  const messages = ["Hello There!", "I'm Hans Kang"];
   
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -114,10 +114,10 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
   transition={{ duration: 0.8, ease: "easeInOut" }}
   className="absolute top-[370px] left-[520px] flex items-center gap-2 px-4 py-1 rounded-3xl 
              bg-black/20 dark:bg-black/90 backdrop-blur-2xl shadow-2xl ">
-  <span id="hero-avatar-text" className="text-sm sm:text-md font-normal text-white dark:text-white">
+  <span id="hero-avatar-text" className="text-sm sm:text-md font-montserrat font-normal text-white dark:text-white">
     {displayedText}
   </span>
-  <span className="text-lg sm:text-2xl font-normal text-orange-500 animate-blink">_</span>
+  <span className="text-lg sm:text-xl font-normal text-orange-500 animate-blink">_</span>
 </motion.div>
 
 
@@ -129,17 +129,17 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           >
           Full Stack Developer
         </motion.p>
+{/* Developer Tagline */}
+<motion.p
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.7 }}
+  className="absolute top-[390px] left-[800px] text-left text-md md:text-lg 
+             font-lora text-gray-700 dark:text-gray-300 leading-relaxed"
+>
+  Coding wizard 🧑🏽‍💻 on a mission to make a difference, one line of <br/> code at a time! 💻 ✨
+</motion.p>
 
-
-        {/* Developer Tagline */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="absolute top-[390px] left-[800px] text-left text-md md:text-md font-normal text-gray-500 dark:text-gray-300"
-        >
-          Coding wizard 🧑🏽‍💻 on a mission to make a difference, one line of <br/> code at a time! 💻 ✨
-        </motion.p>
 
         <motion.div
   initial={{ opacity: 0 }}
@@ -173,26 +173,36 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 </motion.div>
 
 
-        {/* Experience Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="absolute top-[480px] left-[600px] flex flex-wrap gap-40 text-gray-800 dark:text-gray-200"
-        >
-          <div className="text-8xl font-bold stroke-text">
-            1<span className="text-lg">+</span>
-            <p className="text-sm text-gray-600">Years of Experience</p>
-          </div>
-          <div className="text-8xl font-bold stroke-text">
-            4<span className="text-lg">+</span>
-            <p className="text-sm text-gray-600">Happy Customers</p>
-          </div>
-          <div className="text-8xl font-bold stroke-text">
-            10<span className="text-lg">+</span>
-            <p className="text-sm text-gray-600">Projects Done</p>
-          </div>
-        </motion.div>
+{/* Experience Stats */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.8, delay: 1.2 }}
+  className="absolute top-[480px] left-[520px] flex flex-wrap gap-16 text-gray-800 dark:text-gray-200"
+>
+  {/* Experience Block */}
+  <div className="relative flex items-center">
+    <span className="absolute text-4xl font-bold top-[5px] left-[40px]">+</span>
+    <span className="text-8xl font-bold stroke-text">1</span>
+    <p className="text-xl text-gray-900 ml-3 mt-7">Years of Experience</p>
+  </div>
+
+  {/* Happy Customers Block */}
+  <div className="relative flex items-center">
+    <span className="absolute text-4xl font-bold top-[5px] left-[60px]">+</span>
+    <span className="text-8xl font-bold stroke-text">4</span>
+    <p className="text-xl text-gray-900 ml-3  mt-7">Happy Customers</p>
+  </div>
+
+  {/* Projects Done Block */}
+  <div className="relative flex items-center">
+    <span className="absolute text-4xl font-bold top-[5px] left-[110px]">+</span>
+    <span className="text-8xl font-bold stroke-text">10</span>
+    <p className="text-xl text-gray-900 ml-3  mt-7">Projects Done</p>
+  </div>
+</motion.div>
+
+
 
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
