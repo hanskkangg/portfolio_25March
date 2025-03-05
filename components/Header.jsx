@@ -82,8 +82,6 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
       </div>
 
-      {/* Header Section with Border and Positioning */}
-  {/* Header Section with Border and Positioning */}
 {/* Header Section with Border and Positioning */}
 <div className="ml-[460px] mr-[120px] mt-[130px] max-w-5xl text-center 
                 min-h-[500px] flex flex-col items-center justify-center gap-4 

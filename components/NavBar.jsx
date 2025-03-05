@@ -33,6 +33,24 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+const SpotifyEmbed = () => {
+    useEffect(() => {
+      const iframe = document.getElementById("spotify-embed");
+      if (iframe) {
+        const playSpotify = () => {
+          iframe.contentWindow.postMessage(
+            { command: "play" },
+            "https://open.spotify.com"
+          );
+        };
+  
+        setTimeout(playSpotify, 2000); // Delay to ensure the iframe loads
+      }
+    }, []);
+}
+
+    
     return (
         <>
             {/* Name on Top Left Corner */}
@@ -73,15 +91,18 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </ul>
 
                     {/* Spotify Playlist Embed */}
-                    <div className="mt-10 flex justify-center">
-                        <iframe 
-                            className="rounded-xl w-[310px] h-[352px]"  
-                            src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
-                            frameBorder="0"
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy">
-                        </iframe>
-                    </div>
+                    {/* Spotify Playlist Embed */}
+<div className="mt-10 flex justify-center">
+    <iframe
+        id="spotify-embed"
+        className="rounded-xl w-[310px] h-[352px]"
+        src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+    ></iframe>  {/* ✅ Correct closing tag */}
+</div>
+
                 </div>
             </nav>
         </>
