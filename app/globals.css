@@ -83,3 +83,11 @@ h1, h2, h3 {
 .animate-spin-slow {
   animation: spin-slow 2s linear infinite;
 }
+
+
+
+/* Gradient Background Effect */
+.bg-scroll-gradient {
+  background: linear-gradient(to bottom, #E5B9A3, #191919);
+  min-height: 100vh; /* Ensures full page effect */
+}

@@ -53,7 +53,8 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
       {/* Social Icons & Dark Mode Toggle (Disappear on Scroll) */}
       <div 
         id="about" className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
-                      ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex`}>
+                      ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex`}
+                      >
 
 
         <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
@@ -87,7 +88,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
                 min-h-[500px] flex flex-col items-center justify-center gap-4 
                 bg-[url('@/assets/about_bg.png')]
  bg-cover bg-center dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg 
-                rounded-xl p-8">
+                rounded-xl p-8" >
 
 
         {/* Profile Image Positioned at Top Left Inside Border */}
