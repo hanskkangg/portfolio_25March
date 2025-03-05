@@ -1,9 +1,7 @@
-import { assets } from '@/assets/assets';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import "@fontsource/poppins"; // Modern Sans-serif
-import "@fontsource/montserrat"; // Clean Look
-import "@fontsource/inter"; // Clean Look
+import "@fontsource/poppins"; 
+import "@fontsource/montserrat"; 
+import "@fontsource/inter"; 
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [activeSection, setActiveSection] = useState('about');
@@ -14,7 +12,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             const sections = ['about', 'skills', 'resume', 'projects', 'contact'];
             const scrollPosition = window.pageYOffset;
 
-            // Fix navbar when scrolling
             setIsScrolled(scrollPosition > 100);
 
             sections.forEach((section) => {
@@ -40,43 +37,41 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <>
             {/* Name on Top Left Corner */}
             <div className="absolute top-7 left-[110px] text-7xl font-bold text-gray-900 dark:text-white font-ovo">
-
                 Hans <span className="stroke-text">Kang</span>
             </div>
             
-            {/* Sticky & Scrolling Navbar */}
-
-            
-<nav className={`navbar w-[310px] h-[280px] border-r dark:border-gray-700 
+            {/* Sticky Navbar */}
+            <nav className={`navbar w-[310px] h-[280px] border-r dark:border-gray-700 
                 bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
                 fixed left-[110px] ${isScrolled ? 'top-[20px]' : 'top-[130px]'}
                 font-inter font-normal text-[14px] tracking-wider`}>
 
+                <div className="flex flex-col items-center py-6 px-8">
+                    <ul className="flex flex-col w-full relative font-inter text-[14px]">
 
-    <div className="flex flex-col items-center py-6 px-8">
+                        {['about', 'skills', 'resume', 'projects', 'contact'].map((section) => (
+                            <li key={section} className="w-full flex items-center justify-start relative"> 
+                                {/* Menu Link */}
+                                <a
+                                    href={`#${section}`}
+                                    className={`block w-full text-left ml-2 py-2 rounded-lg transition-colors 
+                                    text-gray-500 hover:text-white tracking-wider
+                                    ${activeSection === section ? 'text-white' : ''}`}
+                                >
+                                    {section.toUpperCase()}
+                                </a>
 
-    <ul className="flex flex-col  w-full relative">
-        {['about me', 'skills', 'resume', 'projects', 'contact'].map((section) => (
-            <li key={section} className="w-full flex items-center justify-start relative"> 
-                {/* Menu Link */}
-                <a
-                    href={`#${section.replace(" ", "-")}`} 
-                    className={`block w-full text-left ml-2 py-2 rounded-lg transition-colors 
-                    text-gray-300 hover:text-white tracking-wider
-                    ${activeSection === section ? 'text-white font-semibold' : ''}`}
-                >
-                    {section.toUpperCase()}
-                </a>
+                                {/* Dot Indicator */}
+                                <span className={`absolute left-[220px] flex items-center justify-center
+                                    transition-all duration-300
+                                    ${activeSection === section 
+                                        ? 'left-[210px] w-6 h-6 border-2 border-dashed border-white animate-spin-slow'  // Active: Spins & Bigger
+                                        : 'left-[250px] w-1 h-1 bg-white opacity-70'} // Inactive: Small & Static
+                                `}></span>
+                            </li>
+                        ))}
+                    </ul>
 
-                {/* Dot Indicator Positioned Outside Navbar */}
-                <span className={`absolute left-[250px] w-1 h-1 rounded-full flex items-center justify-center
-                    ${activeSection === section 
-                        ? 'border-2 border-dashed border-white animate-spin-slow' // Spinning Dashed Border for Active Section
-                        : 'bg-white'} // Solid Dot for Inactive Sections
-                `}></span>
-            </li>
-        ))}
-    </ul>
                     {/* Spotify Playlist Embed */}
                     <div className="mt-10 flex justify-center">
                         <iframe 
@@ -89,11 +84,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     </div>
                 </div>
             </nav>
-
-            {/* Main Content Wrapper - Pushes Content Right */}
-            <div className="ml-[500px]">
-                {/* Your Page Content Goes Here */}
-            </div>
         </>
     );
 };

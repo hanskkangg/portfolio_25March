@@ -49,8 +49,10 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>
+    
       {/* Social Icons & Dark Mode Toggle (Disappear on Scroll) */}
-      <div className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
+      <div 
+        id="about" className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
                       ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex`}>
 
 

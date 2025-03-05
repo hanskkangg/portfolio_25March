@@ -70,3 +70,16 @@ h1, h2, h3 {
 .dark .stroke-text {
   -webkit-text-stroke: 1.5px black; /* Dark mode */
 }
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
