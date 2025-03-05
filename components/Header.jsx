@@ -105,7 +105,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="absolute top-[210px] left-[810px] font-ovo text-xl md:text-sm font-bold text-gray-900 dark:text-white"
+          className="absolute top-[210px] left-[805px] font-ovo text-xl md:text-sm font-bold text-gray-900 dark:text-white"
         >
           //   ABOUT ME
         </motion.h3>
