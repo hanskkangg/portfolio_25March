@@ -29,20 +29,23 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
     const currentMessage = messages[currentMessageIndex];
 
     if (charIndex < currentMessage.length) {
+      // Type each character one by one
       const timeout = setTimeout(() => {
         setDisplayedText(currentMessage.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      }, 50);
-
+        setCharIndex((prev) => prev + 1);
+      }, 100);
       return () => clearTimeout(timeout);
     } else {
+      // Wait before switching to the next message
       setTimeout(() => {
         setCharIndex(0);
         setDisplayedText("");
         setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
-      }, 1500);
+      }, 1500); // Delay before next message starts typing
     }
   }, [charIndex, currentMessageIndex]);
+
+
 
   return (
     <>
@@ -71,8 +74,11 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
       </div>
 
       {/* Header Section with Border and Positioning */}
-      <div className="ml-[460px] mr-[120px] mt-[130px] max-w-5xl text-center h-screen flex flex-col items-center justify-center gap-4 
-                bg-white dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg rounded-xl p-8">
+  {/* Header Section with Border and Positioning */}
+<div className="ml-[460px] mr-[120px] mt-[130px] max-w-5xl text-center 
+                min-h-[500px] flex flex-col items-center justify-center gap-4 
+                bg-white dark:bg-gray-900 border-2 border-white dark:border-gray-700 shadow-lg 
+                rounded-xl p-8">
 
         {/* Profile Image Positioned at Top Left Inside Border */}
         <motion.div
@@ -81,7 +87,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
         transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
         className="absolute top-[180px] left-[510px] border-4 border-white dark:border-gray-600 rounded-full"
     >
-        <Image src={assets.profile_img} alt="Profile" className="rounded-full w-32 sm:w-32 md:w-60" />
+        <Image src={assets.prof} alt="Profile" className="rounded-full w-32 sm:w-32 md:w-60" />
     </motion.div>
     
      {/* About Me Title */}
@@ -89,21 +95,25 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="absolute top-[180px] left-[800px] text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
+          className="absolute top-[200px] left-[800px] text-xl md:text-sm font-bold text-gray-900 dark:text-white"
         >
           🚀 ABOUT ME
         </motion.h3>
 
-        {/* Typing effect message */}
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="absolute top-[380px] left-[500px] text-sm sm:text-sm lg:text-[20px] font-ovo text-gray-900 dark:text-white"
-        >
-          {displayedText}
-          <span className="blinking-cursor">|</span>
-        </motion.h1>
+
+        {/* Typing Effect */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute top-[370px] left-[520px] flex items-center gap-2 px-4 py-1 rounded-3xl 
+                      bg-gray-100/40 dark:bg-gray-700/40 
+                      backdrop-blur-md shadow-lg">
+          <span id="hero-avatar-text" className="text-sm sm:text-md font-bold text-black dark:text-white">
+            {displayedText}
+          </span>
+          <span className="text-lg sm:text-2xl font-bold text-orange-500 animate-blink">_</span>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -111,7 +121,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="absolute top-[250px] left-[800px] items-end gap-2 text-sm md:text-5xl mb-3 font-ovo text-gray-900 dark:text-white"
           >
-          Full Stack Developer.
+          Full Stack Developer
         </motion.p>
 
 
@@ -120,43 +130,41 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="absolute top-[450px] left-[800px] text-left text-lg md:text-xl font-semibold text-gray-700 dark:text-gray-300"
+          className="absolute top-[390px] left-[800px] text-left text-md md:text-md font-normal text-gray-500 dark:text-gray-300"
         >
-          Coding wizard 🧑🏽‍💻 on a mission to make a difference,<br/> one line of code at a time! 💻 ✨
+          Coding wizard 🧑🏽‍💻 on a mission to make a difference, one line of <br/> code at a time! 💻 ✨
         </motion.p>
 
-        {/* Tech Stack */}
-<motion.div
+        <motion.div
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ duration: 0.6, delay: 0.9 }}
-  className="absolute top-[350px] left-[800px] flex flex-wrap gap-4"
+  className="absolute top-[320px] left-[800px] flex flex-wrap gap-3"
 >
   {/* React */}
-  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
-    <FaReact className="text-blue-500 text-4xl" title="React" />
-    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">React</span>
+  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
+    <FaReact className="text-gray-500 text-2xl" title="React" />
+    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">React</span>
   </div>
 
   {/* Node.js */}
-  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
-    <FaNodeJs className="text-green-500 text-4xl" title="Node.js" />
-    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">Node.js</span>
+  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
+    <FaNodeJs className="text-gray-500 text-2xl" title="Node.js" />
+    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">Node.js</span>
   </div>
 
   {/* MongoDB */}
-  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
-    <FaDatabase className="text-gray-500 text-4xl" title="MongoDB" />
-    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">MongoDB</span>
+  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
+    <FaDatabase className="text-gray-500 text-2xl" title="MongoDB" />
+    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">MongoDB</span>
   </div>
 
   {/* Jest */}
-  <div className="flex items-center border border-gray-500 dark:border-gray-300 rounded-lg p-3 w-30">
-    <FaServer className="text-yellow-600 text-4xl" title="Jest" />
-    <span className="ml-3 text-lg font-semibold text-gray-800 dark:text-gray-300">Jest</span>
+  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
+    <FaServer className="text-gray-500 text-2xl" title="Jest" />
+    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">Jest</span>
   </div>
 </motion.div>
-
 
 
         {/* Experience Stats */}
@@ -164,18 +172,18 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="absolute top-[550px] left-[600px] flex flex-wrap gap-20 text-gray-800 dark:text-gray-200"
+          className="absolute top-[500px] left-[600px] flex flex-wrap gap-40 text-gray-800 dark:text-gray-200"
         >
           <div className="text-7xl font-bold">
-            8<span className="text-lg">+</span>
+            1<span className="text-lg">+</span>
             <p className="text-sm text-gray-600">Years of Experience</p>
           </div>
           <div className="text-7xl font-bold">
-            18<span className="text-lg">k</span>
-            <p className="text-sm text-gray-600">Hours of Working</p>
+            4<span className="text-lg">+</span>
+            <p className="text-sm text-gray-600">Happy Customers</p>
           </div>
           <div className="text-7xl font-bold">
-            66<span className="text-lg">+</span>
+            10<span className="text-lg">+</span>
             <p className="text-sm text-gray-600">Projects Done</p>
           </div>
         </motion.div>

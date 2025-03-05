@@ -47,7 +47,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </div>
 
             {/* Sticky & Scrolling Navbar */}
-            <nav className={`navbar w-[320px] h-[330px] border-r dark:border-gray-700 
+            <nav className={`navbar w-[310px] h-[330px] border-r dark:border-gray-700 
                             bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
                             fixed left-[110px] ${isScrolled ? 'top-[20px]' : 'top-[130px]'} font-noto font-normal`}>
                 <div className="flex flex-col items-center py-6 px-4">
@@ -71,7 +71,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     {/* Spotify Playlist Embed */}
                     <div className="mt-10 flex justify-center">
                         <iframe 
-                            className="rounded-xl w-[320px] h-[352px]"  
+                            className="rounded-xl w-[310px] h-[352px]"  
                             src="https://open.spotify.com/embed/playlist/4NRH8GgGeAhKbeyi6qrOLk?utm_source=generator&theme=0" 
                             frameBorder="0"
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

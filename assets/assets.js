@@ -40,6 +40,8 @@ import hans_logo2 from './hans_logo2.png';
 import circle_s from './circle_s.png';
 import bg from './bg.png';
 import circle_s_white from './circle_s_white.png';
+import prof from './prof.png';
+
 
 
 export const assets = {
@@ -84,7 +86,8 @@ export const assets = {
     hans_logo2,
     circle_s,
     bg,
-    circle_s_white
+    circle_s_white,
+    prof
 };
 
 export const workData = [
