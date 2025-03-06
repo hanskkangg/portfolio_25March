@@ -69,12 +69,11 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* Social Icons & Dark Mode Toggle */}
       <div 
-        className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300 md:hidden sm:hidden
-                      ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex
-                      
-                                            
-                      `}
-      >
+  className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
+    ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden lg:flex`}
+>
+
+
         <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
           <FaGithub className="w-5 h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
         </a>

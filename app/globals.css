@@ -96,7 +96,7 @@ h1, h2, h3 {
 
 /* Gradient Background Effect */
 .bg-scroll-gradient {
-  background: linear-gradient(to bottom, #E5B9A3, #191919);
+  background: linear-gradient(to bottom, #E5B9A3, #E5B9A3);
   min-height: 100vh; /* Ensures full page effect */
 }
 /* Yellow Circle Effect for All Screens */

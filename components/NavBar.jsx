@@ -64,39 +64,36 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <div className="text-black text-6xl lg:text-8xl font-bold font-ovo tracking-wide text-left mt-5 ml-8 lg:mt-0 lg:ml-0 lg:fixed lg:top-10 lg:left-[110px] ">
             Hans <span className="stroke-text">Kang</span>  <span className="stroke-text text-8xl -ml-3">.</span>
         </div>
-
-
-{/* === Mobile Navigation (Hidden on Desktop) === */}
-<div className="sm:block md:block lg:hidden text-left mt-1 relative">
-    {/* Yellow Circle Effect for Mobile */}
-    <div className="yellow-circle sm:block slg:hidden"></div>
-
-    {/* Mobile Navigation Links */}
-   {/* Mobile Navigation Links */}
+        
+        {/* Mobile Navigation Links */}
 <div
-    className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-6 z-50 lg:hidden transition-opacity duration-300 text-xs
+    className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-3 z-50 lg:hidden transition-opacity duration-300 text-xs
     ${showNav ? "opacity-100" : "opacity-0 pointer-events-none"} text-center`}
 >
-    <a href="#about" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-        About
-    </a>
-    <a href="#skills" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-        Skills
-    </a>
-    <a href="#resume" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-        Resume
-    </a>
-    <a href="#projects" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-        Projects
-    </a>
-    <a href="#contact" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-        Contact
-    </a>
+    {['about', 'skills', 'resume', 'projects', 'contact'].map((section) => (
+        <div key={section} className="relative flex items-center">
+            {/* Spinning Dot */}
+            <span className={`w-3 h-3 rounded-full transition-all duration-300 mr-1
+                ${activeSection === section 
+                    ? 'border-2 border-dashed border-yellow-300 animate-spin-slow'  
+                    : 'w-2 h-2 opacity-70'}
+            `}></span>
+
+            {/* Text */}
+            <a href={`#${section}`}
+                className={`text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m
+                ${activeSection === section ? 'text-white' : ''}`} // Active text turns white
+            >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+        </div>
+    ))}
 </div>
 
 
+
                 {/* Spotify Player (Small Screens) */}
-                <div className="relative w-full flex justify-center mt-2 z-[100] pointer-events-none">
+                <div className="relative w-full flex justify-center mt-2 z-[100] pointer-events-none lg:hidden">
                     <iframe
                         id="spotify-embed"
                         className="relative rounded-lg w-[90%] h-[80px] z-[200] pointer-events-auto"
@@ -106,8 +103,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                         loading="lazy"
                     ></iframe>
                 </div>
-            </div>
-
+                
             <nav className="lg:hidden w-[90%] mx-auto mt-2  rounded-lg px-4 py-2 flex justify-center gap-8 bg-">
     <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
         <FaGithub className="w-6 h-6 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
@@ -140,7 +136,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                                     href={`#${section}`}
                                     className={`block w-full text-left ml-2 py-2 rounded-lg transition-colors 
                                     text-gray-500 hover:text-white tracking-wider
-                                    ${activeSection === section ? 't    ext-white' : ''}`}
+                                    ${activeSection === section ? 'text-white' : ''}`}
                                 >
                                     {section.toUpperCase()}
                                 </a>
