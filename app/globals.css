@@ -56,20 +56,28 @@ h1, h2, h3 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400; /* ✅ ExtraLight weight */
 }
-
+/* Default Stroke Text (For Large Screens) */
 .stroke-text {
   font-family: "Ovo", serif;
   color: transparent;
-  -webkit-text-stroke: 1px black; /* Reduce thickness */
+  -webkit-text-stroke: 1px black; /* Standard thickness */
   font-weight: normal;
-  letter-spacing: 0.3px; /* Small spacing fix */
+  letter-spacing: 0.3px;
 }
 
+.stroke-text_m {
+  font-family: "Ovo", serif;
+  color: transparent;
+  -webkit-text-stroke: 0.4px rgb(19, 19, 19); /* Standard thickness */
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
 
-
+/* Dark Mode Stroke Effect */
 .dark .stroke-text {
-  -webkit-text-stroke: 1.5px black; /* Dark mode */
+  -webkit-text-stroke: 1.5px black; /* Slightly thicker for dark mode */
 }
+
 
 @keyframes spin-slow {
   0% {
@@ -90,4 +98,34 @@ h1, h2, h3 {
 .bg-scroll-gradient {
   background: linear-gradient(to bottom, #E5B9A3, #191919);
   min-height: 100vh; /* Ensures full page effect */
+}
+/* Yellow Circle Effect for All Screens */
+.yellow-circle {
+  position: absolute;
+  width: 180px; /* Default size */
+  height: 180px;
+  background-color: rgba(255, 204, 0, 0.4); /* Soft yellow */
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1; /* Keep it behind text */
+}
+
+/* Positioning for Large Screens (Desktop) */
+@media (min-width: 1024px) {
+  .yellow-circle {
+    width: 220px; /* Bigger for desktop */
+    height: 220px;
+    top: 50px;
+    left: 30%;
+  }
+}
+
+/* Positioning for Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .yellow-circle {
+    width: 150px; /* Smaller for mobile */
+    height: 150px;
+    top: 10px;
+    left: 10%;
+  }
 }
