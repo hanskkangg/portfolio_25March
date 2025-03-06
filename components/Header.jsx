@@ -60,7 +60,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
                dark:bg-gray-900 dark:border-gray-700 shadow-lg rounded-xl 
                flex flex-col items-center gap-4 sm:gap-6
                
-               mt-[60%] sm:mt-[15%] md:mt-[10%] lg:mt-[10%] xl:mt-[10%] 2xl:mt-[10%] 
+               mt-[5%] sm:mt-[5%] md:mt-[5%] lg:mt-[10%] xl:mt-[10%] 2xl:mt-[10%] 
                
                lg:ml-[30%] xl:ml-[30%] 2xl:ml-[30%] md:mx-auto"
   >
@@ -69,7 +69,7 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* Social Icons & Dark Mode Toggle */}
       <div 
-        className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
+        className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300 md:hidden sm:hidden
                       ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden sm:flex
                       
                                             

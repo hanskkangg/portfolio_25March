@@ -64,32 +64,36 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <div className="text-black text-6xl lg:text-8xl font-bold font-ovo tracking-wide text-left mt-5 ml-8 lg:mt-0 lg:ml-0 lg:fixed lg:top-10 lg:left-[110px] ">
             Hans <span className="stroke-text">Kang</span>  <span className="stroke-text text-8xl -ml-3">.</span>
         </div>
+
+
 {/* === Mobile Navigation (Hidden on Desktop) === */}
 <div className="sm:block md:block lg:hidden text-left mt-1 relative">
     {/* Yellow Circle Effect for Mobile */}
-    <div className="yellow-circle sm:block lg:hidden"></div>
+    <div className="yellow-circle sm:block slg:hidden"></div>
 
     {/* Mobile Navigation Links */}
-    <div
-        className={`fixed top-5 right-12 flex gap-6 z-50 lg:hidden transition-opacity duration-300 text-xs
-        ${showNav ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-    >
-        <a href="#about" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-            About
-        </a>
-        <a href="#skills" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-            Skills
-        </a>
-        <a href="#resume" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-            Resume
-        </a>
-        <a href="#projects" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-            Projects
-        </a>
-        <a href="#contact" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
-            Contact
-        </a>
-    </div>
+   {/* Mobile Navigation Links */}
+<div
+    className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-6 z-50 lg:hidden transition-opacity duration-300 text-xs
+    ${showNav ? "opacity-100" : "opacity-0 pointer-events-none"} text-center`}
+>
+    <a href="#about" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
+        About
+    </a>
+    <a href="#skills" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
+        Skills
+    </a>
+    <a href="#resume" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
+        Resume
+    </a>
+    <a href="#projects" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
+        Projects
+    </a>
+    <a href="#contact" className="text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m">
+        Contact
+    </a>
+</div>
+
 
                 {/* Spotify Player (Small Screens) */}
                 <div className="relative w-full flex justify-center mt-2 z-[100] pointer-events-none">
