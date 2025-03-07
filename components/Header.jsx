@@ -1,28 +1,14 @@
-import { assets } from '@/assets/assets';
-import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import { assets } from "@/assets/assets";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaMoon, FaSun , FaReact, FaNodeJs, FaDatabase, FaServer} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDatabase, FaServer } from "react-icons/fa";
 
-const Header = ({ isDarkMode, setIsDarkMode }) => {
+const Header = () => {
   const messages = ["Hello There!", "I'm Hans Kang"];
-  
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [showIcons, setShowIcons] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setShowIcons(currentScrollPos < prevScrollPos || currentScrollPos < 50);
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
 
   useEffect(() => {
     const currentMessage = messages[currentMessageIndex];
@@ -43,207 +29,142 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
   }, [charIndex, currentMessageIndex]);
 
   return (
-  
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1 }}
-    id="header"
-    className="relative mx-auto 
-               w-full 
-               max-w-[350px] 
-               sm:max-w-[600px]
-               md:max-w-[800px] 
-               lg:max-w-[950px] 
-               p-6 sm:p-8 md:p-12 text-center min-h-[900px] sm:min-h-[600px] 
-               bg-[url('@/assets/about_bg.png')] bg-cover bg-center 
-               dark:bg-gray-900 dark:border-gray-700 shadow-lg rounded-xl 
-               flex flex-col items-center gap-4 sm:gap-6
-               
-               mt-[5%] sm:mt-[5%] md:mt-[5%] lg:mt-[10%] xl:mt-[10%] 2xl:mt-[10%] 
-               
-               lg:ml-[30%] xl:ml-[30%] 2xl:ml-[30%] md:mx-auto"
-  >
-  
-  
-      
-      {/* Social Icons & Dark Mode Toggle */}
-      <div 
-  className={`fixed top-1 right-[120px] flex items-center gap-4 z-50 transition-opacity duration-300
-    ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden lg:flex`}
+    <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+  id="header"
+  className="flex flex-col items-center justify-center min-h-screen w-full px-4 dark:bg-gray-900"
 >
+  {/* Border Box Container */}
+  <div className="
+    w-[95%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[65%] 
+    max-w-[1000px] 
+    h-[150vh] sm:h-[150vh] md:h-[150vh] lg:h-[80vh] xl:h-[80vh]
+    rounded-xl flex flex-col items-center justify-center 
+    shadow-xl bg-white dark:bg-gray-800 p-6 
+    relative z-40  /* Ensure it stays below navbar */
+    
+    pt-[5rem] sm:pt-[4rem] md:pt-[5rem] lg:pt-[5rem] xl:pt-[6rem] /* Adjust padding */
+    mt-[0rem] sm:mt-[0rem] md:mt-[0rem] lg:mt-[10rem] lg:ml-[28rem] xl:mt-[10rem] xl:ml-[22rem] 
+  ">
 
 
-        <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="w-5 h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
-        </a>
-        <a href="https://www.linkedin.com/in/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="w-5 h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
-        </a>
-        <a href="https://www.instagram.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="w-5 h-5 text-gray-800 dark:text-white hover:text-pink-500 transition-colors" />
-        </a>
-        <a href="https://www.facebook.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-          <FaFacebook className="w-5 h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
-        </a>
 
-        {/* Dark Mode Toggle */}
-        <div className="p-2 border-1 border-black rounded-md bg-gray-800 dark:bg-gray-700 ml-1">
-          <button onClick={() => setIsDarkMode(prev => !prev)} className="p-2 transition-colors h-[40px]">
-            <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Dark Mode" className='w-5 h-5' />
-          </button>
-        </div>
-      </div>
-
-     {/* Profile Image */}
+{/* Profile Image */}
 <motion.div
   initial={{ scale: 0 }}
   whileInView={{ scale: 1 }}
-  transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+  transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
   className="
-    border-4 border-white dark:border-gray-600 rounded-full w-56
-    md:absolute md:top-10 md:left-10  
-    md:w-40 lg:w-48 xl:w-64 xl:mt-5  
-    mx-auto mt-6 sm:mt-10 sm:w-12" 
+    absolute top-[2%] ml-[1%] transform -translate-x-1/2 xl:top-[10%] xl:left-[10%]
+    rounded-full overflow-hidden 
+    w-[60%] sm:w-[50%] md:w-[40%] lg:w-[35%] xl:w-[30%]
+    max-w-[220px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[350px]
+  "
 >
-  <Image src={assets.prof} alt="Profile" className="rounded-full w-full" />
+  <Image src={assets.prof} alt="Profile" className="rounded-full w-full h-auto" />
 </motion.div>
 
-      {/* About Me Title */}
-      <motion.h3
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-xs font-bold text-gray-900 dark:text-white  xl:mt-5 -ml-56"
-      >
-        // ABOUT ME
-      </motion.h3>
+{/* About Me */}
+<motion.h3
+  initial={{ y: -20, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="font-ovo 
+    text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm
+    font-bold text-gray-900 dark:text-white 
+    absolute /* Ensure positioning */
 
-         {/* title*/}
-         <motion.h3
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-5xl text-gray-900 dark:text-white  xl:mt-5 xl:ml-36 font-ovo"
-      >
-        Full Stack Developer
-      </motion.h3>
-{/* Typing Effect */}
+    /* Move Up for Mobile */
+    top-[20%] left-[10%] sm:top-[5%] md:top-[30%] lg:top-[25%] xl:top-[15%]
+
+    /* Move Left on Desktop */
+   sm:left-[30%] lg:left-[23%] xl:left-[45%] 
+
+   
+    /* Special Case for iPad Air (820px width) */
+    md:max-w-[820px] md:top-[310px]  md:left-[23%]
+  "
+>
+  // ABOUT ME
+</motion.h3>
+
+      {/* Title */}
+<motion.h3
+  initial={{ y: -20, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="font-Outfit
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 
+    text-gray-900 dark:text-white 
+    mt-3 sm:mt-3 md:mt-3 lg:mt-[-10px] xl:mt-[-20px]  /* Move UP for desktop */
+    lg:left-[20%] /* Move RIGHT for desktop */
+    absolute lg:absolute xl:absolute /* Ensure positioning */
+
+
+    /* Special Case for iPad Air (820px width) */
+    md:max-w-[820px] md:top-[330px]  md:left-[23%]
+    /* Move Up for Mobile */
+    top-[22%] left-[10%] sm:top-[30%] md:top-[25%] lg:top-[30%] xl:top-[30%]  
+
+    xl:top-[30%] xl:left-[45%]
+  "
+>
+  Full Stack Developer
+</motion.h3>
+
+
+  {/* Typing Effect */}
 <motion.div
   initial={{ opacity: 1, y: -10 }}
   animate={{ opacity: 2, y: 0 }}
   transition={{ duration: 0.8, ease: "easeInOut" }}
- 
   className="
-  flex items-center gap-2 px-4 py-1 rounded-3xl 
-  bg-black/20 dark:bg-black/90 backdrop-blur-2xl shadow-2xl
-  -mt-[75%] mr-[30%]
-  text-white dark:text-white 
+    absolute top-[15%] left-[20%] sm:top-[15%] md:top-[12%] lg:top-[10%] xl:top-[50%] xl:left-[10%]
+    transform -translate-x-1/2
+    px-4 py-2 text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm
+    bg-black/20 dark:bg-black/90 rounded-3xl backdrop-blur-2xl shadow-2xl 
+    text-white
 
-  /* Desktop (xl) - Position left */
-  xl:absolute xl:top-[20%] xl:-left-[4%]
-
-  /* Medium Screens (md) - Keep in flow */
-  md:relative md:mt-[%] md:ml-20 
-
-  /* Small Screens (sm) - Move to top */
-  sm:absolute sm:mt-[10%] sm:left-1/2 sm:-translate-x-1/2 sm:w-fit
-"
-
->
-
-  <span className="text-md font-montserrat font-normal">
-    {displayedText}
-  </span>
-  <span className="text-xl font-normal text-orange-500 animate-blink">_</span>
-</motion.div>
-
-      {/* Developer Tagline */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
-        className="text-lg font-lora text-gray-700 dark:text-gray-300 leading-relaxed
-        
-        
-    absolute top-[65%] -left-[30%]
-    xl:mt-[5px]   // ✅ Correct syntax for Tailwind
- ml-[30%]"
-      >
-        Based in Ottawa 🧑🏽‍💻 on a mission to make a difference, one line of <br /> code at a time! 💻 ✨
-      </motion.p>
-
-{/* Tech Stack Icons (Below Full Stack Developer Title) */}
-<motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ duration: 0.6, delay: 0.9 }}
-  className="
-    flex flex-wrap justify-center gap-4 mt-4  
-    md:justify-start md:ml-36 md:gap-6
-
-    xl:-mt-[200px] xl:left-[220px]
+    md:w-auto md:px-6 md:py-3 /* More padding on tablets */
+    lg:top-[18%] lg:px-8 lg:py-3 /* Higher on large screens */
     
-    "
+    /* Special tweak for iPad Air (820px width) */
+    md:max-w-[280px] md:top-[15%] md:left-[30%]
+  "
 >
-  {/* React */}
-  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
-    <FaReact className="text-gray-500 text-2xl" title="React" />
-    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">React</span>
-  </div>
-
-  {/* Node.js */}
-  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
-    <FaNodeJs className="text-gray-500 text-2xl" title="Node.js" />
-    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">Node.js</span>
-  </div>
-
-  {/* MongoDB */}
-  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
-    <FaDatabase className="text-gray-500 text-2xl" title="MongoDB" />
-    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">MongoDB</span>
-  </div>
-
-  {/* Jest */}
-  <div className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-2xl p-2 w-24">
-    <FaServer className="text-gray-500 text-2xl" title="Jest" />
-    <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">Jest</span>
-  </div>
+  {displayedText} <span className="text-orange-500 animate-blink">_</span>
 </motion.div>
 
 
-      {/* Experience Stats */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="
 
-    flex flex-wrap gap-2 text-gray-800 dark:text-gray-200
-    sm:absolute sm:top-[75%] sm:left-[10%] 
-    sm:w-[80%] sm:flex-col sm:items-center
-    md:relative md:top-auto md:left-auto 
-    xl:mt-[20%] xl:flex-row xl:gap-20
-  "
-      >
-        {/* Experience Block */}
-        <div className="relative flex items-center">
-          <span className="text-5xl font-bold stroke-text">1+</span>
-          <p className="text-xl text-gray-900 ml-3">Years of Experience</p>
-        </div>
 
-        {/* Happy Customers Block */}
-        <div className="relative flex items-center">
-          <span className="text-5xl font-bold stroke-text">4+</span>
-          <p className="text-xl text-gray-900 ml-3">Happy Customers</p>
-        </div>
-
-        {/* Projects Done Block */}
-        <div className="relative flex items-center">
-          <span className="text-5xl font-bold stroke-text">10+</span>
-          <p className="text-xl text-gray-900 ml-3">Projects Done</p>
-        </div>
-      </motion.div>
+        {/* Tech Stack Icons */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="
+            flex flex-wrap justify-center gap-4 mt-4  
+            md:justify-start md:ml-36 md:gap-6
+            absolute
+            top-[40%] sm:top-[38%] md:top-[42%] lg:top-[40%] xl:top-[38%]
+            left-[10%] sm:left-[30%] md:left-[35%] lg:left-[40%] xl:left-[28%]
+          "
+        >
+          {/* Icons */}
+          {[FaReact, FaNodeJs, FaDatabase, FaServer].map((Icon, index) => (
+            <div key={index} className="flex items-center border border-dashed border-gray-500 dark:border-gray-300 rounded-3xl p-2 w-24">
+              <Icon className="text-gray-500 text-2xl" />
+              <span className="ml-2 text-xs font-light text-gray-500 dark:text-gray-300">
+                {Icon.name.replace("Fa", "")}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+        
+      </div>
     </motion.div>
   );
 };

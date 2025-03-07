@@ -41,15 +41,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-   <body className="flex flex-col items-center justify-center min-h-screen bg-custom dark:bg-gray-900 dark:text-white">
-
-
+    <html lang="en" className="scroll-smooth overflow-x-hidden w-full">
+      <body className="flex flex-col items-center justify-center min-h-screen bg-custom dark:bg-gray-900 dark:text-white overflow-x-hidden">
         {/* Border Container with Proper Size */}
-        <div className="w-full min-h-screen dark:border-white  box-border">
+        <div className="w-full min-h-screen dark:border-white box-border">
           {children}
         </div>
-
       </body>
     </html>
   );

@@ -10,11 +10,14 @@ const Skills = () => {
   return (
     <div
     id="skills"
-    className="relative mx-auto mt-10 w-full 
-    max-w-[350px] 
+    className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-[70%] xl:w-[68%]
+  max-w-[1000px]
+
+    relative mx-auto mt-10
     sm:max-w-[600px]
     md:max-w-[800px] 
     lg:max-w-[950px] 
+    
     p-6 sm:p-8 md:p-12 text-center min-h-[400px] sm:min-h-[500px] 
     bg-[url('@/assets/about_bg.png')] bg-cover bg-center 
     dark:bg-gray-900 dark:border-gray-700 shadow-lg rounded-xl 
