@@ -80,7 +80,7 @@ const Header = () => {
     top-[20%] left-[10%] sm:top-[5%] md:top-[30%] lg:top-[25%] xl:top-[15%]
 
     /* Move Left on Desktop */
-   sm:left-[30%] lg:left-[23%] xl:left-[40%] 
+   sm:left-[30%] lg:left-[23%] xl:left-[40%] lg:left-[10%]
 
    
     /* Special Case for iPad Air (820px width) */
@@ -99,14 +99,15 @@ const Header = () => {
     text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
     text-gray-900 dark:text-white 
     mt-3 sm:mt-3 md:mt-3 lg:mt-[-10px] xl:mt-[-20px]  /* Move UP for desktop */
-    lg:left-[20%] /* Move RIGHT for desktop */
+    lg:left-[10%] /* Move RIGHT for desktop */
     absolute lg:absolute xl:absolute /* Ensure positioning */
 
 
     /* Special Case for iPad Air (820px width) */
     md:max-w-[820px] md:top-[330px]  md:left-[23%]
     /* Move Up for Mobile */
-    top-[22%] left-[10%] sm:top-[30%] md:top-[25%] lg:top-[30%] xl:top-[30%]  
+    top-[22%] left-[10%] sm:top-[30%] md:top-[25%] lg:top-[30%] xl:top-[30%] 
+    
 
     xl:top-[25%] xl:left-[40%]
   "
@@ -147,7 +148,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="
             grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 
-            justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12  mt-4 text-center items-center
+            justify-center gap-4 sm:gap-6 md:gap-2 lg:gap-10 xl:gap-12  mt-4 text-center items-center
             md:justify-start md:ml-36 
             absolute
             
@@ -155,7 +156,7 @@ const Header = () => {
             right-[20%] sm:left-[30%] md:left-[26%] lg:left-[31%] xl:left-[48%]
 
     left-1/2 transform -translate-x-1/2
-    w-[60%] sm:w-[60%] md:w-[50%] lg:w-[65%] xl:w-[40%]
+    w-[60%] sm:w-[60%] md:w-[40%] lg:w-[65%] xl:w-[40%]
 
      fold1:top-[20%] fold:left-1/2 fold:transform fold:-translate-x-1/2 fold:w-[80%]
           "
@@ -171,6 +172,29 @@ const Header = () => {
           ))}
         </motion.div>
         
+{/* Tagline Below Tech Stack */}
+<motion.p
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.7 }}
+  className="
+    text-lg font-lora text-gray-800 dark:text-gray-300 leading-relaxed text-left
+    absolute w-[85%] left-1/2 -translate-x-1/2 top-[39%]
+
+    /* Large Screens (XL & LG) */
+    xl:top-[50%] xl:left-[68%] xl:w-[55%] 
+    lg:top-[44%] lg:w-[80%]
+
+    /* Medium Screens (MD) */
+    md:top-[33%] md:w-[90%]
+
+    /* Small Screens (SM) */
+    sm:top-[60%] sm:w-[90%]
+  "
+>
+  Based in Ottawa 🧑🏽‍💻 on a mission to make a difference, one line of code at a time! 💻 ✨
+</motion.p>
+
       </div>
     </motion.div>
   );
