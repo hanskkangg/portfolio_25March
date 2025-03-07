@@ -64,7 +64,13 @@ h1, h2, h3 {
   font-weight: normal;
   letter-spacing: 0.3px;
 }
-
+.stroke-text_s {
+  font-family: "Lora", "serif";
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(187, 187, 187); /* Standard thickness */
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
 .stroke-text_m {
   font-family: "Ovo", serif;
   color: transparent;
