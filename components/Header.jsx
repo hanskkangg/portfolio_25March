@@ -57,7 +57,7 @@ const Header = () => {
   whileInView={{ scale: 1 }}
   transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
   className="
-    absolute top-[2%] ml-[1%] transform -translate-x-1/2 xl:top-[10%] xl:left-[10%]
+    absolute top-[2%] ml-[1%] transform -translate-x-1/2 xl:top-[10%] xl:left-[5%]
     rounded-full overflow-hidden 
     w-[60%] sm:w-[50%] md:w-[40%] lg:w-[35%] xl:w-[30%]
     max-w-[220px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[350px]
@@ -72,7 +72,7 @@ const Header = () => {
   whileInView={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.6, delay: 0.3 }}
   className="font-ovo 
-    text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm
+    text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm
     font-bold text-gray-900 dark:text-white 
     absolute /* Ensure positioning */
 
@@ -80,7 +80,7 @@ const Header = () => {
     top-[20%] left-[10%] sm:top-[5%] md:top-[30%] lg:top-[25%] xl:top-[15%]
 
     /* Move Left on Desktop */
-   sm:left-[30%] lg:left-[23%] xl:left-[45%] 
+   sm:left-[30%] lg:left-[23%] xl:left-[40%] 
 
    
     /* Special Case for iPad Air (820px width) */
@@ -95,8 +95,8 @@ const Header = () => {
   initial={{ y: -20, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.6, delay: 0.3 }}
-  className="font-Outfit
-    text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 
+  className="font-Ovo
+    text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
     text-gray-900 dark:text-white 
     mt-3 sm:mt-3 md:mt-3 lg:mt-[-10px] xl:mt-[-20px]  /* Move UP for desktop */
     lg:left-[20%] /* Move RIGHT for desktop */
@@ -108,7 +108,7 @@ const Header = () => {
     /* Move Up for Mobile */
     top-[22%] left-[10%] sm:top-[30%] md:top-[25%] lg:top-[30%] xl:top-[30%]  
 
-    xl:top-[30%] xl:left-[45%]
+    xl:top-[25%] xl:left-[40%]
   "
 >
   Full Stack Developer
@@ -146,11 +146,18 @@ const Header = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.9 }}
           className="
-            flex flex-wrap justify-center gap-4 mt-4  
-            md:justify-start md:ml-36 md:gap-6
+            grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 
+            justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12  mt-4 text-center items-center
+            md:justify-start md:ml-36 
             absolute
-            top-[40%] sm:top-[38%] md:top-[42%] lg:top-[40%] xl:top-[38%]
-            left-[10%] sm:left-[30%] md:left-[35%] lg:left-[40%] xl:left-[28%]
+            
+            top-[27%] sm:top-[15%] md:top-[24%] lg:top-[35%] xl:top-[38%]
+            right-[20%] sm:left-[30%] md:left-[26%] lg:left-[31%] xl:left-[48%]
+
+    left-1/2 transform -translate-x-1/2
+    w-[60%] sm:w-[60%] md:w-[50%] lg:w-[65%] xl:w-[40%]
+
+     fold1:top-[20%] fold:left-1/2 fold:transform fold:-translate-x-1/2 fold:w-[80%]
           "
         >
           {/* Icons */}
