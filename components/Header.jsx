@@ -100,10 +100,10 @@ const Header = () => {
             initial={{ opacity: 1, y: -10 }}
             animate={{ opacity: 2, y: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="
+            className=" mb-[10%] 
               absolute font-montserrat bottom-0 left-0 translate-x-[-10%] translate-y-[40%]
-              text-xs sm:text-sm font-lora bg-black/20 dark:bg-black/90 text-white 
-              px-2 py-2 rounded-3xl xl:ml-[10%]
+              text-xs sm:text-sm  bg-black/20 dark:bg-black/90 text-white 
+              px-2 py-2 rounded-3xl xl:ml-[5%] xl:mb-[15%] 
             "
           >
             {displayedText} <span className="text-orange-500 animate-blink">_</span>

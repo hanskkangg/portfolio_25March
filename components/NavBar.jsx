@@ -61,7 +61,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         {["about", "skills", "resume", "projects", "contact"].map((section) => (
-          <div key={section} className="relative flex items-center">
+          <div key={section} className="relative flex items-center stroke-text_m">
             {/* Spinning Dot */}
             <span
               className={`w-3 h-3 rounded-full transition-all duration-300 mr-1 ${
@@ -74,7 +74,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             {/* Navigation Links */}
             <a
               href={`#${section}`}
-              className={`text-gray-100 dark:text-white hover:text-blue-500 transition-colors 
+              className={`text-gray-100 dark:text-white hover:text-blue-500 transition-colors stroke-text_m
               ${activeSection === section ? "text-white" : ""}`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
