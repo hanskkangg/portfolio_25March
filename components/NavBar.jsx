@@ -50,9 +50,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       {/* === Name (Visible on All Screens) === */}
-      <div className="text-black text-6xl lg:text-8xl font-bold font-ovo tracking-wide mt-5 ml-8 lg:fixed lg:top-10 lg:left-[110px]">
+      <div className="text-black text-6xl lg:text-8xl font-bold font-ovo tracking-wide mt-5 ml-8  lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 ">
         Hans <span className="stroke-text">Kang</span>
-        <span className="stroke-text text-8xl -ml-3">.</span>
+        <span className="stroke-text text-8xl ml-1">.</span>
       </div>
 
       {/* === Mobile Navigation Links === */}
