@@ -117,7 +117,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className=" xl:block hidden
            xl:font-bold text-xs sm:text-sm md:text-base mt-4 text-gray-900 dark:text-gray-300 
-            xl:absolute xl:top-16 xl:left-[38%] xl:text-left xs:text-xs"
+            xl:absolute xl:top-20 xl:left-[38%] xl:text-left xs:text-xs"
         >
           // ABOUT ME
         </motion.p>
@@ -129,7 +129,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="
             stroke-text_m text-xs sm:text-7xl md:text-base mt-4 xl:mt-[-26] text-gray-900 dark:text-gray-300 
-            xl:absolute xl:top-20 xl:left-[38%] xl:text-left xl:text-5xl"
+            xl:absolute xl:top-24 xl:left-[38%] xl:text-left xl:text-5xl"
         >
           ABOUT ME
         </motion.p>
@@ -139,8 +139,8 @@ const Header = () => {
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center font-ovo text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl 
-            font-bold text-gray-900 dark:text-white mt-5 xl:absolute xl:top-32 xl:left-[38%]"
+          className="font-Outfit text-center font-ovo text-2xl font-semibold sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl 
+             text-gray-900 dark:text-white mt-5 xl:absolute xl:top-32 xl:left-[38%] xl:font-normal"
         >
           Full Stack Developer
         </motion.h3>
@@ -174,7 +174,7 @@ const Header = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-lg
+          className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl  xl:text-lg
             text-gray-500 dark:text-gray-300 leading-relaxed mt-8
              xl:absolute xl:top-[50%] xl:left-[35%] xl:w-[65%] xl:text-left"
         >
