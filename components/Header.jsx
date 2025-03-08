@@ -39,7 +39,7 @@ const Header = () => {
   {/* Border Box Container */}
   <div className="
     w-[100%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[65%] 
-   max-w-[1000px] min-h-[105vh] sm:min-h-[140vh] md:min-h-[90vh] lg:min-h-[120vh] xl:min-h-[70vh]
+   max-w-[1000px] min-h-[125vh] sm:min-h-[140vh] md:min-h-[90vh] lg:min-h-[120vh] xl:min-h-[70vh]
 
     rounded-xl flex flex-col items-center justify-center 
     shadow-xl bg-white dark:bg-gray-800 p-6 
@@ -73,12 +73,12 @@ const Header = () => {
   whileInView={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.6, delay: 0.3 }}
   className="font-sans stroke-text_s
-    text-2xl sm:text-sm md:text-sm lg:text-sm xl:text-4xl
+    text-2xl sm:text-sm md:text-2xl lg:text-sm xl:text-4xl
     font-bold text-gray-300 dark:text-white 
     absolute /* Ensure positioning */
 
     /* Move Up for Mobile */
-    top-[24%] left-[10%] sm:top-[5%] md:top-[30%] lg:top-[25%] xl:top-[12%]
+    top-[24%] left-[10%] sm:top-[5%] md:top-[23%] lg:top-[25%] xl:top-[12%]
 
     /* Move Left on Desktop */
    sm:left-[30%] lg:left-[23%] xl:left-[40%] lg:left-[10%]
@@ -103,7 +103,7 @@ const Header = () => {
     absolute /* Ensure positioning */
 
     /* Move Up for Mobile */
-    top-[26%] left-[10%] sm:top-[5%] md:top-[30%] lg:top-[25%] xl:top-[15%]
+    top-[26%] left-[10%] sm:top-[5%] md:top-[22%] lg:top-[25%] xl:top-[15%]
 
     /* Move Left on Desktop */
    sm:left-[30%] lg:left-[23%] xl:left-[40%] lg:left-[10%]
@@ -130,9 +130,9 @@ const Header = () => {
 
 
     /* Special Case for iPad Air (820px width) */
-    md:max-w-[820px] md:top-[330px]  md:left-[23%]
+    md:max-w-[820px]  md:left-[27%]
     /* Move Up for Mobile */
-    top-[27%] left-[10%] sm:top-[30%] md:top-[25%] lg:top-[30%] xl:top-[30%] 
+    top-[27%] left-[10%] sm:top-[30%] md:top-[33%] lg:top-[30%] xl:top-[30%] 
     
 
     xl:top-[25%] xl:left-[40%]
@@ -178,8 +178,9 @@ const Header = () => {
             md:justify-start md:ml-36 
             absolute
             
-            top-[32%] sm:top-[15%] md:top-[24%] lg:top-[35%] xl:top-[38%]
-            right-[20%] sm:left-[30%] md:left-[26%] lg:left-[31%] xl:left-[48%]
+            top-[32%] sm:top-[15%] md:top-[38%] lg:top-[35%] xl:top-[38%]
+            right-[20%] sm:left-[30%] md:left-[30%] lg:left-[31%] xl:left-[48%]
+           
 
     left-1/2 transform -translate-x-1/2
     w-[60%] sm:w-[60%] md:w-[40%] lg:w-[65%] xl:w-[40%]
@@ -212,7 +213,7 @@ const Header = () => {
     lg:top-[44%] lg:w-[80%]
 
     /* Medium Screens (MD) */
-    md:top-[33%] md:w-[90%]
+    md:top-[52%] md:w-[90%]
 
     /* Small Screens (SM) */
     sm:top-[60%] sm:w-[90%]
@@ -230,15 +231,15 @@ const Header = () => {
     flex flex-wrap justify-center items-center gap-6
     text-gray-800 dark:text-gray-200 
 
-    w-full px-2 md:px-12 top-[58%]
+    w-full px-2 md:px-12 top-[60%]
     
     sm:flex-col sm:gap-4 sm:text-center 
 
     /* Adjust for medium screens */
-    md:flex-row md:gap-6 md:justify-center md:top-[40%]
+    md:flex-row md:gap-6 md:justify-center md:top-[60%]
 
     /* Align in one row for large screens */
-    lg:flex lg:gap-12 lg:top-[55%]
+    lg:flex lg:gap-12 lg:top-[95%]
 
     /* No absolute for xl to prevent disappearing */
     xl:w-[200%] xl:left-[48%] xl:-translate-x-1/2 xl:top-[72%]
