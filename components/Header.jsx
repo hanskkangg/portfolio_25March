@@ -2,13 +2,14 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaDatabase, FaServer } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaMoon, FaSun , FaReact, FaNodeJs, FaDatabase, FaServer} from 'react-icons/fa';
 
 const Header = () => {
   const messages = ["Hello There!", "I'm Hans Kang"];
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
+  const [showIcons, setShowIcons] = useState(true);
 
   useEffect(() => {
     const currentMessage = messages[currentMessageIndex];
@@ -29,6 +30,8 @@ const Header = () => {
   }, [charIndex, currentMessageIndex]);
 
   return (
+
+    
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -36,6 +39,36 @@ const Header = () => {
       id="header"
       className="flex flex-col items-center justify-center min-h-screen w-full px-4 dark:bg-gray-900"
     >
+
+      
+
+{/* Social Icons & Dark Mode Toggle */}
+<div 
+  className={`fixed top-6 right-12 flex items-center gap-6 z-50 transition-opacity duration-300
+    ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden lg:flex
+    xl:top-8 xl:right-20`}
+>
+  {/* GitHub */}
+  <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
+    <FaGithub className="w-6 h-6 xl:w-7 xl:h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+  </a>
+
+  {/* LinkedIn */}
+  <a href="https://www.linkedin.com/in/hanskkangg" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin className="w-6 h-6 xl:w-7 xl:h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+  </a>
+
+  {/* Instagram */}
+  <a href="https://www.instagram.com/hanskkangg" target="_blank" rel="noopener noreferrer">
+    <FaInstagram className="w-6 h-6 xl:w-7 xl:h-7 text-gray-800 dark:text-white hover:text-pink-500 transition-colors" />
+  </a>
+
+  {/* Facebook */}
+  <a href="https://www.facebook.com/hanskkangg" target="_blank" rel="noopener noreferrer">
+    <FaFacebook className="w-6 h-6 xl:w-7 xl:h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
+  </a>
+
+</div>
       {/* Border Box Container */}
       <div className="
         w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
@@ -48,6 +81,7 @@ const Header = () => {
   lg:translate-x-6 lg:translate-y-6
   xl:translate-x-48 xl:translate-y-12"
       >
+
 
         {/* Profile Image & Typing Effect Wrapper */}
         <div className="relative flex justify-center items-center w-[75%] sm:w-[65%] md:w-[50%] lg:w-[40%] xl:w-[28%] xl:absolute xl:top-14 xl:left-12">
@@ -187,7 +221,11 @@ const Header = () => {
 </motion.div>
 
       </div>
+
+      
     </motion.div>
+
+    
   );
 };
 
