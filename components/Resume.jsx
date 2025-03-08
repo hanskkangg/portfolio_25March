@@ -47,105 +47,116 @@ const experiences = [
 
 const Resume = () => {
   return (
-<motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ duration: 1 }}
-  id="resume"
-  className="relative mx-auto mt-10 w-full 
-  max-w-[350px] 
-  sm:max-w-[600px]
-  md:max-w-[800px] 
-  lg:max-w-[950px] 
-  p-6 sm:p-8 md:p-12 text-center min-h-[400px] sm:min-h-[500px] 
-  bg-[url('@/assets/about_bg.png')] bg-cover bg-center 
-  dark:bg-gray-900 dark:border-gray-700 shadow-lg rounded-xl 
-  flex flex-col items-center gap-4 sm:gap-6
-  
-  lg:ml-[30%] xl:ml-[30%] 2xl:ml-[30%] md:mx-auto"
->
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="resume"
+      className="
+        w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] max-w-[1000px]
+        min-h-[400px] sm:min-h-[500px] 
+        relative mx-auto mt-10 
+        p-6 sm:p-8 md:p-12 
+        text-center 
+        bg-[url('@/assets/about_bg.png')] bg-cover bg-center 
+        dark:bg-gray-900 dark:border-gray-700 
+        shadow-lg rounded-xl 
+        flex flex-col items-center gap-6 sm:gap-8 
 
-
-
-  {/* Responsive Resume Header */}
-  <motion.h2
-    initial={{ y: -20, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ delay: 0.3, duration: 0.5 }}
-    className="absolute top-[3%] left-[5%] sm:top-[4%] md:top-[3%] lg:top-[2%] text-sm font-bold text-black font-ovo"
-  >
-    // Resume
-  </motion.h2>
-
-  {/* EDUCATION SECTION */}
-  <motion.h2 className="text-3xl font-bold text-gray-900 dark:text-white font-ovo">
-    🎓 EDUCATION
-  </motion.h2>
-
-  <div className="relative w-full flex flex-col gap-6 border-l-2 border-dashed border-gray-500 pl-8">
-    {education.map((edu, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        className="flex flex-col w-full mb-8 relative"
+        /* Matching Header's right & bottom shift */
+        lg:translate-x-8 lg:translate-y-6
+        xl:translate-x-48 xl:translate-y-40
+      "
+    >
+      {/* Resume Header */}
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="absolute top-[3%] left-[5%] sm:top-[4%] md:top-[3%] lg:top-[2%] 
+          text-sm font-bold text-black font-ovo"
       >
-        {/* Year Positioning (Responsive) */}
-        <div className="absolute -left-[10%] sm:-left-[12%] md:-left-[8%] border border-dashed border-gray-500 px-4 py-1 rounded-md bg-white text-gray-800 text-sm font-bold">
-          {edu.year}
-        </div>
+        // Resume
+      </motion.h2>
 
-        {/* Education Content */}
-        <div className="border border-gray-400 dark:border-gray-600 p-6 rounded-lg shadow-md w-full bg-white dark:bg-gray-800">
-          <p className="text-lg font-bold text-black">{edu.title}</p>
-          <p className="text-gray-800 dark:text-white">{edu.institution}</p>
-          <p className="text-gray-600">{edu.gpa}</p>
-          <ul className="list-disc text-gray-600 dark:text-gray-300 mt-3 pl-5">
-            {edu.awards.map((award, i) => (
-              <li key={i} className="text-sm">{award}</li>
-            ))}
-          </ul>
-        </div>
-      </motion.div>
-    ))}
-  </div>
+      {/* EDUCATION SECTION */}
+      <motion.h2 className="text-3xl font-bold text-gray-900 dark:text-white font-ovo">
+        🎓 EDUCATION
+      </motion.h2>
 
-  {/* PROFESSIONAL EXPERIENCE SECTION */}
-  <motion.h2 className="text-3xl font-bold text-gray-900 dark:text-white font-ovo mt-12">
-    💼 PROFESSIONAL EXPERIENCE
-  </motion.h2>
+      <div className="relative w-full flex flex-col gap-6 border-l-2 border-dashed border-gray-500 pl-8">
+        {education.map((edu, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            className="flex flex-col w-full mb-8 relative"
+          >
+            {/* Year Positioning (Responsive) */}
+            <div className="absolute -left-[12%] sm:-left-[10%] md:-left-[8%] 
+              border border-dashed border-gray-500 px-4 py-1 rounded-md bg-white 
+              text-gray-800 text-sm font-bold"
+            >
+              {edu.year}
+            </div>
 
-  <div className="relative w-full flex flex-col gap-6 border-l-2 border-dashed border-gray-500 pl-8">
-    {experiences.map((exp, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        className="flex flex-col w-full mb-8 relative"
-      >
-        {/* Year Positioning (Responsive) */}
-        <div className="absolute -left-[10%] sm:-left-[12%] md:-left-[8%] border border-dashed border-gray-500 px-4 py-1 rounded-md bg-white text-gray-800 text-sm font-bold">
-          {exp.year}
-        </div>
+            {/* Education Content */}
+            <div className="border border-gray-400 dark:border-gray-600 p-6 rounded-lg shadow-md 
+              w-full bg-white dark:bg-gray-800"
+            >
+              <p className="text-lg font-bold text-black">{edu.title}</p>
+              <p className="text-gray-800 dark:text-white">{edu.institution}</p>
+              <p className="text-gray-600">{edu.gpa}</p>
+              <ul className="list-disc text-gray-600 dark:text-gray-300 mt-3 pl-5">
+                {edu.awards.map((award, i) => (
+                  <li key={i} className="text-sm">{award}</li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-        {/* Work Experience Content */}
-        <div className="border border-gray-400 dark:border-gray-600 p-6 rounded-lg shadow-md w-full bg-white dark:bg-gray-800">
-          <p className="text-lg font-bold text-black">{exp.title}</p>
-          <p className="text-gray-800 dark:text-white">{exp.company} | {exp.type}</p>
-          <p className="text-gray-500">{exp.location}</p>
-          <ul className="list-disc text-gray-600 dark:text-gray-300 mt-3 pl-5">
-            {exp.description.map((point, i) => (
-              <li key={i} className="text-sm">{point}</li>
-            ))}
-          </ul>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</motion.div>
+      {/* PROFESSIONAL EXPERIENCE SECTION */}
+      <motion.h2 className="text-3xl font-bold text-gray-900 dark:text-white font-ovo mt-12">
+        💼 PROFESSIONAL EXPERIENCE
+      </motion.h2>
 
+      <div className="relative w-full flex flex-col gap-6 border-l-2 border-dashed border-gray-500 pl-8">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            className="flex flex-col w-full mb-8 relative"
+          >
+            {/* Year Positioning (Responsive) */}
+            <div className="absolute -left-[12%] sm:-left-[10%] md:-left-[8%] 
+              border border-dashed border-gray-500 px-4 py-1 rounded-md bg-white 
+              text-gray-800 text-sm font-bold"
+            >
+              {exp.year}
+            </div>
+
+            {/* Work Experience Content */}
+            <div className="border border-gray-400 dark:border-gray-600 p-6 rounded-lg shadow-md 
+              w-full bg-white dark:bg-gray-800"
+            >
+              <p className="text-lg font-bold text-black">{exp.title}</p>
+              <p className="text-gray-800 dark:text-white">{exp.company} | {exp.type}</p>
+              <p className="text-gray-500">{exp.location}</p>
+              <ul className="list-disc text-gray-600 dark:text-gray-300 mt-3 pl-5">
+                {exp.description.map((point, i) => (
+                  <li key={i} className="text-sm">{point}</li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
   );
 };
 

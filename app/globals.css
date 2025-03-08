@@ -135,3 +135,65 @@ h1, h2, h3 {
     left: 10%;
   }
 }
+
+
+/* --- iPad Pro 12.9" (1024x1366) Specific Styles --- */
+@media screen and (width: 1024px) and (height: 1366px) {
+  .ipad-pro-nav {
+    display: flex !important; /* Show mobile-style navbar */
+    justify-content: center;
+  }
+
+  .desktop-nav {
+    display: none !important; /* Hide desktop navbar */
+  }
+
+  .ipad-pro-header {
+    max-width: 90% !important; /* Reduce width for better fit */
+    min-height: 120vh !important; /* Adjust height */
+    padding-top: 3rem !important; /* Adjust padding */
+  }
+
+  .ipad-pro-text {
+    font-size: 1.5rem !important; /* Adjust text size */
+  }
+
+  .ipad-pro-profile {
+    width: 250px !important; /* Resize profile image */
+    max-width: 250px !important;
+  }
+
+  .ipad-pro-icons {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+/* Mobile (iPhone SE) */
+@media (max-width: 375px) {
+  .text-lg { font-size: 1rem; }
+  .text-xl { font-size: 1.2rem; }
+}
+
+/* Tablet (iPad, iPad Pro) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ipad-pro-header {
+    max-width: 80%;
+    min-height: 90vh;
+  }
+
+  .ipad-pro-profile {
+    width: 40%;
+  }
+
+  .ipad-pro-text {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop Screens */
+@media (min-width: 1280px) {
+  .text-lg { font-size: 1.5rem; }
+  .text-xl { font-size: 2rem; }
+}
+}
+

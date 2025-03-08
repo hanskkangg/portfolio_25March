@@ -45,7 +45,13 @@ export default {
         'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
       },
       screens: {
-        'fold1': {'max': '320px'}
+        xs: "320px", // For small phones
+        sm: "480px", // Mobile
+        md: "768px", // Tablet
+        lg: "1024px", // Laptops
+        xl: "1280px", // Desktop
+        "2xl": "1536px", // Large screens
+        "ipad-pro": { raw: "(width: 1024px) and (height: 1366px)" }, // iPad Pro
       },
     },
   },
