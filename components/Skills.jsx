@@ -17,7 +17,7 @@ const Skills = () => {
        w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
         max-w-[1000px]
         min-h-[400px] sm:min-h-[500px] 
-        relative mx-auto mt-10
+        relative mx-auto mt-10 xl:mt-1
         p-6 sm:p-8 md:p-12 
         text-center 
         bg-white bg-cover bg-center 
