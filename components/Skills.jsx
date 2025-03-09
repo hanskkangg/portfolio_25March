@@ -66,7 +66,7 @@ const Skills = () => {
 
           <SkillItem icon={<SiTailwindcss className="text-cyan-500" />} name="Tailwind CSS"className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40]" />
 
-          <SkillItem icon={<FaJs className="text-yellow-500" />} name="Java Script" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40]" />
+          <SkillItem icon={<FaJs className="text-yellow-500" />} name="JavaScript" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40]" />
 
 
 
@@ -133,7 +133,7 @@ const Category = ({ number, title, children }) => (
       <span className="text-4xl sm:text-6xl md:text-7xl font-bold stroke-text xl:mr-1 mr-2 xl:text-5xl">
         {number}
       </span>
-      <h4 className="font-mono mt-1 text-4xl xl:text-2xl md:text-xl xl:font-normal xl:ml-2 xl:mt-3 text-gray-900 dark:text-white ">
+      <h4 className="font-mono mt-1 text-2xl xl:text-2xl md:text-xl xl:font-normal xl:ml-2 xl:mt-3 text-gray-900 dark:text-white ">
         {title}
       </h4>
     </div>
