@@ -17,7 +17,7 @@ const Skills = () => {
        w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
         max-w-[1000px]
         min-h-[400px] sm:min-h-[500px] 
-        relative mx-auto mt-10 
+        relative mx-auto mt-1
         p-6 sm:p-8 md:p-12 
         text-center 
         bg-white bg-cover bg-center 
@@ -27,7 +27,10 @@ const Skills = () => {
 
         /* Matching Header's right & bottom shift */
         lg:translate-x-8 lg:translate-y-6
-        xl:translate-x-48 xl:translate-y-40
+        xl:translate-x-48 xl:translate-y-2
+
+
+        xl:flex xl:flex-col xl:items-left xl:justify-left
       "
     >
       {/* Title & Subtitle */}
@@ -37,13 +40,12 @@ const Skills = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="text-center"
       >
-        <h3 className="hidden xl:block text-sm md:text-lg font-bold font-ovo text-gray-900 dark:text-white">
+        <p className="hidden xl:block text-sm md:text-lg xl:text-xs xl:font-bold font-bold font-ovo text-gray-900 dark:text-white
+        xl:mt-[11%] xl:ml-[-175%] xl:font-sans">
           // SKILLS
-        </h3>
-
-        <p className=" stroke-text_m text-xs md:text-xs text-gray-700 dark:text-gray-300 mt-3 font-ovo">
-          SKILLS
         </p>
+
+        
         <p className="text-2xl font-bold md:text-5xl text-gray-700 dark:text-gray-300 mt-3 font-ovo">
           Core Competencies
         </p>
@@ -51,51 +53,66 @@ const Skills = () => {
           Code, design, deploy—engineering excellence at every step
         </p>
       </motion.div>
+      <p className=" stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[74%]">
+          SKILLS
+        </p>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full xl:flex xl:flex-col xl:gap-2 mt-4 xl:ml-2">
         <Category number="01" title="Frontend">
-          <SkillItem icon={<FaHtml5 className="text-orange-600" />} name="HTML" />
-          <SkillItem icon={<FaCss3Alt className="text-blue-500" />} name="CSS" />
-          <SkillItem icon={<SiTailwindcss className="text-cyan-500" />} name="Tailwind CSS" />
-          <SkillItem icon={<FaJs className="text-yellow-500" />} name="JavaScript" />
-          <SkillItem icon={<FaReact className="text-blue-400" />} name="React" />
-          <SkillItem icon={<SiNextdotjs className="text-black dark:text-white" />} name="Next.js" />
-          <SkillItem icon={<SiJquery className="text-blue-600" />} name="jQuery" />
+          <SkillItem icon={<FaHtml5 className="text-orange-600" />} name="HTML" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40]"/>
+
+          <SkillItem icon={<FaCss3Alt className="text-blue-500" />} name="CSS" className="xl:ml-[-50] flex justify-center items-center  xl:w-[95] xl:h-[40]"/>
+
+          <SkillItem icon={<SiTailwindcss className="text-cyan-500" />} name="Tailwind CSS"className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40]" />
+
+          <SkillItem icon={<FaJs className="text-yellow-500" />} name="Java Script" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40]" />
+
+
+
+          <SkillItem icon={<FaReact className="text-blue-400" />} name="React" className="xl:ml-[-50] flex justify-center items-center  xl:w-[95] xl:h-[40] xl:mt-[-24]"/>
+
+          <SkillItem icon={<SiNextdotjs className="text-black dark:text-white" />} name="Next.js" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[-24]"/>
+
+          <SkillItem icon={<SiJquery className="text-blue-600" />} name="jQuery" className="xl:ml-[-50] flex justify-center items-center  xl:w-[95] xl:h-[40] xl:mt-[-24] xl:mb-[10]"/>
+
         </Category>
 
         <Category number="02" title="Backend">
-          <SkillItem icon={<FaPhp className="text-indigo-600" />} name="PHP" />
-          <SkillItem icon={<FaNodeJs className="text-green-500" />} name="Node.js" />
-          <SkillItem icon={<SiExpress className="text-gray-500" />} name="Express.js" />
-          <SkillItem icon={<FaJava className="text-red-600" />} name="Java" />
+          <SkillItem icon={<FaPhp className="text-indigo-600" />} name="PHP"className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40]  xl:mt-[10] xl:mb-[10] "  />
+
+          <SkillItem icon={<FaNodeJs className="text-green-500" />} name="Node.js"className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]"  />
+          <SkillItem icon={<SiExpress className="text-gray-500" />} name="Express.js"className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]"  />
+          <SkillItem icon={<FaJava className="text-red-600" />} name="Java" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]"  />
         </Category>
 
         <Category number="03" title="Database">
-          <SkillItem icon={<SiMysql className="text-blue-700" />} name="MySQL" />
-          <SkillItem icon={<FaDatabase className="text-orange-500" />} name="Oracle" />
-          <SkillItem icon={<SiMongodb className="text-green-500" />} name="MongoDB" />
-          <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" />
-          <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" />
+          <SkillItem icon={<SiMysql className="text-blue-700" />} name="MySQL" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]"  />
+          <SkillItem icon={<FaDatabase className="text-orange-500" />} name="Oracle"className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]"  />
+          <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB"className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]"  /> 
+          <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]" />
+          <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-50] flex justify-center items-center  xl:w-[95] xl:h-[40] xl:mt-[-24] xl:mb-[10]" />
         </Category>
 
         <Category number="04" title="Tools">
-          <SkillItem icon={<FaGitAlt className="text-red-500" />} name="Git" />
-          <SkillItem icon={<SiGithubactions className="text-gray-700 dark:text-white" />} name="GitHub Actions" />
-          <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" />
-          <SkillItem icon={<FaTerminal className="text-blue-500" />} name="PowerShell" />
-          <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" />
-          <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" />
- 
- <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" />
-        </Category>
+  <SkillItem icon={<FaGitAlt className="text-red-500" />} name="Git" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]" />
+  <SkillItem icon={<SiGithubactions className="text-gray-700 dark:text-white" />} name="GitHub Actions" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
+  <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"/>
+  <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
+  <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24]" />
+  <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24]" />
+  <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24] xl:mb-[10]" />
+</Category>
+
 
         <Category number="05" title="Deployment">
-          <SkillItem icon={<FaCloud className="text-blue-700" />} name="Azure Web App" />
-          <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" />
-          <SkillItem icon={<SiVercel className="text-black dark:text-white" />} name="Vercel" />
-          <SkillItem icon={<SiNetlify className="text-green-400" />} name="Netlify" />
-          <SkillItem icon={<SiRender className="text-purple-500" />} name="Render" />
+          <SkillItem icon={<FaCloud className="text-blue-700" />} name="Azure Web App" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" 
+           />
+          <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"  />
+          <SkillItem icon={<SiVercel className="text-black dark:text-white" />} name="Vercel" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"  />
+          <SkillItem icon={<SiNetlify className="text-green-400" />} name="Netlify" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
+
+          <SkillItem icon={<SiRender className="text-purple-500" />} name="Render" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24] xl:mb-[10]" />
         </Category>
       </div>
     </motion.div>
@@ -107,34 +124,35 @@ const Category = ({ number, title, children }) => (
   <motion.div
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
-    transition={{ duration: 0.6, delay: 0.3 }}
-    className="flex flex-col border-b border-dashed border-gray-300 dark:border-gray-600 pb-5"
+    transition={{ duration: 0.6, delay: 0.1 }}
+    className="flex flex-col border-b border-black dark:border-gray-600 pb-5
+    xl:flex-row xl:items-center xl:justify-start xl:gap-12 xl:w-[100%] xl:pb-4 xl:pt-[4]" 
   >
     {/* Number with stroke effect */}
-    <div className="flex items-center">
-      <span className="text-4xl sm:text-6xl md:text-7xl font-bold stroke-text_m mr-2">
+    <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
+      <span className="text-4xl sm:text-6xl md:text-7xl font-bold stroke-text xl:mr-1 mr-2 xl:text-5xl">
         {number}
       </span>
-      <h4 className="font-ovo mt-1 text-2xl md:text-xl text-gray-900 dark:text-white">
+      <h4 className="font-mono mt-1 text-4xl xl:text-2xl md:text-xl xl:font-normal xl:ml-2 xl:mt-3 text-gray-900 dark:text-white ">
         {title}
       </h4>
     </div>
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-3">{children}</div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-3 xl:grid-cols-4 xl:w-full xl:gap-12">{children}</div>
   </motion.div>
 );
-
-// Skill Item Component
-const SkillItem = ({ icon, name }) => (
+const SkillItem = ({ icon, name, className = "" }) => (
   <motion.div
     initial={{ scale: 0.9 }}
     whileInView={{ scale: 1 }}
-    transition={{ duration: 0.4, delay: 0.2 }}
-    className="flex font-montserrat items-center gap-2 p-2 border border-dashed border-gray-400 dark:border-gray-600 
-                  rounded-3xl hover:scale-105 transition-transform text-xs"
+    transition={{ duration: 0.1, delay: 0.1 }}
+    className={`flex font-montserrat items-center gap-1 p-1 border border-dashed border-black dark:border-gray-600 mx-18
+                  rounded-3xl hover:scale-105 transition-transform text-xs
+                   xl:w-[120px] xl:h-12 xl:gap-22 ${className}`}
   >
-    <div className="text-xl">{icon}</div>
-    <p className="text-xs font-medium text-gray-800 dark:text-gray-200">{name}</p>
+    <div className="xl:text-2xl">{icon}</div>
+    <p className="text-xs font-sm text-gray-800 dark:text-gray-200">{name}</p>
   </motion.div>
 );
+
 
 export default Skills;

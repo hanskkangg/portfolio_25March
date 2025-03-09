@@ -71,7 +71,7 @@ const Header = () => {
 </div>
       {/* Border Box Container */}
       <div className="
-        w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
+        w-[100%] sm:w-[90%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
         max-w-[1000px] min-h-screen sm:min-h-[120vh] md:min-h-[100vh] lg:min-h-[90vh] xl:min-h-[70vh]
         rounded-xl flex flex-col items-center justify-center shadow-xl 
         bg-white dark:bg-gray-800 p-6 relative z-40
@@ -117,7 +117,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className=" xl:block hidden
            xl:font-bold text-xs sm:text-sm md:text-base mt-4 text-gray-900 dark:text-gray-300 
-            xl:absolute xl:top-20 xl:left-[38%] xl:text-left xs:text-xs"
+            xl:absolute xl:top-20 xl:left-[38%] xl:text-left xs:text-xs xl:font-sans"
         >
           // ABOUT ME
         </motion.p>
