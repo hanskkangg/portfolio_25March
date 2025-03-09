@@ -43,6 +43,10 @@ import circle_s_white from './circle_s_white.png';
 import prof from './prof.png';
 import about_bg from './about_bg.png';
 import skills_bg from './skills_bg.png';
+import al_logo from './al_logo.png';
+import del_logo from './del_logo.png';
+import del_logo1 from './del_logo1.jpg';
+import self_logo from './self_logo.png';
 
 
 
@@ -92,7 +96,11 @@ export const assets = {
     circle_s_white,
     prof,
     about_bg,
-    skills_bg
+    skills_bg,
+    al_logo,
+    del_logo,
+    del_logo1,
+    self_logo
 };
 
 export const workData = [

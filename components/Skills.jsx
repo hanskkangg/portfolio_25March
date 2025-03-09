@@ -33,6 +33,10 @@ const Skills = () => {
         xl:flex xl:flex-col xl:items-left xl:justify-left
       "
     >
+
+<p className=" stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[74%]">
+          SKILLS
+        </p>
       {/* Title & Subtitle */}
       <motion.div
         initial={{ y: -20, opacity: 0 }}
@@ -53,9 +57,7 @@ const Skills = () => {
           Code, design, deploy—engineering excellence at every step
         </p>
       </motion.div>
-      <p className=" stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[74%]">
-          SKILLS
-        </p>
+      
 
       {/* Skills Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full xl:flex xl:flex-col xl:gap-2 mt-4 xl:ml-2">
