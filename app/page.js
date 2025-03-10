@@ -57,7 +57,7 @@ export default function Home() {
       <Skills isDarkMode={isDarkMode} />
       <Resume isDarkMode={isDarkMode} />
       <Work isDarkMode={isDarkMode} />
-      {/* <Contact isDarkMode={isDarkMode} /> */}
+      <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </div>
   );

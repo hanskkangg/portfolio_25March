@@ -37,27 +37,43 @@ const Contact = () => {
     initial={{ opacity: 0 }} 
       whileInView={{ opacity: 1 }} 
       transition={{ duration: 1 }} 
-    id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'>
+    id='contact' className=' w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
+        max-w-[1000px]  
+        min-h-[400px] sm:min-h-[500px] relative mx-auto 
+        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white dark:bg-gray-900 
+        dark:border-gray-700 shadow-lg rounded-xl flex flex-col items-center gap-6 sm:gap-8
+        
+        
+        lg:translate-x-8 lg:translate-y-6
+        xl:translate-x-48 xl:translate-y-2
+
+
+        xl:flex xl:flex-col xl:items-left xl:justify-left'>
+          
+<p className="mt-2 stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 ont-ovo xl:absolute xl:top-[54px] xl:left-[7%]">
+         CONTACT
+        </p>
+
 
       <motion.h4 
       initial={{ y: -20, opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }} 
       transition={{ delay: 0.3, duration: 0.5 }}
-      className='text-center mb-2 text-lg font-montserrat'>
-      Connect with me</motion.h4>
-
+      className='text-center font-bold mb-2 text-sm font-ovo text-gray-900  xl:ml-[-82%] xl:mt-[5%]'>
+      // Connect with me</motion.h4>
+      
       <motion.h2
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className='text-center text-5xl font-montserrat'>
+      className='font-ovo text-center text-5xl font-bold'>
       Get in touch</motion.h2>
 
       <motion.p
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.7, duration: 0.5 }}
-      className='text-center max-w-2xl mx-auto mt-5 mb-12 font-montserrat'>
+      className='font-ovo xl:text-md text-gray-500 text-center max-w-2xl mx-auto mt-5 mb-12 xl:mt-[-3]'>
       I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.</motion.p>
 
       <motion.form
@@ -65,29 +81,36 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.9, duration: 0.5 }}
       onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-        <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
-
-            <motion.input
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.6 }}
-            type="text" placeholder='Enter your name' required
-            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='name'/>
-
-            <motion.input
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-            type="email" placeholder='Enter your email' required
-            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90' name='email'/>
-
-        </div>
-        <motion.textarea 
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1.3, duration: 0.6 }}
-        rows='6' placeholder='Enter your message' required
-        className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90' name='message'></motion.textarea>
+       <div className='flex flex-col gap-6 mt-10 mb-8 items-center'>
+  <motion.input
+    initial={{ x: -50, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ delay: 1.1, duration: 0.6 }}
+    type="text" placeholder='Enter your name' required
+    className='w-full xl:w-[800px] p-3 xl:p-5 outline-none border-[0.5px] border-gray-400 
+               rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90
+               text-base xl:text-lg xl:mt-[-10%]' name='name'
+  />
+           
+  <motion.input
+    initial={{ x: 50, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ delay: 1.2, duration: 0.6 }}
+    type="email" placeholder='Enter your email' required
+    className='w-full xl:w-[800px] p-3 xl:p-5 outline-none border-[0.5px] border-gray-400 
+               rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90
+               text-base xl:text-lg' name='email'
+  />
+</div>
+<motion.textarea 
+  initial={{ y: 100, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ delay: 1.3, duration: 0.6 }}
+  rows='6' placeholder='Enter your message' required
+  className='w-full xl:w-[800px] p-4 xl:p-6 outline-none border-[0.5px] border-gray-400 
+             rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90
+             text-base xl:text-lg xl:ml-[-65]' name='message'
+></motion.textarea>
 
         <motion.button
         whileHover={{ scale: 1.05 }} 

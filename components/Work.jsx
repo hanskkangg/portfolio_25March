@@ -101,14 +101,14 @@ const Projects = () => {
 <button
   onClick={prevSlide}
   className="absolute left-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10"
-  style={{ top: "50%" }} // Explicitly set top position to keep it stable
+  style={{ top: "50%" }} 
 >
   ❮
 </button>
 <button
   onClick={nextSlide}
   className="absolute right-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10"
-  style={{ top: "50%" }} // Explicitly set top position to keep it stable
+  style={{ top: "50%" }} 
 >
   ❯
 </button>
@@ -141,28 +141,29 @@ const Projects = () => {
   animate={{ opacity: 1, scale: 1 }}
   exit={{ opacity: 0 }}
   transition={{ duration: 0.8, ease: "easeInOut" }}
+  className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 
+  bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md 
+  border border-[rgba(0,0,0,0.2)] dark:border-[rgba(255,255,255,0.2)] 
+  w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[900px]
+  h-[690px] sm:h-[650px] md:h-[700px] xl:h-[450px]"
 
-    className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 
-               bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md 
-               w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[900px]
-               h-[600px] sm:h-[650px] md:h-[700px] xl:h-[450px]"
   >            
   <div className="w-full lg:w-1/2 xl:w-[140%] xl:h-[540px] flex justify-center">
   <Image 
     src={projects[currentIndex].image} 
     alt={projects[currentIndex].title} 
-    width={700} // Increased width for xl screens
-    height={800} // Increased height for xl screens
+    width={700} 
+    height={800} 
     className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%]"
   />
 </div>
 
            <div className="w-full lg:w-1/2 text-left">
-            <h3 className="font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white xl:ml-[-40%]">{projects[currentIndex].title}</h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-40%]">{projects[currentIndex].description}</p>
-            <ul className="mt-4 text-gray-600 dark:text-gray-300 text-sm xl:ml-[-40%]">
+            <h3 className="font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white xl:ml-[-40%] xl:mb-5">{projects[currentIndex].title}</h3>
+            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-40%]">{projects[currentIndex].description}</p>
+            <ul className="font-montserrat mt-4 text-gray-900 dark:text-gray-300 text-sm xl:ml-[-40%] xl:mb-5">
               {projects[currentIndex].contributions.map((item, i) => (
-                <li key={i} className="list-disc ml-4">{item}</li>
+                <li key={i} className="list-disc ml-4 xl:mt-2">{item}</li>
               ))}
             </ul>
 
@@ -170,10 +171,10 @@ const Projects = () => {
 <div className="flex flex-wrap gap-4 mt-4 xl:ml-[-35%]">
   {projects[currentIndex].techStack.map((Icon, i) => (
     <div key={i} className="relative group flex flex-col items-center">
-      <div className="text-2xl text-gray-700 dark:text-gray-300">{<Icon />}</div>
+      <div className="text-2xl text-gray-700 dark:text-gray-300 xl:mb-1">{<Icon />}</div>
 
       {/* Tooltip with manual name */}
-      <span className="absolute bottom-[-30px] hidden group-hover:block bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow-lg">
+      <span className="absolute bottom-[-30px] hidden group-hover:block bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow-xl">
         {techNames[Icon.name] || "Unknown"}
       </span>
     </div>
@@ -181,7 +182,7 @@ const Projects = () => {
 </div>
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
              text-gray-600 dark:text-blue-400 hover:text-white 
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-40%]">View Live</a>
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-40%] ml-[-5%] ">View Live</a>
             </div>
           </motion.div>
         
