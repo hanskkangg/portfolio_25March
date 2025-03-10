@@ -179,7 +179,9 @@ const Projects = () => {
     </div>
   ))}
 </div>
-              <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline xl:ml-[-40%]">View Live</a>
+              <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
+             text-gray-600 dark:text-blue-400 hover:text-white 
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-40%]">View Live</a>
             </div>
           </motion.div>
         
