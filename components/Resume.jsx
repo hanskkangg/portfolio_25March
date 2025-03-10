@@ -165,24 +165,24 @@ const Resume = () => {
                     alt="Algonquin College Logo"
                     width={80}
                     height={80}
-                    className="object-contain"
+                    className="object-contain ml-[-10] mt-[-25] xl:ml-[-10] xl:mt-[-1] md:mt-[-1]"
                   />
                 </div>
 
                 {/* Program Info */}
                 <div className="flex flex-col text-left">
-                  <p className="text-lg font-bold text-black dark:text-white">
+                  <p className="font-poppins text-lg font-bold text-black dark:text-white ml-[-15] mt-[-2]">
                     {edu.title}
                   </p>
-                  <p className="text-gray-800 dark:text-gray-300">{edu.institution}</p>
-                  <p className="text-gray-800 dark:text-gray-300">{edu.year}</p>
+                  <p className="font-poppins text-sm text-gray-800 dark:text-gray-300  ml-[-15] mt-[3] ">{edu.institution}</p>
+                  <p className="font-poppins text-xs text-gray-800 dark:text-gray-300  ml-[-15] mt-[1] ">{edu.year}</p>
                 </div>
               </div>
 
               {/* RIGHT SIDE: GPA & Awards (Only for XL Screens) */}
               <div className=" xl:flex flex-col text-right">
-                <p className="mt-5 xl:mt-[-7] flex-col text-left  text-gray-600 dark:text-gray-400 font-semibold">{edu.gpa}</p>
-                <ul className=" mt-2 flex flex-col text-left list-none text-gray-600 dark:text-gray-300">
+                <p className="mt-5 xl:mt-[-7] flex-col text-left font-poppins text-xs  text-gray-600 dark:text-gray-400 font-semibold">{edu.gpa}</p>
+                <ul className="mt-2 flex flex-col text-left list-none text-gray-600 dark:text-gray-300">
                   {edu.awards.map((award, i) => (
                     <li key={i} className="text-sm">{award}</li>
                   ))}
@@ -214,18 +214,18 @@ const Resume = () => {
         {/* Logo + Job Title + Company */}
         <div className="w-full flex items-center gap-4 sm:gap-6">
           <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0">
-            <Image src={exp.logo} alt={`${exp.company} Logo`} width={80} height={80} className="object-contain xl:ml-[-110%] xl:mt-[-115%]" />
+            <Image src={exp.logo} alt={`${exp.company} Logo`} width={80} height={80} className="object-contain xl:ml-[-110%] xl:mt-[-115%] ml-4 md:mt-5" />
           </div>
           <div className="w-full flex flex-col">
-            <p className="font-poppins text-xl font-bold text-gray-900 dark:text-green-400 
-            xl:text-left xl:ml-[-18%] xl:mt-[-35%]">
+            <p className="text-left ml-5 mt-5 font-poppins text-xl font-bold text-gray-900 dark:text-green-400 
+            xl:text-left xl:ml-[-18%] xl:mt-[-33%]">
               {exp.title}
             </p>
-            <p className="font-poppins text-md font-normal text-gray-500 dark:text-white xl:text-left
+            <p className="font-poppins text-left ml-5 text-xs mt-1 font-normal text-gray-500 dark:text-white xl:text-left
             xl:ml-[-18%]">
               {exp.type}
             </p>
-            <p className="font-poppins text-sm font-normal text-gray-400 dark:text-white 
+            <p className="font-poppins text-left ml-5 text-xs font-normal text-gray-400 dark:text-white 
             xl:text-left
             xl:ml-[-18%]">
               {exp.location}
@@ -234,7 +234,7 @@ const Resume = () => {
         </div>
 
         {/* Company Name & Year */}
-        <div className="w-full flex flex-col xl:ml-[-100%] xl:mt-6">
+        <div className="text-left mt-5 ml-8 w-full flex flex-col xl:ml-[-100%] xl:mt-6">
           <p className="font-poppins xl:text-lg font-bold text-gray-800 dark:text-gray-300 xl:text-left
             xl:ml-[15%] xl:mt-[-12%]">
             {exp.company}
@@ -246,21 +246,21 @@ const Resume = () => {
         </div>
 
         {/* Description */}
-        <div className="text-gray-600 dark:text-gray-300 mt-3 xl:text-left xl:ml-[-17%] xl:w-[85%]">
+        <div className="text-left ml-4 text-gray-600 dark:text-gray-300 mt-3 xl:text-left xl:ml-[-17%] xl:w-[85%]">
   {exp.description.map((point, i) => (
     <span key={i} className="text-sm xl:text-left xl:absolute
-          xl:ml-[-36%] xl:mt-[2%]">{point}</span>
+          xl:ml-[-36%] xl:mt-[0%]">{point}</span>
   ))}
 </div>
 
 {/* Tech Stack */}
 <div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-6">
   <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
-  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center">
+  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center relative left-7 mb-3 xl:left-3 xl:top-1">
     {exp.techStack.map((tech, i) => (
       <div key={i} className="relative group flex flex-col items-center">
         {/* Tech Icon */}
-        <div className="xl:text-4xl text-3xl">{tech.icon}</div>
+        <div className="text-xl  ml-[-12] xl:text-4xl xl:ml-[-4]">{tech.icon}</div>
         {/* Tooltip with Tech Name */}
         <span className="absolute bottom-[-30px] scale-0 group-hover:scale-100 transition-transform duration-300 
           bg-black text-white text-xs px-3 py-1 rounded shadow-md">
@@ -294,21 +294,20 @@ const Resume = () => {
       >
         {/* Logo + Job Title + Company */}
         <div className="w-full flex items-center gap-4 sm:gap-6">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0">
-            <Image src={exp.logo} alt={`${exp.company} Logo`} width={80} height={80} className="object-contain xl:ml-[-110%] xl:mt-[-130%]" />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 ml-4">
+            <Image src={exp.logo} alt={`${exp.company} Logo`} width={80} height={80} className="object-contain xl:ml-[-125%] xl:mt-[-120%]" />
           </div>
           <div className="w-full flex flex-col">
-            <p className="font-poppins text-xl font-bold text-gray-900 dark:text-blue-400 
-            xl:text-left xl:ml-[-18%] xl:mt-[-35%]">
+            <p className="text-left ml-5 mt-5  font-poppins text-xl font-bold text-gray-900 dark:text-blue-400 
+            xl:text-left xl:ml-[-21%] xl:mt-[-33%] md:ml-3">
               {exp.title}
             </p>
-            <p className="font-poppins text-md font-normal text-gray-500 dark:text-white xl:text-left
-            xl:ml-[-18%]">
+            <p className="font-poppins text-left ml-5 text-xs mt-1 md:ml-3 font-normal text-gray-500 dark:text-white xl:text-left
+            xl:ml-[-21%]">
               {exp.type}
             </p>
-            <p className="font-poppins text-sm font-normal text-gray-400 dark:text-white xl:text-left
-             xl:text-left
-            xl:ml-[-18%]">
+            <p className="font-poppins  text-left ml-5 text-xs font-normal md:ml-3 text-gray-400 dark:text-white xl:text-left
+            xl:ml-[-21%]">
               {exp.location}
             </p>
           </div>
@@ -317,7 +316,7 @@ const Resume = () => {
 
 
         {/* Company Name & Year */}
-        <div className="w-full flex flex-col xl:ml-[-100%] xl:mt-6">
+        <div className="text-left mt-5 ml-8 w-full flex flex-col xl:ml-[-100%] xl:mt-6">
           <p className="font-poppins xl:text-lg font-bold text-gray-800 dark:text-gray-300 xl:text-left
             xl:ml-[15%] xl:mt-[-12%]">
             {exp.company}
@@ -331,21 +330,21 @@ const Resume = () => {
 
 
         {/* Description */}
-        <p className="text-gray-600 dark:text-gray-300 mt-3 xl:text-left xl:ml-[-17%] xl:w-[85%]">
+        <p className="text-left ml-4 text-gray-600 dark:text-gray-300 mt-3 xl:text-left xl:ml-[-17%] xl:w-[85%]">
           {exp.description.map((point, i) => (
             <span key={i} className="text-sm xl:text-sm xl:text-left xl:absolute
-          xl:ml-[-36%] xl:mt-[2%]">{point}</span>
+          xl:ml-[-36%] xl:mt-[0%]">{point}</span>
           ))}
         </p>
 
 {/* Tech Stack */}
-<div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-6">
+<div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-1">
   <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
-  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center">
+  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center relative left-7 mb-3 w-[90%]">
     {exp.techStack.map((tech, i) => (
       <div key={i} className="relative group flex flex-col items-center">
         {/* Tech Icon */}
-        <div className="xl:text-4xl text-3xl">{tech.icon}</div>
+        <div className="text-xl  ml-[-12] xl:text-4xl xl:ml-[-4]">{tech.icon}</div>
         {/* Tooltip with Tech Name */}
         <span className="absolute bottom-[-30px] scale-0 group-hover:scale-100 transition-transform duration-300 
           bg-black text-white text-xs px-3 py-1 rounded shadow-md">
