@@ -3,7 +3,7 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPhp, FaJava, FaDatabase, FaCloud, FaTerminal, FaGitAlt, FaMicrosoft
 } from "react-icons/fa";
 import {
-  SiTailwindcss, SiNextdotjs, SiJquery, SiExpress, SiMysql, SiMongodb, SiFirebase, SiCpanel, SiVercel, SiNetlify, SiRender, SiPostman, SiGnubash, SiGithubactions, SiApache, SiNginx, SiXampp
+  SiTailwindcss, SiNextdotjs, SiJquery, SiExpress, SiMysql, SiMongodb, SiFirebase, SiCpanel, SiVercel, SiNetlify, SiRender, SiPostman, SiGnubash, SiGithubactions, SiApache, SiNginx, SiXampp,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -102,6 +102,7 @@ const Skills = () => {
   <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"/>
   <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
   <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24]" />
+  
   <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24]" />
   <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24] xl:mb-[10]" />
 </Category>
