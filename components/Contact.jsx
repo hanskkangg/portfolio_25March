@@ -59,21 +59,21 @@ const Contact = () => {
       initial={{ y: -20, opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }} 
       transition={{ delay: 0.3, duration: 0.5 }}
-      className='text-center font-bold mb-2 text-sm font-ovo text-gray-900  xl:ml-[-82%] xl:mt-[5%]'>
+      className='text-center font-bold mb-2 text-sm font-ovo text-gray-900 xl:block hidden  xl:ml-[-82%] xl:mt-[5%]'>
       // Connect with me</motion.h4>
       
       <motion.h2
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className='font-ovo text-center text-5xl font-bold'>
+      className='font-ovo text-center xl:text-5xl font-bold text-2xl'>
       Get in touch</motion.h2>
 
       <motion.p
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.7, duration: 0.5 }}
-      className='font-ovo xl:text-md text-gray-500 text-center max-w-2xl mx-auto mt-5 mb-12 xl:mt-[-3]'>
+      className='font-ovo xl:text-md text-gray-500 text-center max-w-2xl mx-auto mt-[-5%] mb-12 xl:mt-[-3]'>
       I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.</motion.p>
 
       <motion.form
@@ -81,7 +81,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.9, duration: 0.5 }}
       onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-       <div className='flex flex-col gap-6 mt-10 mb-8 items-center'>
+       <div className='flex flex-col gap-6 mb-8 items-center mt-[-20%] xl:mt-[5%]'>
   <motion.input
     initial={{ x: -50, opacity: 0 }}
     whileInView={{ x: 0, opacity: 1 }}
