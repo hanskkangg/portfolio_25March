@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import Image from "next/image"; // For handling the logo image
+import Image from "next/image";
 import { assets } from "@/assets/assets";
 const algonquinLogo = "/algonquin_logo.png";
 const self_logo = "/self_logo.png";
 
 import { 
-  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPhp, FaJava, FaDatabase, FaCloud, FaTerminal 
+  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPhp, FaJava, FaDatabase, FaCloud, FaTerminal,FaJs,FaGitAlt,
 } from "react-icons/fa";
 
-import { 
+import {
   SiTailwindcss, SiMysql, SiMongodb, SiFirebase, SiExpress, SiNextdotjs, 
   SiVercel, SiRender, SiJquery, SiCpanel, SiNetlify, SiPostman, SiGnubash, 
   SiGithubactions, SiApache, SiNginx, SiXampp 
@@ -38,19 +38,19 @@ const experiences1 = [
     title: "Full Stack Web Developer",
     year: "2023 - Present",
 
-    logo: assets.del_logo, // Add the actual logo path in assets
+    logo: assets.del_logo, 
     description: [
       "Maintaining and enhancing a food business locator for restaurants with 4.5+ star rating with 400+ reviews, attracting 50+ daily users Implemented menu updates, price adjustments, tax changes (HST), and promotional banners based on business needs.",
     ],
     techStack: [
       { name: "PHP", icon: <FaPhp className="text-indigo-500" /> },
-      { name: "JavaScript", icon: <DiJavascript className="text-yellow-500" /> },
+      { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
       { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
       { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
-      { name: "jQuery", icon: <DiJavascript className="text-gray-500" /> },
+      { name: "jQuery", icon: <SiJquery className="text-gray-500" /> },
       { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-      { name: "XAMPP", icon: <FaDatabase className="text-orange-500" /> },
-      { name: "cPanel", icon: <SiVercel className="text-black" /> },
+      { name: "XAMPP", icon: <SiXampp className="text-orange-500" /> },
+      { name: "cPanel", icon: <SiCpanel className="text-orange-500" /> },
     ],
   },
 ];
@@ -70,22 +70,22 @@ const experiences2 = [
     ],
     techStack: [
       { name: "React", icon: <FaReact className="text-blue-400" /> },
-      { name: "JavaScript", icon: <DiJavascript className="text-yellow-500" /> },
+      { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
       { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
       { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
       { name: "Next.js", icon: <SiNextdotjs className="text-gray-800" /> },
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+      { name: "Firebase", icon: <SiFirebase className="text-red-500" /> },
       { name: "Express.js", icon: <SiExpress className="text-gray-500" /> },
-      { name: "Git", icon: <SiVercel className="text-black" /> },
-      { name: "Git Actions", icon: <FaDatabase className="text-orange-500" /> },
-      { name: "Postman", icon: <SiFirebase className="text-red-500" /> },
+      { name: "Git", icon: <FaGitAlt className="text-black" /> },
+      { name: "Git Actions", icon: <SiGithubactions className="text-orange-500" /> },
+      { name: "Postman", icon: <SiPostman className="text-red-500" /> },
       { name: "Vercel", icon: <SiVercel className="text-black" /> },
-      { name: "Render", icon: <SiRender className="text-blue-500" /> },
-      { name: "Azure Web App", icon: <SiNextdotjs className="text-gray-800" /> },
-      { name: "Netlify", icon: <SiVercel className="text-black" /> },
+      { name: "Render", icon: <SiRender className="text-black" /> },
+      { name: "Azure Web App", icon: <FaCloud className="text-blue-500" /> },
+      { name: "Netlify", icon: <SiNetlify className="text-teal-500" /> },
     ],
   },
 ];

@@ -97,8 +97,8 @@ const Skills = () => {
         </Category>
 
         <Category number="04" title="Tools">
-  <SkillItem icon={<FaGitAlt className="text-red-500" />} name="Git" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]" />
-  <SkillItem icon={<SiGithubactions className="text-gray-700 dark:text-white" />} name="GitHub Actions" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
+  <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-50] flex justify-center items-center xl:w-[95] xl:h-[40] xl:mt-[10]" />
+  <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
   <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"/>
   <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
   <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24]" />
@@ -112,9 +112,9 @@ const Skills = () => {
            />
           <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"  />
           <SkillItem icon={<SiVercel className="text-black dark:text-white" />} name="Vercel" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]"  />
-          <SkillItem icon={<SiNetlify className="text-green-400" />} name="Netlify" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
+          <SkillItem icon={<SiNetlify className="text-teal-500" />} name="Netlify" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[10]" />
 
-          <SkillItem icon={<SiRender className="text-purple-500" />} name="Render" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24] xl:mb-[10]" />
+          <SkillItem icon={<SiRender className="text-black" />} name="Render" className="xl:ml-[-50] flex justify-center items-center xl:w-[99] xl:h-[40] xl:mt-[-24] xl:mb-[10]" />
         </Category>
       </div>
     </motion.div>
