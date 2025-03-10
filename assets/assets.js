@@ -47,6 +47,25 @@ import al_logo from './al_logo.png';
 import del_logo from './del_logo.png';
 import del_logo1 from './del_logo1.jpg';
 import self_logo from './self_logo.png';
+import azure_logo from './azure_logo.svg';
+
+
+import azure_logo1 from './azure_logo1.svg';
+import bash_logo from './bash_logo.svg';
+import docker_logo from './docker_logo.svg';
+import firebase_logo from './firebase_logo.svg';
+import github_logo from './github_logo.svg';
+import linux_logo from './linux_logo.svg';
+
+
+import ngnix_logo from './ngnix_logo.svg';
+import npm_logo from './npm_logo.svg';
+import powershell_logo from './powershell_logo.svg';
+import terminal_logo from './terminal_logo.svg';
+
+import ubuntu_logo from './ubuntu_logo.svg';
+import vim_logo from './vim_logo.svg';
+import vs_code_logo from './vs_code_logo.svg';
 
 
 
@@ -100,7 +119,22 @@ export const assets = {
     al_logo,
     del_logo,
     del_logo1,
-    self_logo
+    azure_logo,
+    self_logo,
+    azure_logo1,
+    bash_logo,
+    docker_logo,
+    firebase_logo,
+    github_logo,
+    linux_logo,
+    ngnix_logo,
+    npm_logo,
+    powershell_logo,
+    terminal_logo,
+    ubuntu_logo,
+    vim_logo,
+    vs_code_logo,
+
 };
 
 export const workData = [

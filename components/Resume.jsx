@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
 import Image from "next/image"; // For handling the logo image
 import { assets } from "@/assets/assets";
+const algonquinLogo = "/algonquin_logo.png";
+const self_logo = "/self_logo.png";
 
-const algonquinLogo = "/algonquin_logo.png"; // Replace with the actual logo path
+import { 
+  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPhp, FaJava, FaDatabase, FaCloud, FaTerminal 
+} from "react-icons/fa";
+
+import { 
+  SiTailwindcss, SiMysql, SiMongodb, SiFirebase, SiExpress, SiNextdotjs, 
+  SiVercel, SiRender, SiJquery, SiCpanel, SiNetlify, SiPostman, SiGnubash, 
+  SiGithubactions, SiApache, SiNginx, SiXampp 
+} from "react-icons/si";
+
+import { DiJavascript, DiPostgresql, DiPhp } from "react-icons/di";
 
 const education = [
   {
@@ -30,8 +42,18 @@ const experiences1 = [
     description: [
       "Maintaining and enhancing a food business locator for restaurants with 4.5+ star rating with 400+ reviews, attracting 50+ daily users Implemented menu updates, price adjustments, tax changes (HST), and promotional banners based on business needs.",
     ],
-    techStack: ["PHP", "JavaScript", "HTML", "CSS", "jQuery", "MySQL", "XAMPP", "cPanel"], 
-  },]
+    techStack: [
+      { name: "PHP", icon: <FaPhp className="text-indigo-500" /> },
+      { name: "JavaScript", icon: <DiJavascript className="text-yellow-500" /> },
+      { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
+      { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+      { name: "jQuery", icon: <DiJavascript className="text-gray-500" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+      { name: "XAMPP", icon: <FaDatabase className="text-orange-500" /> },
+      { name: "cPanel", icon: <SiVercel className="text-black" /> },
+    ],
+  },
+];
   
 const experiences2 = [
   {
@@ -42,12 +64,29 @@ const experiences2 = [
     
     year: "2023 - Present",
     
-    logo: assets.self_logo, // Add the actual logo path in assets
+    logo: assets.self_logo,
     description: [
       "Developed custom Full Stack web apps using the MERV stack, integrating REST APIs and payment gateways.Implemented online payment systems allowing users to pay via Stripe, PayPal, and e-Transfer, ensuring secure transactions.Implemented CI/CD automation using GitHub Actions and Bash scripts to streamline deployment and testing workflows.",
     ],
-    techStack: ["REACT", "JavaScript", "HTML", "CSS", "Tailwind CSS", "MONGO DB", "NEXT.js", "Node.js","Firebase"
-      , "EXPRESS.js", "NEXT.js", "Git","Git action","postman", "Vercel", "Render", "Azure Web App", "Netlify"],
+    techStack: [
+      { name: "React", icon: <FaReact className="text-blue-400" /> },
+      { name: "JavaScript", icon: <DiJavascript className="text-yellow-500" /> },
+      { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
+      { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-gray-800" /> },
+      { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-gray-500" /> },
+      { name: "Git", icon: <SiVercel className="text-black" /> },
+      { name: "Git Actions", icon: <FaDatabase className="text-orange-500" /> },
+      { name: "Postman", icon: <SiFirebase className="text-red-500" /> },
+      { name: "Vercel", icon: <SiVercel className="text-black" /> },
+      { name: "Render", icon: <SiRender className="text-blue-500" /> },
+      { name: "Azure Web App", icon: <SiNextdotjs className="text-gray-800" /> },
+      { name: "Netlify", icon: <SiVercel className="text-black" /> },
+    ],
   },
 ];
 
@@ -209,19 +248,30 @@ const Resume = () => {
         {/* Description */}
         <div className="text-gray-600 dark:text-gray-300 mt-3 xl:text-left xl:ml-[-17%] xl:w-[85%]">
   {exp.description.map((point, i) => (
-    <p key={i} className="text-sm xl:text-left xl:absolute
-          xl:ml-[-36%] xl:mt-[2%]">{point}</p>
+    <span key={i} className="text-sm xl:text-left xl:absolute
+          xl:ml-[-36%] xl:mt-[2%]">{point}</span>
   ))}
 </div>
 
+{/* Tech Stack */}
+<div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-6">
+  <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
+  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center">
+    {exp.techStack.map((tech, i) => (
+      <div key={i} className="relative group flex flex-col items-center">
+        {/* Tech Icon */}
+        <div className="xl:text-4xl text-3xl">{tech.icon}</div>
+        {/* Tooltip with Tech Name */}
+        <span className="absolute bottom-[-30px] scale-0 group-hover:scale-100 transition-transform duration-300 
+          bg-black text-white text-xs px-3 py-1 rounded shadow-md">
+          {tech.name}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
 
-        {/* Tech Stack */}
-        
-        <div className="w-full flex flex-col xl:absolute xl:ml-[-10%] xl:mb-[-25%]">
-        <p className="text-sm text-gray-500 dark:text-gray-400 xl:text-left">
-          <span className="font-semibold ">Tech Stack:</span> {exp.techStack.join(", ")}
-        </p>
-        </div>
+
       </motion.div>
     ))}
   </div>
@@ -283,19 +333,28 @@ const Resume = () => {
         {/* Description */}
         <p className="text-gray-600 dark:text-gray-300 mt-3 xl:text-left xl:ml-[-17%] xl:w-[85%]">
           {exp.description.map((point, i) => (
-            <p key={i} className="text-sm xl:text-sm xl:text-left xl:absolute
-          xl:ml-[-36%] xl:mt-[2%]">{point}</p>
+            <span key={i} className="text-sm xl:text-sm xl:text-left xl:absolute
+          xl:ml-[-36%] xl:mt-[2%]">{point}</span>
           ))}
         </p>
 
-        {/* Tech Stack */}
-        
-        <div className="w-full flex flex-col xl:absolute xl:ml-[-10%] xl:mb-[-28%]">
-        <p className="text-sm text-gray-500 dark:text-gray-400 xl:text-left">
-          <span className="font-semibold ">Tech Stack:</span> {exp.techStack.join(", ")}
-        </p>
-        </div>
-        
+{/* Tech Stack */}
+<div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-6">
+  <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
+  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center">
+    {exp.techStack.map((tech, i) => (
+      <div key={i} className="relative group flex flex-col items-center">
+        {/* Tech Icon */}
+        <div className="xl:text-4xl text-3xl">{tech.icon}</div>
+        {/* Tooltip with Tech Name */}
+        <span className="absolute bottom-[-30px] scale-0 group-hover:scale-100 transition-transform duration-300 
+          bg-black text-white text-xs px-3 py-1 rounded shadow-md">
+          {tech.name}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
 
       </motion.div>
     ))}
