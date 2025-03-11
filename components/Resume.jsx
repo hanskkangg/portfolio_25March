@@ -340,7 +340,8 @@ const Resume = () => {
 {/* Tech Stack */}
 <div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-1">
   <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
-  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center relative left-7 mb-3 w-[97%]">
+
+  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center relative left-7 mb-3 w-[90%]">
     {exp.techStack.map((tech, i) => (
       <div key={i} className="relative group flex flex-col items-center xl:mt-[-1%]">
         {/* Tech Icon */}
