@@ -63,7 +63,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       {/* === Footer === */}
       <footer
-        className={`fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center p-4 transition-transform duration-300 ${
+        className={`fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center p-1 transition-transform duration-300 ${
           isFooterVisible ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -129,7 +129,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       {/* === Desktop Sidebar Navigation === */}
       <nav
         className={`hidden lg:block navbar w-[310px] h-[270px] bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
-        fixed left-[110px] ${isScrolled ? "top-[50px]" : "top-[160px]"} font-inter font-normal text-[14px]`}
+        fixed left-[110px] ${isScrolled ? "top-[35px]" : "top-[160px]"} font-inter font-normal text-[14px]`}
       >
         <div className="flex flex-col items-center py-6 px-8">
           <ul className="flex flex-col w-full relative font-inter text-[14px]">
