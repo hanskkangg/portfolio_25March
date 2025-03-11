@@ -174,7 +174,7 @@ const Header = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl  xl:text-lg
+          className="text-left text-lg sm:text-xl md:text-2xl lg:text-3xl  xl:text-lg
             text-gray-500 dark:text-gray-300 leading-relaxed mt-8
              xl:absolute xl:top-[50%] xl:left-[35%] xl:w-[65%] xl:text-left"
         >
