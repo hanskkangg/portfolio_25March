@@ -73,23 +73,23 @@ const Skills = () => {
 </Category>
 
         <Category number="02" title="Backend">
-  <SkillItem icon={<FaPhp className="text-indigo-600"/>} name="PHP" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10] xl:mb-[20]" />
-  <SkillItem icon={<FaNodeJs className="text-green-500 dark:text-white" />} name="Node.js" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10] xl:mb-[20]" />
-  <SkillItem icon={<SiExpress className="text-gray-500" />} name="Express.js" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10] xl:mb-[20]"/>
-  <SkillItem icon={<FaJava className="text-red-500" />} name="Java" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10] xl:mb-[20] " />
+  <SkillItem icon={<FaPhp className="text-indigo-600"/>} name="PHP" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[20] xl:mb-[10]" />
+  <SkillItem icon={<FaNodeJs className="text-green-500 dark:text-white" />} name="Node.js" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[20] xl:mb-[10]" />
+  <SkillItem icon={<SiExpress className="text-gray-500" />} name="Express.js" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[20] xl:mb-[10]"/>
+  <SkillItem icon={<FaJava className="text-red-500" />} name="Java" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[20] xl:mb-[10] " />
 </Category>
 
         <Category number="03" title="Database">
-  <SkillItem icon={<SiMysql className="text-blue-700"/>} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
-  <SkillItem icon={<FaDatabase className="text-orange-500 dark:text-white" />} name="Oracle" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
-  <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"/>
-  <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+  <SkillItem icon={<SiMysql className="text-blue-700"/>} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+  <SkillItem icon={<FaDatabase className="text-orange-500 dark:text-white" />} name="Oracle" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+  <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
+  <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
   <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
 </Category>
 
 
         <Category number="04" title="Tools">
-  <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+  <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
   <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
   <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"/>
   <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
