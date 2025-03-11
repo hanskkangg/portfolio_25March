@@ -345,7 +345,7 @@ const Resume = () => {
     {exp.techStack.map((tech, i) => (
       <div key={i} className="relative group flex flex-col items-center xl:mt-[-1%]">
         {/* Tech Icon */}
-        <div className="text-xl ml-[-12] xl:text-4xl xl:ml-[-70%]">{tech.icon}</div>
+        <div className="text-xl ml-[-12] xl:text-4xl">{tech.icon}</div>
         {/* Tooltip with Tech Name */}
         <span className="absolute bottom-[-30px] scale-0 group-hover:scale-100 transition-transform duration-300 
           bg-black text-white text-xs px-3 py-1 rounded shadow-md">
