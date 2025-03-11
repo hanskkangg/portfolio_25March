@@ -32,6 +32,32 @@ h1, h2, h3 {
   font-family: "Inter", sans-serif;
 }
 
+/* Custom Font Classes */
+.font-rubik {
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.font-alata {
+  font-family: "Alata", sans-serif;
+}
+
+.font-alfa {
+  font-family: "Alfa Slab One", serif;
+}
+
+.font-noto {
+  font-family: "Noto Serif JP", serif;
+}
+
+/* Custom Font Classes */
+.font-major {
+  font-family: "Major Mono Display", monospace;
+}
+/* Custom Font Classes */
+.font-mitr {
+  font-family: "Mitr", sans-serif;
+}
+
 /* Light Mode Background */
 .bg-custom {
   background-image: url('/bg_5.png'); /* Ensure the path is correct */
@@ -197,3 +223,24 @@ h1, h2, h3 {
 }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 100s linear infinite;
+}
+
+/* Ensure the text duplicates seamlessly */
+.marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}

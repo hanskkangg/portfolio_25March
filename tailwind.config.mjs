@@ -29,6 +29,15 @@ export default {
         dmserif: ["DM Serif Display", "serif"],
         garamond: ["EB Garamond", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
+  
+        rubik: ["Rubik Mono One", "sans-serif"],
+        alata: ["Alata", "sans-serif"],
+        alfa: ["Alfa Slab One", "serif"],
+        notoSerif: ["Noto Serif JP", "serif"],
+        
+        major: ["Major Mono Display", "monospace"], 
+        
+        mitr: ["Mitr", "sans-serif"],
       },
       fontWeight: {
         thin: "100", // ✅ Thin weight
