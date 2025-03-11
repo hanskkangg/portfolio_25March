@@ -80,10 +80,10 @@ const Skills = () => {
 </Category>
 
         <Category number="03" title="Database">
-  <SkillItem icon={<SiMysql className="text-blue-700"/>} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
-  <SkillItem icon={<FaDatabase className="text-orange-500 dark:text-white" />} name="Oracle" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
-  <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
-  <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+  <SkillItem icon={<SiMysql className="text-blue-700"/>} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
+  <SkillItem icon={<FaDatabase className="text-orange-500 dark:text-white" />} name="Oracle" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
+  <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]"/>
+  <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
   <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
 </Category>
 
@@ -119,7 +119,7 @@ const Category = ({ number, title, children }) => (
   whileInView={{ opacity: 1 }}
   transition={{ duration: 0.6, delay: 0.1 }}
   className="flex flex-col border-b border-black dark:border-gray-600 pb-5
-  xl:flex-row xl:items-center xl:justify-start xl:gap-4 xl:w-[100%] xl:pb-5 xl:pt-5 xl:mb-0 xl:mt-1" 
+  xl:flex-row xl:items-center xl:justify-start xl:gap-4 xl:w-[100%] xl:pb-8 xl:pt-8 xl:mb-0 xl:mt-1" 
 >
     {/* Number with stroke effect */}
     <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
