@@ -134,17 +134,15 @@ const Category = ({ number, title, children }) => (
   </motion.div>
 );
 const SkillItem = ({ icon, name, className = "" }) => (
-  <motion.div
-    initial={{ scale: 0.9 }}
-    whileInView={{ scale: 1 }}
-    transition={{ duration: 0.1, delay: 0.1 }}
+  <div
+    
     className={`flex font-montserrat items-center gap-1 p-1 border border-dashed border-black dark:border-gray-600 mx-18
                   rounded-3xl hover:scale-105 transition-transform text-xs
                    xl:w-[120px] xl:h-12 xl:gap-22 ${className}`}
   >
     <div className="xl:text-2xl">{icon}</div>
     <p className="text-xs font-sm text-gray-800 dark:text-gray-200">{name}</p>
-  </motion.div>
+  </div>
 );
 
 

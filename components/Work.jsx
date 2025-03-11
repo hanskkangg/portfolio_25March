@@ -109,14 +109,14 @@ const Projects = () => {
 <button
   onClick={prevSlide}
   className="absolute left-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10"
-  style={{ top: "50%" }} 
+  style={{ top: "27%" }} 
 >
   ❮
 </button>
 <button
   onClick={nextSlide}
   className="absolute right-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10"
-  style={{ top: "50%" }} 
+  style={{ top: "27%" }} 
 >
   ❯
 </button>
@@ -164,7 +164,7 @@ const Projects = () => {
     className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%] xl:mt-[9%] md:-[9%]"
   />
 </div>
-<div className="w-full lg:w-1/2 text-left relative "> {/* Make this relative so absolute positioning works */}
+<div className="w-full lg:w-1/2 text-left relative ">
   {/* Title - Centered at the Top */}
   <h3 className="absolute text-2xl font-bold mt-[-90%] left-1/2 -translate-x-1/2 
                  font-montserrat xl:text-4xltext-gray-900 dark:text-white 
