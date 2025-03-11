@@ -38,7 +38,7 @@ const projects = [
     link: "https://personal-blog-lboi.onrender.com",
   },
   {
-    title: "CCNA Study guide",
+    title: "CCNA Blog",
     description: "Developed a CCNA study guide web app hosted on Azure Web App, dynamically fetching and displaying study materials from MongoDB JSON files.",
     image: "/bae.gif",
     contributions: ["Implemented dynamic data fetching", "Added CI/CD automation", "Deployed on Azure Web App"],
@@ -152,7 +152,7 @@ const Projects = () => {
   className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 
   bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md 
   border border-[rgba(0,0,0,0.2)] dark:border-[rgba(255,255,255,0.2)] 
-  w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[900px]
+  w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[900px]
   h-[690px] sm:h-[650px] md:h-[700px] xl:h-[450px]"
 
   >            
@@ -167,8 +167,8 @@ const Projects = () => {
 </div>
 <div className="w-full lg:w-1/2 text-left relative "> {/* Make this relative so absolute positioning works */}
   {/* Title - Centered at the Top */}
-  <h3 className="absolute mt-[-90%] left-1/2 -translate-x-1/2 
-                 font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white 
+  <h3 className="absolute text-2xl font-bold mt-[-90%] left-1/2 -translate-x-1/2 
+                 font-montserrat xl:text-4xltext-gray-900 dark:text-white 
                  text-center whitespace-nowrap max-w-[90%] xl:max-w-[600px] 
                  overflow-hidden text-ellipsis mb-6 xl:mt-[-5%] xl:ml-[-150%] xl:top-[-1] md:top-[-350]">
     {projects[currentIndex].title}
