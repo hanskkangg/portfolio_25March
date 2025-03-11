@@ -341,9 +341,9 @@ const Resume = () => {
 <div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-1">
   <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
 
-  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center relative left-7 mb-3 w-[90%]">
+  <div className="flex flex-wrap gap-4 xl:justify-start xl:items-center relative left-7 mb-3 w-[90%] xl:w-[100%]">
     {exp.techStack.map((tech, i) => (
-      <div key={i} className="relative group flex flex-col items-center xl:mt-[-1%]">
+      <div key={i} className="relative group flex flex-col items-center xl:mt-[10%]">
         {/* Tech Icon */}
         <div className="text-xl ml-[-12] xl:text-4xl">{tech.icon}</div>
         {/* Tooltip with Tech Name */}
