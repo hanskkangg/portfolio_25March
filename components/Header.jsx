@@ -198,21 +198,21 @@ const Header = () => {
     { number: "4", label: "Happy Customers" },
     { number: "6", label: "Projects Done" }
   ].map(({ number, label }, index) => (
-    <div key={index} className="flex items-center gap-1 w-[80px] xl:text-7xl">
+    <div key={index} className="flex items-center gap-1 w-[80px] xl:text-7xl ml-[8px]">
       {/* Number - Shift Left on Small Screens */}
     {/* Number - Shift Left on Small Screens, but "1" moves right */}
 <span
-  className={`text-8xl md:text-7xl xl:text-8xl font-bold stroke-text w-[50px] 
+  className={`text-7xl md:text-7xl xl:text-8xl font-bold stroke-text w-[50px] 
     ${number === "1" ? "ml-[-10px]" : "ml-[-20px]"} sm:ml-[-12px] md:ml-0`}
 >
   {number}
 </span>
 
 
-      {/* + and Label - Now **Perfectly Close** */}
+      {/* + and Label -*/}
       <div className="flex flex-col items-start ml-[5px]">
         <span className="text-4xl font-bold stroke-text text-orange-500 leading-none">+</span>
-        <p className="text-lg md:text-xl xl:text-[16px]  text-gray-900 dark:text-gray-300 font-ovo leading-tight xl:mt-[-6] xl:text-left xl:w-40">
+        <p className="text-sm md:text-xl xl:text-[16px]  text-gray-900 dark:text-gray-300 font-ovo leading-tight xl:mt-[-6] xl:text-left xl:w-40">
           {label}
         </p>
       </div>
