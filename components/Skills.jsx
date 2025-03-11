@@ -119,7 +119,7 @@ const Category = ({ number, title, children }) => (
     whileInView={{ opacity: 1 }}
     transition={{ duration: 0.6, delay: 0.1 }}
     className="flex flex-col border-b border-black dark:border-gray-600 pb-5
-    xl:flex-row xl:items-center xl:justify-start xl:gap-12 xl:w-[100%] xl:pb-4 xl:pt-[4] xl:mb-30 xl:mt-1" 
+    xl:flex-row xl:items-center xl:justify-start xl:gap-12 xl:w-[100%] xl:pb-4 xl:pt-[4] xl:mb-50 xl:mt-1" 
   >
     {/* Number with stroke effect */}
     <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
