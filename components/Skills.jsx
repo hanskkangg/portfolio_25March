@@ -115,12 +115,13 @@ const Skills = () => {
 // Category Component with Styled Numbers
 const Category = ({ number, title, children }) => (
   <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 0.6, delay: 0.1 }}
-    className="flex flex-col border-b border-black dark:border-gray-600 pb-5
-    xl:flex-row xl:items-center xl:justify-start xl:gap-12 xl:w-[100%] xl:pb-4 xl:pt-[4] xl:mb-50 xl:mt-1" 
-  >
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.1 }}
+  className="flex flex-col border-b border-black dark:border-gray-600 pb-5
+  xl:flex-row xl:items-center xl:justify-start xl:gap-8 xl:w-[100%] xl:pb-3 xl:pt-3" 
+>
+
     {/* Number with stroke effect */}
     <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
       <span className="text-4xl sm:text-6xl md:text-7xl font-bold stroke-text xl:mr-1 mr-2 xl:text-5xl">
