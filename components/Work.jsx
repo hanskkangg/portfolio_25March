@@ -156,21 +156,21 @@ const Projects = () => {
   h-[690px] sm:h-[650px] md:h-[700px] xl:h-[450px]"
 
   >            
-  <div className="w-full lg:w-1/2 xl:w-[140%] xl:h-[540px] flex justify-center">
+  <div className="w-full lg:w-1/2 xl:w-[140%] xl:h-[540px] flex justify-center mt-[18%] xl:mt-0 md:mt-[15%]">
   <Image 
     src={projects[currentIndex].image} 
     alt={projects[currentIndex].title} 
     width={700} 
     height={800} 
-    className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%] xl:mt-[9%]"
+    className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%] xl:mt-[9%] md:-[9%]"
   />
 </div>
 <div className="w-full lg:w-1/2 text-left relative "> {/* Make this relative so absolute positioning works */}
   {/* Title - Centered at the Top */}
-  <h3 className="absolute top-0 left-1/2 -translate-x-1/2 
+  <h3 className="absolute top-[-190] left-1/2 -translate-x-1/2 
                  font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white 
                  text-center whitespace-nowrap max-w-[90%] xl:max-w-[600px] 
-                 overflow-hidden text-ellipsis mb-6 xl:mt-[-5%] xl:ml-[-150%]">
+                 overflow-hidden text-ellipsis mb-6 xl:mt-[-5%] xl:ml-[-150%] xl:top-[-1] md:top-[-350]">
     {projects[currentIndex].title}
 </h3>
 
@@ -198,7 +198,7 @@ const Projects = () => {
 </div>
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
              text-gray-600 dark:text-blue-400 hover:text-white 
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-40%] ml-[-5%] ">View Live</a>
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-40%] ml-[-1%] md:ml-[38%] ">View Live</a>
             </div>
           </motion.div>
         
