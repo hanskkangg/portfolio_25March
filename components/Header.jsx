@@ -128,8 +128,8 @@ const Header = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="
-            stroke-text_m text-xs sm:text-7xl md:text-base mt-4 xl:mt-[-26] text-gray-900 dark:text-gray-300 
-            xl:absolute xl:top-24 xl:left-[38%] xl:text-left xl:text-5xl"
+            stroke-text_m text-xs sm:text-7xl md:text-base mt-4 xl:mt-[-34%] text-gray-900 dark:text-gray-300 
+            xl:absolute xl:left-[38%] xl:text-left xl:text-5xl"
         >
           ABOUT ME
         </motion.p>

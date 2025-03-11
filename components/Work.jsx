@@ -7,14 +7,14 @@ import { SiMongodb, SiMysql, SiExpress, SiTailwindcss, SiVercel, SiNextdotjs, Si
 const projects = [
   {
     title: "Delivery Sushi",
-    description: "Maintaining and enhancing a food business locator with a 4.5+ star rating and 400+ reviews, attracting 50+ daily users. Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",
+    description: "Maintaining and enhancing a food business locator and Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",
     image: "/bae.gif",
     contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
     techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
     link: "https://www.ottawadeliverysushi.com",
   },
   {
-    title: "E-Commerce Website",
+    title: "Baeyond Nails",
     description: "Built a full-stack e-commerce web app using the MERV stack with a REST API for CRUD operations. Integrated Stripe, PayPal, and e-Transfer for secure payments.",
     image: "/bae.gif",
     contributions: ["Implemented secure transactions", "Built admin panel for order tracking", "Optimized for mobile devices"],
@@ -22,7 +22,15 @@ const projects = [
     link: "https://baeyondfrontend.vercel.app/",
   },
   {
-    title: "Personal Blog",
+    title: "OnPapier",
+    description: "Built a full-stack e-commerce web app using the MERV stack with a REST API for CRUD operations. Integrated Stripe, PayPal, and e-Transfer for secure payments.",
+    image: "/bae.gif",
+    contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
+    techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
+    link: "https://www.ottawadeliverysushi.com",
+  },
+  {
+    title: "Min Blog",
     description: "Developed a personal blog platform with role-based access control (RBAC), allowing admins to create and manage posts, while users can read and comment.",
     image: "/bae.gif",
     contributions: ["Implemented RBAC system", "Enhanced UI/UX design", "Deployed on Render with monitoring"],
@@ -30,7 +38,7 @@ const projects = [
     link: "https://personal-blog-lboi.onrender.com",
   },
   {
-    title: "CCNA Web App",
+    title: "CCNA Study guide",
     description: "Developed a CCNA study guide web app hosted on Azure Web App, dynamically fetching and displaying study materials from MongoDB JSON files.",
     image: "/bae.gif",
     contributions: ["Implemented dynamic data fetching", "Added CI/CD automation", "Deployed on Azure Web App"],
@@ -154,13 +162,21 @@ const Projects = () => {
     alt={projects[currentIndex].title} 
     width={700} 
     height={800} 
-    className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%]"
+    className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%] xl:mt-[9%]"
   />
 </div>
+<div className="w-full lg:w-1/2 text-left relative "> {/* Make this relative so absolute positioning works */}
+  {/* Title - Centered at the Top */}
+  <h3 className="absolute top-0 left-1/2 -translate-x-1/2 
+                 font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white 
+                 text-center whitespace-nowrap max-w-[90%] xl:max-w-[600px] 
+                 overflow-hidden text-ellipsis mb-6 xl:mt-[-5%] xl:ml-[-150%]">
+    {projects[currentIndex].title}
+</h3>
 
-           <div className="w-full lg:w-1/2 text-left">
-            <h3 className="font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white xl:ml-[-40%] xl:mb-5">{projects[currentIndex].title}</h3>
-            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-40%]">{projects[currentIndex].description}</p>
+
+
+            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-40%] xl:mt-[30%]">{projects[currentIndex].description}</p>
             <ul className="font-montserrat mt-4 text-gray-900 dark:text-gray-300 text-sm xl:ml-[-40%] xl:mb-5">
               {projects[currentIndex].contributions.map((item, i) => (
                 <li key={i} className="list-disc ml-4 xl:mt-2">{item}</li>
