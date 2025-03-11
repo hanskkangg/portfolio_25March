@@ -167,7 +167,7 @@ const Projects = () => {
 </div>
 <div className="w-full lg:w-1/2 text-left relative "> {/* Make this relative so absolute positioning works */}
   {/* Title - Centered at the Top */}
-  <h3 className="absolute mt-[-195] left-1/2 -translate-x-1/2 
+  <h3 className="absolute mt-[-90%] left-1/2 -translate-x-1/2 
                  font-Ovo xl:text-4xl text-xl font-bold text-gray-900 dark:text-white 
                  text-center whitespace-nowrap max-w-[90%] xl:max-w-[600px] 
                  overflow-hidden text-ellipsis mb-6 xl:mt-[-5%] xl:ml-[-150%] xl:top-[-1] md:top-[-350]">
