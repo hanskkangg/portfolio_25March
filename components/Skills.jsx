@@ -93,18 +93,18 @@ const Skills = () => {
   <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
   <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"/>
   <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
-  <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[90%] xl:mt-[-24]" />
-  <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24]" />
-  <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24] xl:mb-[10]" />
+  <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
+  <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
+  <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
 </Category>
 
 
         <Category number="05" title="Deployment">
-          <SkillItem icon={<FaCloud className="text-blue-700" />} name="Azure Web App" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" 
+          <SkillItem icon={<FaCloud className="text-blue-700" />} name="Azure Web App" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" 
            />
-          <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<SiVercel className="text-black dark:text-white" />} name="Vercel" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<SiNetlify className="text-teal-500" />} name="Netlify" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+          <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"  />
+          <SkillItem icon={<SiVercel className="text-black dark:text-white" />} name="Vercel" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"  />
+          <SkillItem icon={<SiNetlify className="text-teal-500" />} name="Netlify" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
           <SkillItem icon={<SiRender className="text-black" />} name="Render" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
         </Category>
       </div>
@@ -119,7 +119,7 @@ const Category = ({ number, title, children }) => (
     whileInView={{ opacity: 1 }}
     transition={{ duration: 0.6, delay: 0.1 }}
     className="flex flex-col border-b border-black dark:border-gray-600 pb-5
-    xl:flex-row xl:items-center xl:justify-start xl:gap-12 xl:w-[100%] xl:pb-4 xl:pt-[4] xl:mb-12" 
+    xl:flex-row xl:items-center xl:justify-start xl:gap-12 xl:w-[100%] xl:pb-4 xl:pt-[4] xl:mb-1" 
   >
     {/* Number with stroke effect */}
     <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
