@@ -256,7 +256,7 @@ const Resume = () => {
 {/* Tech Stack */}
 <div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-6">
   <span className="font-semibold text-gray-500 dark:text-gray-400"></span>
-  <div className="flex flex-wrap gap-2 xl:justify-start xl:items-center relative left-5 mb-3 xl:left-3 xl:top-1">
+  <div className="flex flex-wrap gap-2 xl:justify-start xl:items-center relative left-5 mb-3 xl:left-1 xl:top-1">
     {exp.techStack.map((tech, i) => (
       <div key={i} className="relative group flex flex-col items-center">
         {/* Tech Icon */}
@@ -321,7 +321,7 @@ const Resume = () => {
             xl:ml-[15%] xl:mt-[-12%]">
             {exp.company}
           </p>
-          <p className="font-poppins xl:text-sm xl:text-gray-400 text-gray-800 dark:text-gray-300  xl:text-left
+          <p className="font-poppins xl:text-sm xl:text-gray-400 text-gray-800 dark:text-gray-300 xl:text-left
           xl:ml-[15%] xl:mt-[%]">
             {exp.year}
           </p>
@@ -341,7 +341,7 @@ const Resume = () => {
 <div className="w-full flex flex-col mt-4 xl:absolute xl:bottom-4 xl:left-1 ">
   <span className="font-semibold text-gray-500 dark:text-gray-400 " ></span>
 
-  <div className="flex flex-wrap gap-2 xl:justify-start xl:items-center relative left-5 mb-3 xl:left-3 xl:top-1 w-[90%]">
+  <div className="flex flex-wrap gap-2 xl:justify-start xl:items-center relative left-5 mb-3 xl:left-5 xl:top-1 w-[90%]">
     {exp.techStack.map((tech, i) => (
       <div key={i} className="relative group flex flex-col items-centerf">
         {/* Tech Icon */}
