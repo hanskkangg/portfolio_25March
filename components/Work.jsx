@@ -108,15 +108,15 @@ const Projects = () => {
      {/* Navigation Buttons */}
 <button
   onClick={prevSlide}
-  className="absolute left-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10"
-  style={{ top: "27%" }} 
+  className="absolute left-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
+ top-[27%] xl:top-[45%] xl:ml-[10%]" 
 >
   ❮
 </button>
 <button
   onClick={nextSlide}
-  className="absolute right-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10"
-  style={{ top: "27%" }} 
+  className="absolute right-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
+ top-[27%] xl:top-[45%] xl:mr-[10%]" 
 >
   ❯
 </button>
