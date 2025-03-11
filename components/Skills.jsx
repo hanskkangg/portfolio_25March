@@ -112,7 +112,7 @@ const Skills = () => {
   );
 };
 
-// Category Component with Styled Numbers
+// Category Component with Styled Numberss 
 const Category = ({ number, title, children }) => (
   <motion.div
   initial={{ opacity: 0 }}
