@@ -150,9 +150,8 @@ const Projects = () => {
   exit={{ opacity: 0 }}
   transition={{ duration: 0.8, ease: "easeInOut" }}
   className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 
-  bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md 
-  border border-[rgba(0,0,0,0.2)] dark:border-[rgba(255,255,255,0.2)] 
-  w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[900px]
+  bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl
+  w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[1000px]
   h-[690px] sm:h-[650px] md:h-[700px] xl:h-[450px]"
 
   >            
