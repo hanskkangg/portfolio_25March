@@ -16,16 +16,22 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [isFooterVisible, setIsFooterVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["about", "skills", "resume", "projects", "contact"];
-      const scrollPosition = window.pageYOffset;
+      const handleScroll = () => {
+        const sections = ["about", "skills", "resume", "projects", "contact"];
+        const scrollPosition = window.pageYOffset;
+        const documentHeight = document.documentElement.scrollHeight;
+        const viewportHeight = window.innerHeight;
 
-      // Toggle Navbar visibility on scroll
+      // Navbar Visibility Logic
       setIsScrolled(scrollPosition > 100);
       setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
       setPrevScrollPos(scrollPosition);
+      // Footer Visibility Logic
+      const isAtBottom = scrollPosition + viewportHeight >= documentHeight - 50;
+      setIsFooterVisible(isAtBottom);
 
       // Highlight active section
       sections.forEach((section) => {
@@ -48,13 +54,22 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   }, [prevScrollPos]);
 
   return (
-    <>
+    <>    
       {/* === Name (Visible on All Screens) === */}
       <div className="text-black text-6xl lg:text-8xl font-bold font-ovo tracking-wide mt-5 ml-8  lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 ">
         Hans <span className="stroke-text">Kang</span>
         <span className="stroke-text text-8xl ml-1">.</span>
       </div>
 
+      {/* === Footer === */}
+      <footer
+        className={`fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center p-4 transition-transform duration-300 ${
+          isFooterVisible ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        © {new Date().getFullYear()} Hans Kang. All Rights Reserved.
+      </footer>
+      
       {/* === Mobile Navigation Links === */}
       <div
         className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-3 z-50 lg:hidden transition-opacity duration-300 text-xs 
