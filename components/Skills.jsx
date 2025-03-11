@@ -60,62 +60,62 @@ const Skills = () => {
       
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full xl:flex xl:flex-col xl:gap-2 mt-4 xl:ml-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full xl:flex xl:flex-col xl:gap-2 mt-4">
         <Category number="01" title="Frontend">
-          <SkillItem icon={<FaHtml5 className="text-orange-600" />} name="HTML" className="xl:ml-[-50] flex justify-center items-center xl:w-[140%] xl:h-[90%]"/>
+          <SkillItem icon={<FaHtml5 className="text-orange-600" />} name="HTML" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%]"/>
 
-          <SkillItem icon={<FaCss3Alt className="text-blue-500" />} name="CSS" className="xl:ml-[-50] flex justify-center items-center   xl:w-[140%] xl:h-[90%]"/>
+          <SkillItem icon={<FaCss3Alt className="text-blue-500" />} name="CSS" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[110%]"/>
 
-          <SkillItem icon={<SiTailwindcss className="text-cyan-500" />} name="Tailwind CSS"className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%]" />
+          <SkillItem icon={<SiTailwindcss className="text-cyan-500" />} name="Tailwind CSS"className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]" />
 
-          <SkillItem icon={<FaJs className="text-yellow-500" />} name="JavaScript" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%]" />
+          <SkillItem icon={<FaJs className="text-yellow-500" />} name="JavaScript" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]" />
 
 
 
-          <SkillItem icon={<FaReact className="text-blue-400" />} name="React" className="xl:ml-[-50] flex justify-center items-center   xl:w-[140%] xl:h-[90%] xl:mt-[-24]"/>
+          <SkillItem icon={<FaReact className="text-blue-400" />} name="React" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24]"/>
 
-          <SkillItem icon={<SiNextdotjs className="text-black dark:text-white" />} name="Next.js" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24]"/>
+          <SkillItem icon={<SiNextdotjs className="text-black dark:text-white" />} name="Next.js" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[110%] xl:mt-[-24]"/>
 
-          <SkillItem icon={<SiJquery className="text-blue-600" />} name="jQuery" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24] xl:mb-[10]"/>
+          <SkillItem icon={<SiJquery className="text-blue-600" />} name="jQuery" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]"/>
 
         </Category>
 
         <Category number="02" title="Backend">
-          <SkillItem icon={<FaPhp className="text-indigo-600" />} name="PHP"className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10] xl:mb-[10] "  />
+          <SkillItem icon={<FaPhp className="text-indigo-600" />} name="PHP"className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10] xl:mb-[10] "  />
 
-          <SkillItem icon={<FaNodeJs className="text-green-500" />} name="Node.js"className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<SiExpress className="text-gray-500" />} name="Express.js"className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<FaJava className="text-red-600" />} name="Java" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
+          <SkillItem icon={<FaNodeJs className="text-green-500" />} name="Node.js"className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"  />
+          <SkillItem icon={<SiExpress className="text-gray-500" />} name="Express.js"className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"  />
+          <SkillItem icon={<FaJava className="text-red-600" />} name="Java" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"  />
         </Category>
 
         <Category number="03" title="Database">
-          <SkillItem icon={<SiMysql className="text-blue-700" />} name="MySQL" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<FaDatabase className="text-orange-500" />} name="Oracle"className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB"className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  /> 
-          <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%]  xl:mt-[10]" />
-          <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-50] flex justify-center items-center   xl:w-[140%] xl:h-[90%] xl:mt-[-24] xl:mb-[10]" />
+          <SkillItem icon={<SiMysql className="text-blue-700" />} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
+          <SkillItem icon={<FaDatabase className="text-orange-500" />} name="Oracle"className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
+          <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB"className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  /> 
+          <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%]  xl:mt-[10]" />
+          <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
         </Category>
 
         <Category number="04" title="Tools">
-  <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-50] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
-  <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[70%] xl:mt-[10]" />
-  <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"/>
-  <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
-  <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-50] flex justify-center items-center   xl:w-[140%] xl:h-[90%] xl:mt-[-24]" />
+  <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+  <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-50] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+  <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"/>
+  <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+  <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[90%] xl:mt-[-24]" />
   
-  <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24]" />
-  <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24] xl:mb-[10]" />
+  <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24]" />
+  <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24] xl:mb-[10]" />
 </Category>
 
 
         <Category number="05" title="Deployment">
-          <SkillItem icon={<FaCloud className="text-blue-700" />} name="Azure Web App" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" 
+          <SkillItem icon={<FaCloud className="text-blue-700" />} name="Azure Web App" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" 
            />
-          <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[9s0%] xl:mt-[10]"  />
+          <SkillItem icon={<SiCpanel className="text-orange-500" />} name="cPanel" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"  />
           <SkillItem icon={<SiVercel className="text-black dark:text-white" />} name="Vercel" className="xl:ml-[-50] flex justify-center items-center  xl:w-[130%] xl:h-[90%] xl:mt-[10]"  />
-          <SkillItem icon={<SiNetlify className="text-teal-500" />} name="Netlify" className="xl:ml-[-50] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+          <SkillItem icon={<SiNetlify className="text-teal-500" />} name="Netlify" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
 
-          <SkillItem icon={<SiRender className="text-black" />} name="Render" className="xl:ml-[-50] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[-24] xl:mb-[10]" />
+          <SkillItem icon={<SiRender className="text-black" />} name="Render" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
         </Category>
       </div>
     </motion.div>
