@@ -209,7 +209,7 @@ const Projects = () => {
   <h3 className="absolute text-2xl font-bold mt-[-100%] left-1/2 -translate-x-1/2 
                  font-poppins xl:text-6xl text-gray-600 dark:text-white 
                  text-center whitespace-nowrap max-w-[100%] xl:max-w-[600px] 
-                 overflow-hidden text-ellipsis mb-6 xl:mt-[-15%] xl:ml-[-80%] xl:top-[0] md:top-[80%] 
+                 overflow-hidden text-ellipsis mb-6 xl:mt-[-78%] xl:ml-[-80%] md:top-[80%] 
                  md:text-6xl
                  lg:top-[65%] lg:ml-[-80%] lg:text-2xl">
     {projects[currentIndex].title}

@@ -72,7 +72,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* === Unified Navigation Bar (Mobile & Desktop) === */}
       <div
-        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-4 z-50 transition-opacity duration-300 text-xs 
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-4 z-50 transition-opacity duration-300 text-xs  xl:hidden
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"} lg:w-auto lg:p-4`}
       >
         {["about", "skills", "resume", "projects", "contact"].map((section) => (
