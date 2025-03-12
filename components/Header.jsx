@@ -76,6 +76,7 @@ const Header = () => {
         rounded-xl flex flex-col items-center justify-center shadow-xl 
         bg-white dark:bg-gray-800 p-6 relative z-40
         lg:mb-[-10%] lg:mt-[-50%]
+        xl:mb-[0%] xl:mt-[0%]
         
   /* Shift to right and bottom on large screens */
   lg:translate-x-6 lg:translate-y-[-1]
