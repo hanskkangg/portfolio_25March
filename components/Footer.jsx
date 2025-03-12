@@ -53,10 +53,10 @@ const Footer = ({ isDarkMode }) => {
         {/* Social Icons*/}
         <nav className="w-[100%] mx-auto mt-4 flex justify-center gap-6 xl:ml-[-5%] xl:text-xl xl:justify-end">
           {[
-            { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
-            { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hanskkangg" },
-            { icon: <FaInstagram />, url: "https://www.instagram.com/kkanghhanss" },
-            { icon: <FaFacebook />, url: "https://www.facebook.com/hanskkangg" },
+                    { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
+                    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hanskkang" },
+                    { icon: <FaInstagram />, url: "https://www.instagram.com/kkanghhanss" },
+                    { icon: <FaFacebook />, url: "https://www.facebook.com/hans.kkang" },
           ].map(({ icon, url }, index) => (
             <a key={index} href={url} target="_blank" rel="noopener noreferrer">
               <div className="w-7 h-7 text-gray-800 dark:text-white hover:text-blue-500 transition-colors">
