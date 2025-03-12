@@ -129,6 +129,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
+            
           </div>
         ))}
       </div>
@@ -146,7 +147,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       </div>
 
       {/* Social Icons (Mobile)  */}
-      <nav className="xl:hidden w-[100%] mx-auto mt-2 flex justify-center items-center gap-4">
+      <nav className="xl:hidden w-[100%] mx-auto mt-2 flex justify-center items-center gap-4 lg:hidden">
 
         {[
           { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
@@ -176,6 +177,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         className={`hidden lg:hidden xl:block navbar w-[310px] h-[270px] bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
         fixed left-[110px] ${isScrolled ? "top-[35px]" : "top-[160px]"} font-inter font-normal text-[14px]`}
       >
+        
         <div className="flex flex-col items-center py-6 px-8">
           <ul className="flex flex-col w-full relative font-inter text-[14px]">
             {["about", "skills", "resume", "projects", "contact"].map((section) => (

@@ -10,6 +10,7 @@ const Header = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
   const [showIcons, setShowIcons] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const currentMessage = messages[currentMessageIndex];
@@ -29,6 +30,25 @@ const Header = () => {
     }
   }, [charIndex, currentMessageIndex]);
 
+
+  
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      document.documentElement.classList.toggle("dark", newMode);
+      return newMode;
+    });
+  };
+
+
   return (
 
     
@@ -40,33 +60,35 @@ const Header = () => {
       className="flex flex-col items-center justify-center min-h-screen w-full px-4 dark:bg-gray-900"
     >
 
-      
+    
+      {/* Social Icons & Dark Mode Toggle */}
+      <div 
+        className={`fixed top-6 right-12 flex items-center gap-6 z-50 transition-opacity duration-300
+          ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden lg:flex
+          xl:top-2 xl:right-20`}
+      >
+        {/* Social Links */}
+        {[
+          { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
+          { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hanskkangg" },
+          { icon: <FaInstagram />, url: "https://www.instagram.com/hanskkangg" },
+          { icon: <FaFacebook />, url: "https://www.facebook.com/hanskkangg" },
+        ].map(({ icon, url }, index) => (
+          <a key={index} href={url} target="_blank" rel="noopener noreferrer">
+            <div className="w-6 h-6 xl:w-5 xl:h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors">
+              {icon}
+            </div>
+          </a>
+        ))}
 
-{/* Social Icons & Dark Mode Toggle */}
-<div 
-  className={`fixed top-6 right-12 flex items-center gap-6 z-50 transition-opacity duration-300
-    ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden lg:flex
-    xl:top-2 xl:right-20`}
->
-  {/* GitHub */}
-  <a href="https://github.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-    <FaGithub className="w-6 h-6 xl:w-5 xl:5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
-  </a>
+        {/*Dark Mode Toggle Button*/}
+        <button
+          onClick={toggleDarkMode}
+          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors xl:mt-[-2%] lg:mt-[-4%]"
+        >
+          {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+        </button>
 
-  {/* LinkedIn */}
-  <a href="https://www.linkedin.com/in/hanskkangg" target="_blank" rel="noopener noreferrer">
-    <FaLinkedin className="w-6 h-6 xl:w-5 xl:h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
-  </a>
-
-  {/* Instagram */}
-  <a href="https://www.instagram.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-    <FaInstagram className="w-6 h-6 xl:w-5 xl:h-5 text-gray-800 dark:text-white hover:text-pink-500 transition-colors" />
-  </a>
-
-  {/* Facebook */}
-  <a href="https://www.facebook.com/hanskkangg" target="_blank" rel="noopener noreferrer">
-    <FaFacebook className="w-6 h-6 xl:w-5 xl:h-5 text-gray-800 dark:text-white hover:text-blue-500 transition-colors" />
-  </a>
 
 </div>
       {/* Border Box Container */}
@@ -201,7 +223,6 @@ const Header = () => {
   ].map(({ number, label }, index) => (
     <div key={index} className="flex items-center gap-1 w-[80px] xl:text-7xl ml-[8px]">
       {/* Number - Shift Left on Small Screens */}
-    {/* Number - Shift Left on Small Screens, but "1" moves right */}
 <span
   className={`text-8xl md:text-8xl xl:text-8xl font-bold stroke-text w-[50px] 
     ${number === "1" ? "ml-[-30px]" : "ml-[-10px]"} sm:ml-[-12px] md:gap-2`}
