@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Delivery Sushi",
     description: "Maintaining and enhancing a food business locator and Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",
-    image: "/del.gif",
+    image: "/deli.gif",
     contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
     techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
     link: "https://www.ottawadeliverysushi.com",
