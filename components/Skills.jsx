@@ -14,7 +14,7 @@ const Skills = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="
-       w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
+       w-[90%] sm:w-[85%] md:w-[95%] lg:w-[63%] xl:w-[67%] 
         max-w-[1000px]
         min-h-[400px] sm:min-h-[500px] 
         relative mx-auto mt-10 xl:mt-1
@@ -26,7 +26,7 @@ const Skills = () => {
         flex flex-col items-center gap-6 sm:gap-8 
 
         /* Matching Header's right & bottom shift */
-        lg:translate-x-8 lg:translate-y-6
+        lg:translate-x- lg:translate-y-6 lg:mt-[-38%]
         xl:translate-x-48 xl:translate-y-2
 
 

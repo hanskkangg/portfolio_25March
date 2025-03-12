@@ -71,14 +71,14 @@ const Header = () => {
 </div>
       {/* Border Box Container */}
       <div className="
-        w-[100%] sm:w-[90%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
-        max-w-[1000px] min-h-screen sm:min-h-[120vh] md:min-h-[100vh] lg:min-h-[90vh] xl:min-h-[70vh]
+        w-[100%] sm:w-[90%] md:w-[100%] lg:w-[65%] xl:w-[67%] 
+        max-w-[1000px] min-h-screen sm:min-h-[120vh] md:min-h-[100vh] lg:min-h-[70vh] xl:min-h-[70vh]
         rounded-xl flex flex-col items-center justify-center shadow-xl 
         bg-white dark:bg-gray-800 p-6 relative z-40
-        
+        lg:mb-[-10%] lg:mt-[-50%]
         
   /* Shift to right and bottom on large screens */
-  lg:translate-x-6 lg:translate-y-24
+  lg:translate-x-6 lg:translate-y-[-1]
   xl:translate-x-48 xl:translate-y-12"
       >
 
@@ -95,7 +95,7 @@ const Header = () => {
             <Image src={assets.prof} alt="Profile" className="rounded-full w-full h-auto" />
           </motion.div>
 
-          {/* Typing Effect - Positioned on Bottom-Left of Profile Image */}
+          {/* Typing Effect - */}
           <motion.div
             initial={{ opacity: 1, y: -10 }}
             animate={{ opacity: 2, y: 0 }}
@@ -110,7 +110,7 @@ const Header = () => {
           </motion.div>
         </div>
 
-  {/* About Me Text (SMALL TEXT ABOVE FULL STACK DEVELOPER) */}
+  {/* About Me Text */}
   <motion.p
           initial={{ y: -10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -122,7 +122,7 @@ const Header = () => {
           // ABOUT ME
         </motion.p>
 
-         {/* About Me Text (SMALL TEXT ABOVE FULL STACK DEVELOPER) */}
+         {/* About Me Text */}
   <motion.p
           initial={{ y: -10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

@@ -37,14 +37,14 @@ const Contact = () => {
     initial={{ opacity: 0 }} 
       whileInView={{ opacity: 1 }} 
       transition={{ duration: 1 }} 
-    id='contact' className=' w-[90%] sm:w-[85%] md:w-[95%] lg:w-[65%] xl:w-[67%] 
+    id='contact' className=' w-[90%] sm:w-[85%] md:w-[95%] lg:w-[63%] xl:w-[67%] 
         max-w-[1000px]  
         min-h-[400px] sm:min-h-[500px] relative mx-auto 
         mt-10 p-6 sm:p-8 md:p-12 text-center bg-white dark:bg-gray-900 
         dark:border-gray-700 shadow-lg rounded-xl flex flex-col items-center gap-6 sm:gap-8
         
         
-        lg:translate-x-8 lg:translate-y-6
+        lg:translate-x-0 lg:translate-y-6
         xl:translate-x-48 xl:translate-y-2
 
 

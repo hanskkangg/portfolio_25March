@@ -18,6 +18,26 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
   const [isFooterVisible, setIsFooterVisible] = useState(true);
 
+  // Load dark mode preference from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+    }
+  }, []);
+
+
+  
+  // Toggle Dark Mode
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      document.documentElement.classList.toggle("dark", newMode);
+      return newMode;
+    });
+  };
+
   useEffect(() => {
       const handleScroll = () => {
         const sections = ["about", "skills", "resume", "projects", "contact"];
@@ -25,10 +45,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         const documentHeight = document.documentElement.scrollHeight;
         const viewportHeight = window.innerHeight;
 
+
+        
+
       // Navbar Visibility Logic
       setIsScrolled(scrollPosition > 100);
       setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
       setPrevScrollPos(scrollPosition);
+
       // Footer Visibility Logic
       const isAtBottom = scrollPosition + viewportHeight >= documentHeight - 50;
       setIsFooterVisible(isAtBottom);
@@ -65,13 +89,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>    
-      {/* === Name (Visible on All Screens) === */}
+      {/* Name (Visible on All Screens) */}
       <div className="text-black text-5xl lg:text-7xl md:text-7xl md:ml-% lg:mt-1 font-bold font-ovo tracking-wide mt-[2%] ml-7 lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 md:ml-10 xl:text-8xl lg:ml-[10%]">
         Hans <span className="stroke-text">Kang</span>
         <span className="stroke-text text-8xl ml-1">.</span>
       </div>
 
-      {/* === Footer === */}
+      {/* Footer */}
       <footer
         className={`fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center p-1 transition-transform duration-300 ${
           isFooterVisible ? "translate-y-0" : "translate-y-full"
@@ -80,7 +104,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         © {new Date().getFullYear()} Hans Kang. All Rights Reserved.
       </footer>
       
-      {/* === Unified Navigation Bar (Mobile & Desktop) === */}
+      {/* Unified Navigation Bar (Mobile & Desktop) */}
       <div
         className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 transition-opacity duration-300 text-xs  xl:hidden
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"} lg:w-auto lg:p-4`}
@@ -109,8 +133,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         ))}
       </div>
 
-      {/* === Spotify Player (Mobile) === */}
-      <div className="relative w-full flex justify-center mt-2 z-[100] pointer-events-none lg:hidden">
+      {/* Spotify Player (Mobile) */}
+      <div className="relative w-full flex justify-center mt-2 z-[100] pointer-events-none xl:hidden lg:mt-[15%] lg:w-[70%] lg:ml-[15%]">
         <iframe
           id="spotify-embed"
           className="relative rounded-lg w-[90%] h-[80px] z-[200] pointer-events-auto"
@@ -121,8 +145,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         ></iframe>
       </div>
 
-      {/* === Social Icons (Mobile) === */}
-      <nav className="lg:hidden w-[100%] mx-auto mt-2 flex justify-center gap-8">
+      {/* Social Icons (Mobile)  */}
+      <nav className="xl:hidden w-[100%] mx-auto mt-2 flex justify-center items-center gap-4">
+
         {[
           { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
           { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hanskkangg" },
@@ -135,6 +160,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </div>
           </a>
         ))}
+        
+
+        {/* === Dark Mode Toggle Button === */}
+        <button
+          onClick={toggleDarkMode}
+          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors ml-[-2] mt-[-8] z-9999"
+        >
+          {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+        </button>
       </nav>
 
       {/* === Desktop Sidebar Navigation === */}
