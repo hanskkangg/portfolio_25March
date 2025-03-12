@@ -24,15 +24,20 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         const scrollPosition = window.pageYOffset;
         const documentHeight = document.documentElement.scrollHeight;
         const viewportHeight = window.innerHeight;
+ // Desktop Navbar: Hide on Scroll Down, Show on Scroll Up
+ if (window.innerWidth >= 1024) { 
+  setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
+} else {
+  setIsNavbarVisible(true); // Always show navbar on mobile
+}
 
-      // Navbar Visibility Logic
-      setIsScrolled(scrollPosition > 100);
-      setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
-      setPrevScrollPos(scrollPosition);
+setPrevScrollPos(scrollPosition);
       // Footer Visibility Logic
       const isAtBottom = scrollPosition + viewportHeight >= documentHeight - 50;
       setIsFooterVisible(isAtBottom);
 
+      
+      setPrevScrollPos(scrollPosition);
       // Highlight active section
       sections.forEach((section) => {
         const element = document.getElementById(section);
@@ -72,7 +77,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* === Unified Navigation Bar (Mobile & Desktop) === */}
       <div
-        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-4 z-50 transition-opacity duration-300 text-xs  xl:hidden
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 transition-opacity duration-300 text-xs  xl:hidden
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"} lg:w-auto lg:p-4`}
       >
         {["about", "skills", "resume", "projects", "contact"].map((section) => (
