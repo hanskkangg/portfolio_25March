@@ -78,7 +78,7 @@ const Header = () => {
         
         
   /* Shift to right and bottom on large screens */
-  lg:translate-x-6 lg:translate-y-6
+  lg:translate-x-6 lg:translate-y-24
   xl:translate-x-48 xl:translate-y-12"
       >
 
@@ -186,11 +186,11 @@ const Header = () => {
   whileInView={{ opacity: 1 }}
   transition={{ duration: 0.8, delay: 1.2 }}
   className="
-    flex flex-wrap justify-center items-center gap-14
+    flex flex-wrap justify-center items-center gap-10
     text-gray-800 dark:text-gray-200 w-full px-6 md:px-12
     sm:flex-col sm:text-center 
     md:flex-row md:justify-center 
-    lg:flex-row lg:gap-12 mt-12
+    lg:flex-row lg:gap-24 mt-12 md:gap-40
     xl:absolute xl:top-[65%] xl:left-[-5%] xl:gap-56 "
 >
   {[
@@ -202,8 +202,8 @@ const Header = () => {
       {/* Number - Shift Left on Small Screens */}
     {/* Number - Shift Left on Small Screens, but "1" moves right */}
 <span
-  className={`text-8xl md:text-7xl xl:text-8xl font-bold stroke-text w-[50px] 
-    ${number === "1" ? "ml-[-10px]" : "ml-[-20px]"} sm:ml-[-12px] md:ml-0`}
+  className={`text-8xl md:text-8xl xl:text-8xl font-bold stroke-text w-[50px] 
+    ${number === "1" ? "ml-[-30px]" : "ml-[-10px]"} sm:ml-[-12px] md:gap-2`}
 >
   {number}
 </span>

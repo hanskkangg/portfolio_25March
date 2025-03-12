@@ -7,7 +7,7 @@ const Footer = ({ isDarkMode }) => {
     <div className="mt-[-5%] relative xl:mt-[1%]">
       {/* Marquee Animation */}
       <div className="w-full marquee-wrapper xl:ml-[28%]">
-        <div className="animate-marquee text-[150px] sm:text-7xl md:text-8xl xl:text-[300px] font-garamond font-bold text-gray-800 dark:text-gray-300">
+        <div className="animate-marquee text-[150px] sm:text-7xl md:text-8xl xl:text-[300px] font-garamond font-bold text-gray-800 dark:text-gray-300 md:mt-14 md:mb-4">
   HANS&nbsp;HANS&nbsp;HANS&nbsp;HANS&nbsp;
   
 </div>

@@ -56,7 +56,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>    
       {/* === Name (Visible on All Screens) === */}
-      <div className="text-black text-6xl lg:text-8xl font-bold font-ovo tracking-wide mt-5 ml-8  lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 ">
+      <div className="text-black text-5xl lg:text-7xl md:text-7xl md:ml-% lg:mt-1 font-bold font-ovo tracking-wide mt-8 ml-7 lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 md:ml-10">
         Hans <span className="stroke-text">Kang</span>
         <span className="stroke-text text-8xl ml-1">.</span>
       </div>
@@ -72,7 +72,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* === Mobile Navigation Links === */}
       <div
-        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-3 z-50 lg:hidden transition-opacity duration-300 text-xs 
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 lg:hidden transition-opacity duration-300 text-xs 
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         {["about", "skills", "resume", "projects", "contact"].map((section) => (

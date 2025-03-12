@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Delivery Sushi",
     description: "Maintaining and enhancing a food business locator and Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",
-    image: "/bae.gif",
+    image: "/del.gif",
     contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
     techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
     link: "https://www.ottawadeliverysushi.com",
@@ -24,23 +24,54 @@ const projects = [
   {
     title: "OnPapier",
     description: "Built a full-stack e-commerce web app using the MERV stack with a REST API for CRUD operations. Integrated Stripe, PayPal, and e-Transfer for secure payments.",
-    image: "/bae.gif",
+    image: "/On1.png",
     contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
     techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
-    link: "https://www.ottawadeliverysushi.com",
+    link: "https://www.onpapier.com/",
   },
   {
-    title: "Min Blog",
+    title: "Personal Blog",
     description: "Developed a personal blog platform with role-based access control (RBAC), allowing admins to create and manage posts, while users can read and comment.",
-    image: "/bae.gif",
+    image: "/blog.gif",
     contributions: ["Implemented RBAC system", "Enhanced UI/UX design", "Deployed on Render with monitoring"],
     techStack: [FaReact, FaNodeJs, SiMongodb, SiExpress, SiTailwindcss],
     link: "https://personal-blog-lboi.onrender.com",
   },
   {
+    title: "Personal Portfolio",
+    description: "Developed my personal portfolio website using Next.js, React, and Tailwind CSS, featuring animations, dark mode, and CI/CD deployment.",
+    image: "/pro.gif",
+    contributions: [
+      <>
+        Latest Portfolio:{" "}
+        <a href="https://hanskang.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          hanskang.com
+        </a>
+      </>,
+      <>
+        Second Portfolio:{" "}
+        <a href="https://hanskkangport.netlify.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          hanskkangport.netlify.app
+        </a>
+      </>,
+      <>
+        First Portfolio:{" "}
+        <a href="https://hanskang.netlify.app" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+        hanskang.netlify.app
+
+
+        </a>
+      </>
+    ],
+    techStack: [FaReact, SiNextdotjs, SiTailwindcss, SiVercel],
+    link: "https:hanskang.com",
+  }
+  
+,  
+  {
     title: "CCNA Blog",
     description: "Developed a CCNA study guide web app hosted on Azure Web App, dynamically fetching and displaying study materials from MongoDB JSON files.",
-    image: "/bae.gif",
+    image: "/CCNA.gif",
     contributions: ["Implemented dynamic data fetching", "Added CI/CD automation", "Deployed on Azure Web App"],
     techStack: [FaReact, FaCloud, SiMongodb, SiTailwindcss],
     link: "https://hansdevhub-cxa3cba5hmhdhyb0.canadacentral-01.azurewebsites.net/",
@@ -108,15 +139,18 @@ const Projects = () => {
      {/* Navigation Buttons */}
 <button
   onClick={prevSlide}
-  className="absolute left-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
- top-[27%] xl:top-[45%] xl:ml-[10%]" 
+  className="absolute left-4 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
+ top-[24%] xl:top-[41%] xl:ml-[10%] md:top-[30%]
+ lg:top-[45%]" 
 >
   ❮
 </button>
 <button
   onClick={nextSlide}
-  className="absolute right-4 top-1/2 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
- top-[27%] xl:top-[45%] xl:mr-[10%]" 
+  className="absolute right-4 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
+ top-[24%] xl:top-[41%] xl:mr-[10%] md:top-[30%]
+ 
+ lg:top-[45%]" 
 >
   ❯
 </button>
@@ -141,49 +175,58 @@ const Projects = () => {
       ))}
     </div>
     
-    
     <div className="relative w-full flex justify-center items-center mt-[-10]">
   <motion.div
-  key={currentIndex}
-  initial={{ opacity: 0, scale: 0.95 }} 
-  animate={{ opacity: 1, scale: 1 }}
-  exit={{ opacity: 0 }}
-  transition={{ duration: 0.8, ease: "easeInOut" }}
-  className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 
-  bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl
-  w-[100%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[100%] max-w-[1000px]
-  h-[690px] sm:h-[650px] md:h-[700px] xl:h-[450px]"
+    key={currentIndex}
+    initial={{ opacity: 0, scale: 0.95 }} 
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.8, ease: "easeInOut" }}
+    className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 
+    bg-white dark:bg-gray-800 p-8 xl:p-12 rounded-2xl
+    w-[110%] sm:w-[120%] md:w-[130%] lg:w-[140%] xl:w-[150%] max-w-none 
+    h-[800px] sm:h-[750px] md:h-[800px] xl:h-[500px] 
+    -mx-10 sm:-mx-12 md:-mx-16 lg:-mx-20 xl:-mx-24 
+    
+    lg:h-[550px]"
 
-  >            
-  <div className="w-full lg:w-1/2 xl:w-[140%] xl:h-[540px] flex justify-center mt-[18%] xl:mt-0 md:mt-[15%]">
+    
+  >
+
+       
+  <div className="w-full xl:w-[140%] xl:h-[540px] lg:w-[140%] lg:h-[300px] flex justify-center mt-[18%] xl:mt-0 md:mt-[15%]">
   <Image 
     src={projects[currentIndex].image} 
     alt={projects[currentIndex].title} 
     width={700} 
     height={800} 
-    className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%] xl:mt-[9%] md:-[9%]"
+    className="rounded-lg xl:w-[90%] xl:h-[500px] max-h-[800px] object-contain xl:ml-[-10%] xl:mt-[9%] md:-[9%]
+    lg:w-[90%] lg:h-[500px] lg:ml-[-10%] lg:mt-[-30%] md:-[9%] "
   />
 </div>
-<div className="w-full lg:w-1/2 text-left relative ">
+<div className="w-full lg:w-full text-left relative ">
   {/* Title - Centered at the Top */}
-  <h3 className="absolute text-2xl font-bold mt-[-90%] left-1/2 -translate-x-1/2 
-                 font-montserrat xl:text-4xltext-gray-900 dark:text-white 
+  <h3 className="absolute text-xl font-bold mt-[-100%] left-1/2 -translate-x-1/2 
+                 font-poppins xl:text-5xl text-gray-600 dark:text-white 
                  text-center whitespace-nowrap max-w-[90%] xl:max-w-[600px] 
-                 overflow-hidden text-ellipsis mb-6 xl:mt-[-5%] xl:ml-[-150%] xl:top-[-1] md:top-[-350]">
+                 overflow-hidden text-ellipsis mb-6 xl:mt-[-10%] xl:ml-[-80%] xl:top-[-10] md:top-[80%] 
+                 md:text-6xl
+                 lg:top-[65%] lg:ml-[-80%] lg:text-2xl">
     {projects[currentIndex].title}
 </h3>
 
 
 
-            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-40%] xl:mt-[30%]">{projects[currentIndex].description}</p>
-            <ul className="font-montserrat mt-4 text-gray-900 dark:text-gray-300 text-sm xl:ml-[-40%] xl:mb-5">
+            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-25%] xl:mt-[30%] lg:mt-[60%]
+            ">{projects[currentIndex].description}</p>
+            <ul className="font-montserrat mt-4 text-gray-900 dark:text-gray-300 text-sm xl:ml-[-25%] xl:mb-5">
               {projects[currentIndex].contributions.map((item, i) => (
                 <li key={i} className="list-disc ml-4 xl:mt-2">{item}</li>
               ))}
             </ul>
 
             
-<div className="flex flex-wrap gap-4 mt-4 xl:ml-[-35%]">
+<div className="flex flex-wrap gap-4 mt-4 xl:ml-[-23%]">
   {projects[currentIndex].techStack.map((Icon, i) => (
     <div key={i} className="relative group flex flex-col items-center">
       <div className="text-2xl text-gray-700 dark:text-gray-300 xl:mb-1">{<Icon />}</div>
@@ -197,7 +240,7 @@ const Projects = () => {
 </div>
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
              text-gray-600 dark:text-blue-400 hover:text-white 
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-40%] ml-[-1%] md:ml-[38%] ">View Live</a>
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-25%] ml-[-1%] md:ml-[38%] ">View Live</a>
             </div>
           </motion.div>
         
