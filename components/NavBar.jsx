@@ -70,10 +70,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         © {new Date().getFullYear()} Hans Kang. All Rights Reserved.
       </footer>
       
-      {/* === Mobile Navigation Links === */}
+      {/* === Unified Navigation Bar (Mobile & Desktop) === */}
       <div
-        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 lg:hidden transition-opacity duration-300 text-xs 
-        ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-4 z-50 transition-opacity duration-300 text-xs 
+        ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"} lg:w-auto lg:p-4`}
       >
         {["about", "skills", "resume", "projects", "contact"].map((section) => (
           <div key={section} className="relative flex items-center stroke-text_m">
@@ -85,6 +85,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                   : "w-2 h-2 opacity-70"
               }`}
             ></span>
+
 
             {/* Navigation Links */}
             <a
@@ -128,7 +129,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       {/* === Desktop Sidebar Navigation === */}
       <nav
-        className={`hidden lg:block navbar w-[310px] h-[270px] bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
+        className={`hidden lg:hidden xl:block navbar w-[310px] h-[270px] bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
         fixed left-[110px] ${isScrolled ? "top-[35px]" : "top-[160px]"} font-inter font-normal text-[14px]`}
       >
         <div className="flex flex-col items-center py-6 px-8">
