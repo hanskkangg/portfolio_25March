@@ -24,20 +24,25 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         const scrollPosition = window.pageYOffset;
         const documentHeight = document.documentElement.scrollHeight;
         const viewportHeight = window.innerHeight;
- // Desktop Navbar: Hide on Scroll Down, Show on Scroll Up
- if (window.innerWidth >= 1024) { 
-  setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
-} else {
-  setIsNavbarVisible(true); // Always show navbar on mobile
-}
 
-setPrevScrollPos(scrollPosition);
+      // Navbar Visibility Logic
+      setIsScrolled(scrollPosition > 100);
+      setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
+      setPrevScrollPos(scrollPosition);
       // Footer Visibility Logic
       const isAtBottom = scrollPosition + viewportHeight >= documentHeight - 50;
       setIsFooterVisible(isAtBottom);
 
       
+      // Desktop Navbar: Hide on Scroll Down, Show on Scroll Up
+      if (window.innerWidth >= 1025) { 
+        setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
+      } else {
+        setIsNavbarVisible(true); // Always show navbar on mobile
+      }
+
       setPrevScrollPos(scrollPosition);
+      
       // Highlight active section
       sections.forEach((section) => {
         const element = document.getElementById(section);
@@ -61,7 +66,7 @@ setPrevScrollPos(scrollPosition);
   return (
     <>    
       {/* === Name (Visible on All Screens) === */}
-      <div className="text-black text-5xl lg:text-7xl md:text-7xl md:ml-% lg:mt-1 font-bold font-ovo tracking-wide mt-[2%] ml-7 lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 md:ml-10">
+      <div className="text-black text-5xl lg:text-7xl md:text-7xl md:ml-% lg:mt-1 font-bold font-ovo tracking-wide mt-[2%] ml-7 lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 md:ml-10 xl:text-8xl lg:ml-[10%]">
         Hans <span className="stroke-text">Kang</span>
         <span className="stroke-text text-8xl ml-1">.</span>
       </div>
