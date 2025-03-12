@@ -205,7 +205,7 @@ const Projects = () => {
   />
 </div>
 <div className="w-full lg:w-full text-left relative ">
-  {/* Title - Centered at the Top */}
+  {/* Title  */}
   <h3 className="absolute text-2xl font-bold mt-[-100%] left-1/2 -translate-x-1/2 
                  font-poppins xl:text-6xl text-gray-600 dark:text-white 
                  text-center whitespace-nowrap max-w-[100%] xl:max-w-[600px] 
@@ -215,8 +215,6 @@ const Projects = () => {
     {projects[currentIndex].title}
 </h3>
 
-
-
             <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-25%] xl:mt-[30%] lg:mt-[60%]
             ">{projects[currentIndex].description}</p>
             <ul className="font-montserrat mt-4 text-gray-900 dark:text-gray-300 text-sm xl:ml-[-25%] xl:mb-5">
@@ -225,19 +223,26 @@ const Projects = () => {
               ))}
             </ul>
 
-            
-<div className="flex flex-wrap gap-4 mt-4 xl:ml-[-23%]">
-  {projects[currentIndex].techStack.map((Icon, i) => (
-    <div key={i} className="relative group flex flex-col items-center">
-      <div className="text-2xl text-gray-700 dark:text-gray-300 xl:mb-1">{<Icon />}</div>
+            <div className="flex flex-wrap gap-4 mt-4 xl:ml-[-23%]">
+  {projects[currentIndex].techStack.map((Icon, i) => {
+    const techName =
+      Object.keys(techNames).find((key) => Icon.name && Icon.name.includes(key)) || "Unknown";
 
-      {/* Tooltip with manual name */}
-      <span className="absolute bottom-[-30px] hidden group-hover:block bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow-xl">
-        {techNames[Icon.name] || "Unknown"}
-      </span>
-    </div>
-  ))}
+    return (
+      <div key={i} className="relative group flex flex-col items-center">
+        <div className="text-2xl text-gray-700 dark:text-gray-300 xl:mb-1">
+          {<Icon />}
+        </div>
+
+        {/* Tooltip with tech name */}
+        <span className="absolute bottom-[-30px] hidden group-hover:block bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow-xl">
+          {techNames[techName] || "Unknown"}
+        </span>
+      </div>
+    );
+  })}
 </div>
+
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
              text-gray-600 dark:text-blue-400 hover:text-white 
              hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-25%] ml-[-1%] md:ml-[38%] ">View Live</a>
