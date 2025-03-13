@@ -172,7 +172,7 @@ const Resume = () => {
 
                 {/* Program Info */}
                 <div className="flex flex-col text-left">
-                  <p className="font-poppins text-lg font-bold text-black dark:text-gray-200 ml-[-15] mt-[-2]">
+                  <p className="font-poppins text-lg font-bold text-black dark:text-slate-200 ml-[-15] mt-[-2]">
                     {edu.title}
                   </p>
                   <p className="font-poppins text-sm text-gray-800 dark:text-gray-300  ml-[-15] mt-[3] ">{edu.institution}</p>
@@ -218,7 +218,7 @@ const Resume = () => {
             <Image src={exp.logo} alt={`${exp.company} Logo`} width={80} height={80} className="object-contain xl:ml-[-110%] xl:mt-[-115%] ml-4 md:mt-5" />
           </div>
           <div className="w-full flex flex-col">
-            <p className="text-left ml-5 mt-5 font-poppins text-xl font-bold text-gray-900 dark:text-green-400 
+            <p className="text-left ml-5 mt-5 font-poppins text-xl font-bold text-gray-900 dark:text-slate-200 
             xl:text-left xl:ml-[-18%] xl:mt-[-33%]">
               {exp.title}
             </p>
@@ -299,7 +299,7 @@ const Resume = () => {
             <Image src={exp.logo} alt={`${exp.company} Logo`} width={80} height={80} className="object-contain xl:ml-[-125%] xl:mt-[-120%]" />
           </div>
           <div className="w-full flex flex-col">
-            <p className="text-left ml-5 mt-5  font-poppins text-xl font-bold text-gray-900 dark:text-blue-400 
+            <p className="text-left ml-5 mt-5  font-poppins text-xl font-bold text-gray-900 dark:text-slate-200
             xl:text-left xl:ml-[-21%] xl:mt-[-33%] md:ml-3">
               {exp.title}
             </p>

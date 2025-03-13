@@ -89,8 +89,8 @@ const Contact = () => {
     transition={{ delay: 1.1, duration: 0.6 }}
     type="text" placeholder='Enter your name' required
     className='w-full xl:w-[800px] p-3 xl:p-5 outline-none border-[0.5px] border-gray-400 
-               rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90
-               text-base xl:text-lg xl:mt-[-10%]' name='name'
+               rounded-md bg-white dark:bg-darkHover/30 dark:border-neutral-700
+               text-base xl:text-lg xl:mt-[-10%] dark:bg-neutral-700 ' name='name'
   />
            
   <motion.input
@@ -99,8 +99,8 @@ const Contact = () => {
     transition={{ delay: 1.2, duration: 0.6 }}
     type="email" placeholder='Enter your email' required
     className='w-full xl:w-[800px] p-3 xl:p-5 outline-none border-[0.5px] border-gray-400 
-               rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90
-               text-base xl:text-lg' name='email'
+               rounded-md bg-white dark:bg-darkHover/30 dark:border-neutral-700
+               text-base xl:text-lg dark:bg-neutral-700' name='email'
   />
 </div>
 <motion.textarea 
@@ -109,8 +109,8 @@ const Contact = () => {
   transition={{ delay: 1.3, duration: 0.6 }}
   rows='6' placeholder='Enter your message' required
   className='w-full xl:w-[800px] p-4 xl:p-6 outline-none border-[0.5px] border-gray-400 
-             rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90
-             text-base xl:text-lg xl:ml-[-10%]' name='message'
+             rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-neutral-700
+             text-base xl:text-lg xl:ml-[-10%] dark:bg-neutral-700' name='message'
 ></motion.textarea>
 
         <motion.button
