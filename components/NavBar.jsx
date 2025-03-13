@@ -166,7 +166,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         {/*Dark Mode Toggle Button*/}
         <button
           onClick={toggleDarkMode}
-          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors ml-[-2] mt-[-1%]"
+          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors ml-[-2] mt-[-2%] md:mt-[-1%] "
         >
           {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
         </button>
