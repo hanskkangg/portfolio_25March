@@ -62,7 +62,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       if (window.innerWidth >= 1025) { 
         setIsNavbarVisible(scrollPosition < prevScrollPos || scrollPosition < 50);
       } else {
-        setIsNavbarVisible(true); // Always show navbar on mobile
+        setIsNavbarVisible(true); 
       }
 
       setPrevScrollPos(scrollPosition);
@@ -163,16 +163,16 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         ))}
         
 
-        {/* === Dark Mode Toggle Button === */}
+        {/*Dark Mode Toggle Button*/}
         <button
           onClick={toggleDarkMode}
-          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors ml-[-2] mt-[-8] z-9999"
+          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors ml-[-2] mt-[-1%]"
         >
           {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
         </button>
       </nav>
 
-      {/* === Desktop Sidebar Navigation === */}
+      {/*Desktop Sidebar Navigation */}
       <nav
         className={`hidden lg:hidden xl:block navbar w-[310px] h-[270px] bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
         fixed left-[110px] ${isScrolled ? "top-[35px]" : "top-[160px]"} font-inter font-normal text-[14px]`}
