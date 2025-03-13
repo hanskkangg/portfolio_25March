@@ -65,7 +65,7 @@ const Header = () => {
       <div 
         className={`fixed top-6 right-12 flex items-center gap-6 z-50 transition-opacity duration-300
           ${showIcons ? 'opacity-100' : 'opacity-0 pointer-events-none'} hidden lg:flex
-          xl:top-2 xl:right-20`}
+          xl:top-2 xl:right-20 xl:text-2xl lg:text-2xl`}
       >
         {/* Social Links */}
         {[
@@ -81,13 +81,13 @@ const Header = () => {
           </a>
         ))}
 
-        {/*Dark Mode Toggle Button*/}
-        <button
-          onClick={toggleDarkMode}
-          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors xl:mt-[-2%] lg:mt-[-4%]"
-        >
-          {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-        </button>
+        {/*Dark Mode Toggle Button*/}{/* Dark Mode Toggle Button */}
+<button
+  onClick={toggleDarkMode}
+  className="flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors xl:mt-[2%] lg:mt-[-1%] text-2xl"
+>
+  {isDarkMode ? <FaSun className="xl:text-2xl" /> : <FaMoon className="xl:text-2xl" />}
+</button>
 
 
 </div>
@@ -130,7 +130,7 @@ const Header = () => {
             "
           >
             {displayedText} <span className="text-orange-500 animate-blink">_</span>
-          </motion.div>
+          </motion.div> 
         </div>
 
   {/* About Me Text */}
