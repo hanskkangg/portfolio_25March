@@ -139,7 +139,7 @@
   const SkillItem = ({ icon, name, className = "" }) => (
     <div
       
-      className={`flex font-montserrat items-center gap-1 p-1 border border-dashed border-black dark:border-gray-600 mx-18  dark:border-[#EFB920]
+      className={`flex font-montserrat items-center gap-1 p-1 border border-dashed border-black  mx-18  dark:border-[#EFB920]
                     rounded-3xl hover:scale-105 transition-transform text-xs
                     xl:w-[120px] xl:h-12 xl:gap-22 ${className}`}
     >
