@@ -101,9 +101,9 @@ const Resume = () => {
       className="  w-[90%] sm:w-[85%] md:w-[95%] lg:w-[63%] xl:w-[67%] 
         max-w-[1000px]
         min-h-[400px] sm:min-h-[500px] relative mx-auto 
-        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white dark:bg-gray-900 
-        dark:border-gray-700 shadow-lg rounded-xl flex flex-col items-center gap-6 sm:gap-8
-        
+        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white
+        dark:border-gray-700 rounded-xl flex flex-col items-center gap-6 sm:gap-8
+ dark:bg-[#272626] 
         
         /* Matching Header's right & bottom shift */
         lg:translate-x- lg:translate-y-6
@@ -115,7 +115,7 @@ const Resume = () => {
 
       
 
-<p className="mt-2 stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 mt-3 font-ovo xl:absolute xl:top-[54px] xl:right-[69%]">
+<p className="mt-3 stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700  font-ovo xl:absolute xl:top-[54px] xl:right-[69%] dark:text-[#EFB920]">
           RESUME
         </p>
       
@@ -140,9 +140,10 @@ const Resume = () => {
         </p>
         
 
-        <motion.h2 className="stroke-text mt-10 text-3xl font-bold text-gray-900 dark:text-white font-ovo xl:mt-20">
-        EDUCATION
-      </motion.h2>
+        <motion.h2 className="stroke-text mt-10 text-3xl font-bold text-gray-900 font-ovo xl:mt-20 dark:text-gray-300 xl:text-3xl">
+  EDUCATION
+</motion.h2>
+
 
       </motion.div>     
 
@@ -154,7 +155,7 @@ const Resume = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative flex flex-col xl:flex-row justify-between items-center p-4 sm:p-6 border border-gray-400 dark:border-gray-600 rounded-lg shadow-md w-full bg-white dark:bg-gray-800 mb-8"
+              className="relative flex flex-col xl:flex-row justify-between items-center p-4 sm:p-6 border border-gray-400 dark:border-neutral-700 rounded-lg shadow-md w-full bg-white dark:bg-neutral-700 mb-8"
             >
               {/* LEFT SIDE: Logo + Program + Institution + Year */}
               <div className="flex items-center gap-4 sm:gap-6">
@@ -171,7 +172,7 @@ const Resume = () => {
 
                 {/* Program Info */}
                 <div className="flex flex-col text-left">
-                  <p className="font-poppins text-lg font-bold text-black dark:text-white ml-[-15] mt-[-2]">
+                  <p className="font-poppins text-lg font-bold text-black dark:text-gray-200 ml-[-15] mt-[-2]">
                     {edu.title}
                   </p>
                   <p className="font-poppins text-sm text-gray-800 dark:text-gray-300  ml-[-15] mt-[3] ">{edu.institution}</p>
@@ -208,7 +209,7 @@ const Resume = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: index * 0.2 }}
-        className="relative flex flex-col xl:flex-row justify-between items-center xl:p-28 sm:p-6 border border-gray-400 dark:border-gray-600 rounded-lg shadow-md w-full bg-white dark:bg-gray-800 mb-8"
+        className="relative flex flex-col xl:flex-row justify-between items-center xl:p-28 sm:p-6 border border-gray-400 dark:border-neutral-700 rounded-lg shadow-md w-full bg-white dark:bg-neutral-700 mb-8"
             
       >
         {/* Logo + Job Title + Company */}
@@ -235,7 +236,7 @@ const Resume = () => {
 
         {/* Company Name & Year */}
         <div className="text-left mt-5 ml-8 w-full flex flex-col xl:ml-[-100%] xl:mt-6">
-          <p className="font-poppins xl:text-lg font-bold text-gray-800 dark:text-gray-300 xl:text-left
+          <p className="font-poppins xl:text-lg font-bold text-gray-800 dark:text-gray-400 xl:text-left
             xl:ml-[15%] xl:mt-[-12%]">
             {exp.company}
           </p>
@@ -289,7 +290,7 @@ const Resume = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: index * 0.2 }}
-        className="relative flex flex-col xl:flex-row justify-between items-center xl:p-28 sm:p-6 border border-gray-400 dark:border-gray-600 rounded-lg shadow-md w-full bg-white dark:bg-gray-800 mb-8"
+        className="relative flex flex-col xl:flex-row justify-between items-center xl:p-28 sm:p-6 border border-gray-400 dark:border-neutral-700 rounded-lg shadow-md w-full bg-white dark:bg-neutral-700 mb-8"
           
       >
         {/* Logo + Job Title + Company */}
@@ -317,7 +318,7 @@ const Resume = () => {
 
         {/* Company Name & Year */}
         <div className="text-left mt-5 ml-8 w-full flex flex-col xl:ml-[-100%] xl:mt-6">
-          <p className="font-poppins xl:text-lg font-bold text-gray-800 dark:text-gray-300 xl:text-left
+          <p className="font-poppins xl:text-lg font-bold text-gray-800 dark:text-gray-400 xl:text-left
             xl:ml-[15%] xl:mt-[-12%]">
             {exp.company}
           </p>

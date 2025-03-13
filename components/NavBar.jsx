@@ -90,14 +90,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>    
       {/* Name (Visible on All Screens) */}
-      <div className="text-black text-5xl lg:text-7xl md:text-7xl md:ml-% lg:mt-1 font-bold font-ovo tracking-wide mt-[2%] ml-7 lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 md:ml-10 xl:text-8xl lg:ml-[10%]">
-        Hans <span className="stroke-text">Kang</span>
-        <span className="stroke-text text-8xl ml-1">.</span>
+      <div className="text-black dark:text-gray-300 text-5xl lg:text-7xl md:text-7xl md:ml-% lg:mt-1 font-bold font-ovo tracking-wide mt-[2%] ml-7 lg:fixed lg:top-10 lg:left-[110px] xl:mt-1 xl:ml-1 md:ml-10 xl:text-8xl lg:ml-[10%]">
+        Hans <span className="stroke-text dark:text-[#EFB920]">Kang</span>
+        <span className="stroke-text text-8xl ml-1 dark:text-[#EFB920]">.</span>
       </div>
 
       {/* Footer */}
       <footer
-        className={`fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center p-1 transition-transform duration-300 ${
+        className={`fixed bottom-0 left-0 w-full bg-gray-800  dark:bg-[#272626]  text-white text-center p-1 transition-transform duration-300 ${
           isFooterVisible ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -106,7 +106,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* Unified Navigation Bar (Mobile & Desktop) */}
       <div
-        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 transition-opacity duration-300 text-xs  xl:hidden
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 transition-opacity duration-300 text-xs  xl:hidden 
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"} lg:w-auto lg:p-4`}
       >
         {["about", "skills", "resume", "projects", "contact"].map((section) => (
@@ -147,7 +147,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       </div>
 
       {/* Social Icons (Mobile)  */}
-      <nav className="xl:hidden w-[100%] mx-auto mt-2 flex justify-center items-center gap-4 lg:hidden">
+      <nav className="xl:hidden w-[100%] mx-auto mt-2 flex justify-center items-center gap-4 lg:hidden
+      ">
 
         {[
           { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
@@ -156,7 +157,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           { icon: <FaFacebook />, url: "https://www.facebook.com/hans.kkang" },
         ].map(({ icon, url }, index) => (
           <a key={index} href={url} target="_blank" rel="noopener noreferrer">
-            <div className="w-6 h-6 text-gray-800 dark:text-white hover:text-blue-500 transition-colors">
+            <div className="w-6 h-6 text-gray-800 hover:text-blue-500 transition-colors
+            dark:text-gray-300">
               {icon}
             </div>
           </a>
@@ -166,7 +168,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         {/*Dark Mode Toggle Button*/}
         <button
           onClick={toggleDarkMode}
-          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 dark:text-white hover:text-yellow-400 transition-colors ml-[-2] mt-[-2%] md:mt-[-1%] "
+          className="w-4 h-4 flex items-center justify-center rounded-full text-gray-800 hover:text-yellow-400 transition-colors ml-[-2] mt-[-2%] md:mt-[-1%] dark:text-gray-300"
         >
           {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
         </button>
@@ -174,19 +176,19 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       {/*Desktop Sidebar Navigation */}
       <nav
-        className={`hidden lg:hidden xl:block navbar w-[310px] h-[270px] bg-black dark:bg-gray-900 transition-all duration-300 z-[100] rounded-xl
+        className={`hidden lg:hidden xl:block navbar w-[310px] h-[270px] bg-black dark:bg-[#272626] transition-all duration-300 z-[100] rounded-xl 
         fixed left-[110px] ${isScrolled ? "top-[35px]" : "top-[160px]"} font-inter font-normal text-[14px]`}
       >
         
         <div className="flex flex-col items-center py-6 px-8">
-          <ul className="flex flex-col w-full relative font-inter text-[14px]">
+          <ul className="flex flex-col w-full relative font-inter text-[14px] ">
             {["about", "skills", "resume", "projects", "contact"].map((section) => (
               <li key={section} className="w-full flex items-center justify-start relative">
                 {/* Navigation Link */}
                 <a
                   href={`#${section}`}
                   className={`block w-full text-left ml-2 py-2 rounded-lg transition-colors text-gray-500 hover:text-white tracking-wider 
-                  ${activeSection === section ? "text-white" : ""}`}
+                  ${activeSection === section ? "text-white dark:text-[#EFB920]" : ""}`}
                 >
                   {section.toUpperCase()}
                 </a>

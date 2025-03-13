@@ -40,17 +40,17 @@ const Contact = () => {
     id='contact' className=' w-[90%] sm:w-[85%] md:w-[95%] lg:w-[63%] xl:w-[67%] 
         max-w-[1000px]  
         min-h-[400px] sm:min-h-[500px] relative mx-auto 
-        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white dark:bg-gray-900 
-        dark:border-gray-700 shadow-lg rounded-xl flex flex-col items-center gap-6 sm:gap-8
+        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white 
+        dark:border-gray-700 rounded-xl flex flex-col items-center gap-6 sm:gap-8
         
         
         lg:translate-x-0 lg:translate-y-6
         xl:translate-x-48 xl:translate-y-2
-
+         dark:bg-[#272626] 
 
         xl:flex xl:flex-col xl:items-left xl:justify-left'>
           
-<p className="mt-2 stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 ont-ovo xl:absolute xl:top-[54px] xl:left-[7%]">
+<p className="mt-2 stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700  ont-ovo xl:absolute xl:top-[54px] xl:left-[7%] dark:text-[#EFB920]">
          CONTACT
         </p>
 
@@ -59,14 +59,15 @@ const Contact = () => {
       initial={{ y: -20, opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }} 
       transition={{ delay: 0.3, duration: 0.5 }}
-      className='text-center font-bold mb-2 text-sm font-ovo text-gray-900 xl:block hidden  xl:ml-[-82%] xl:mt-[5%]'>
+      className='text-center dark:text-white font-bold mb-2 text-sm font-ovo text-gray-900 xl:block hidden xl:ml-[-82%] xl:mt-[5%]
+      '>
       // Connect with me</motion.h4>
       
       <motion.h2
       initial={{ y: -20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className='font-ovo text-center xl:text-5xl font-bold text-2xl'>
+      className='font-ovo text-center xl:text-5xl font-bold text-2xl dark:text-gray-300'>
       Get in touch</motion.h2>
 
       <motion.p
@@ -116,8 +117,9 @@ const Contact = () => {
         whileHover={{ scale: 1.05 }} 
         transition={{ duration: 0.3 }}
         type='submit'
-        className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'
-        >Submit now <Image src={assets.right_arrow_white} alt='' className='w-4'/></motion.button>
+        className='py-3 px-8 w-max flex border-dashed items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto dark:border-[#EFB920] dark:text-[#EFB920] hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-[#EFB920]
+        dark:hover:text-black'
+        >Submit</motion.button>
 
         <p className='mt-4'>{result}</p>
       </motion.form>

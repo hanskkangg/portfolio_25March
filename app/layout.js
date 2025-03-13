@@ -38,11 +38,10 @@ export const metadata = {
   title: "HansKang",
   description: "",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden w-full">
-      <body className="flex flex-col items-center justify-center min-h-screen bg-custom dark:bg-gray-900 dark:text-white overflow-x-hidden">
+      <body className="flex flex-col items-center justify-center min-h-screen bg-custom dark:bg-[#2d6a4f] dark:text-white overflow-x-hidden">
         {/* Border Container with Proper Size */}
         <div className="w-full min-h-screen dark:border-white box-border">
           {children}

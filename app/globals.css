@@ -65,12 +65,44 @@ h1, h2, h3 {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents tiling */
   background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  z-index: -9999;
 }
+
+
 
 /* Dark Mode Background */
 .dark .bg-custom {
-  background-image: url('/bg_d.png'); /* Dark mode background */
+
+  background-image: url('/bg_7.png'); /* Ensure the path is correct */
+  background-color:#191919; /* Ensure background color as a fallback */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  z-index: -9999;
 }
+
+/* Dark Mode - Remove Stroke */
+.dark .stroke-text {
+  -webkit-text-stroke: 0px !important; /* Removes stroke */
+  color: #EFB920 !important; /* Ensures visibility */
+}
+
+/* Ensure dark mode is properly applied */
+html.dark body {
+  background-color: #67bcab !important;
+}
+
+/* Set Default Dark Mode Text Color */
+.dark body {
+  color: white;
+}
+
+/* Set Light Mode Text Color */
+body {
+  color: black;
+}
+
 
 .dark .circle-effect {
   filter: invert(1); /* Turns black to white */

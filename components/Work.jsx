@@ -116,30 +116,30 @@ const Projects = () => {
     className=" w-[90%] sm:w-[85%] md:w-[95%] lg:w-[63%] xl:w-[67%] 
         max-w-[1000px]
         min-h-[400px] sm:min-h-[500px] relative mx-auto 
-        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white dark:bg-gray-900 
-        dark:border-gray-700 shadow-lg rounded-xl flex flex-col items-center gap-6 sm:gap-8
+        mt-10 p-6 sm:p-8 md:p-12 text-center bg-white
+        dark:border-gray-700 rounded-xl flex flex-col items-center gap-6 sm:gap-8
         
         
         /* Matching Header's right & bottom shift */
         lg:translate-x- lg:translate-y-6
         xl:translate-x-48 xl:translate-y-2
-
-
+ dark:bg-[#272626] 
         xl:flex xl:flex-col xl:items-left xl:justify-left overflow-hidden"
   >
     
-<p className="mt-2 stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 ont-ovo xl:absolute xl:top-[54px] xl:left-[7%]">
+<p className="mt-2 stroke-text text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 ont-ovo xl:absolute xl:top-[54px] xl:left-[7%]">
           PORTFOLIO
         </p>
       
-        <p className="hidden xl:block text-sm md:text-lg xl:text-xs xl:font-bold font-bold font-ovo  stroke-text_m  text-gray-700 dark:text-gray-300 mt-3 font-ovo xl:absolute xl:top-[90px] xl:left-[7%]">
+        <p className="hidden xl:block text-sm md:text-lg xl:text-xs xl:font-bold font-bold font-ovotext-gray-700 dark:white mt-3 font-ovo xl:absolute xl:top-[90px] xl:left-[7%] ">
           // PORTFOLIO
         </p>
 
      {/* Navigation Buttons */}
 <button
   onClick={prevSlide}
-  className="absolute left-4 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
+  className="absolute left-4 -translate-y-1/2 transform text-gray-600 dark:text-[#EFB920] bg-white p-3 rounded-full  z-10  dark:bg-[#272626] 
+        
  top-[24%] xl:top-[41%] xl:ml-[10%] md:top-[30%]
  lg:top-[45%]" 
 >
@@ -147,7 +147,8 @@ const Projects = () => {
 </button>
 <button
   onClick={nextSlide}
-  className="absolute right-4 -translate-y-1/2 transform text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-800 p-3 rounded-full shadow-md z-10
+  className="absolute right-4 -translate-y-1/2 transform text-gray-600  bg-white  p-3 rounded-full dark:text-[#EFB920] z-10  dark:bg-[#272626] 
+        
  top-[24%] xl:top-[41%] xl:mr-[10%] md:top-[30%]
  
  lg:top-[45%]" 
@@ -183,12 +184,15 @@ const Projects = () => {
     exit={{ opacity: 0 }}
     transition={{ duration: 0.8, ease: "easeInOut" }}
     className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 
-    bg-white dark:bg-gray-800 p-8 xl:p-12 rounded-2xl
+    bg-white  dark:bg-[#272626] 
+         p-8 xl:p-12 rounded-2xl
     w-[110%] sm:w-[120%] md:w-[130%] lg:w-[140%] xl:w-[150%] max-w-none 
     h-[800px] sm:h-[750px] md:h-[800px] xl:h-[500px] 
     -mx-10 sm:-mx-12 md:-mx-16 lg:-mx-20 xl:-mx-24 
     
-    lg:h-[550px]"
+    lg:h-[550px]
+    
+    "
 
     
   >
@@ -207,11 +211,11 @@ const Projects = () => {
 <div className="w-full lg:w-full text-left relative ">
   {/* Title  */}
   <h3 className="absolute text-2xl font-bold mt-[-100%] left-1/2 -translate-x-1/2 
-                 font-poppins xl:text-6xl text-gray-600 dark:text-white 
+                 font-poppins xl:text-6xl text-gray-600 
                  text-center whitespace-nowrap max-w-[100%] xl:max-w-[600px] 
                  overflow-hidden text-ellipsis mb-6 xl:mt-[-78%] xl:ml-[-80%] md:top-[80%] 
                  md:text-6xl
-                 lg:top-[65%] lg:ml-[-80%] lg:text-2xl">
+                 lg:top-[65%] lg:ml-[-80%] lg:text-2xl dark:text-[#EFB920]">
     {projects[currentIndex].title}
 </h3>
 
@@ -244,8 +248,8 @@ const Projects = () => {
 </div>
 
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
-             text-gray-600 dark:text-blue-400 hover:text-white 
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-25%] ml-[-1%] md:ml-[38%] ">View Live</a>
+             text-gray-600 dark:border-[#EFB920] hover:text-white 
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-25%] ml-[-1%] md:ml-[38%] dark:text-[#EFB920]">View Live</a>
             </div>
           </motion.div>
         
