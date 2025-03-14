@@ -88,10 +88,6 @@ h1, h2, h3 {
   color: #EFB920 !important; /* Ensures visibility */
 }
 
-/* Ensure dark mode is properly applied */
-html.dark body {
-  background-color: #67bcab !important;
-}
 
 /* Set Default Dark Mode Text Color */
 .dark body {
