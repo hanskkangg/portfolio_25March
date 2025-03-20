@@ -9,7 +9,7 @@ const projects = [
   {
     title: "AI-Powered PDF Translator",
     description: "Developed an AI-powered SaaS application that assists immigrants and non-native English speakers in translating official documents.",
-    image: "/aisejong.gif",
+    image: "/aisejong.png",
     contributions: [
       "Integrated GPT-4 Turbo and Pinecone vector embeddings for accurate translations",
       "Implemented retrieval-augmented generation (RAG) for contextual understanding",
@@ -18,7 +18,7 @@ const projects = [
     techStack: [SiNextdotjs, FaDatabase, SiTailwindcss, FaCloud],
     link: "https://www.aisejong.com",
   },
-  
+
   {
     title: "Delivery Sushi",
     description: "Maintaining and enhancing a food business locator and Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",
