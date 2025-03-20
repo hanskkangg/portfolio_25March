@@ -84,9 +84,9 @@
           <Category number="03" title="Database & Storage">
     <SkillItem icon={<SiMysql className="text-blue-700"/>} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
     <SkillItem icon={<FaDatabase className="text-orange-500 dark:text-white" />} name="Oracle" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
-    <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
+    <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]"/>
     <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
-    <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
+    <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
 
     {/* added after ai wrapper projet */}
     <SkillItem icon={<FaDatabase className="text-gray-500" />} name="PostgreSQL" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]"/>
@@ -95,9 +95,9 @@
 
           <Category number="04" title="Tools">
     <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
-    <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
-    <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]"/>
-    <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[90%] xl:mt-[10]" />
+    <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+    <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
+    <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
     <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
     <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
     <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
@@ -117,13 +117,13 @@
           </Category>
         </div>
         <Category number="06" title="APIs & Auths" className="xl:mt-[-10%] xl:mb-[10]">
-    <SkillItem icon={<FaCloud className="text-gray-700" />} name="OpenAI API (LLM)" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"  />
-    <SkillItem icon={<SiFirebase className="text-blue-600" />} name="Google Maps API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"   />
-    <SkillItem icon={<SiPostman className="text-orange-500" />} name="Stripe API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"  />
-    <SkillItem icon={<SiPostman className="text-orange-500" />} name="PayPal API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"   />
-    <SkillItem icon={<SiPostman className="text-blue-500" />} name="Clerk API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]" />
-    <SkillItem icon={<FaDatabase className="text-green-700" />} name="Pinecone API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"  />
-    <SkillItem icon={<FaTerminal className="text-blue-500" />} name="JWT Auth" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]" />
+    <SkillItem icon={<FaCloud className="text-gray-700" />} name="OpenAI API (LLM)" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"  />
+    <SkillItem icon={<SiFirebase className="text-blue-600" />} name="Google Maps API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"   />
+    <SkillItem icon={<SiPostman className="text-orange-500" />} name="Stripe API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"  />
+    <SkillItem icon={<SiPostman className="text-orange-500" />} name="PayPal API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"   />
+    <SkillItem icon={<SiPostman className="text-blue-500" />} name="Clerk API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]" />
+    <SkillItem icon={<FaDatabase className="text-green-700" />} name="Pinecone API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"  />
+    <SkillItem icon={<FaTerminal className="text-blue-500" />} name="JWT Auth" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]" />
     <SkillItem icon={<FaCloud className="text-gray-700" />} name="OAuth 2.0" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]" />
 </Category>
 
