@@ -11,9 +11,10 @@ const projects = [
     description: "Developed an AI-powered SaaS application that assists immigrants and non-native English speakers in translating official documents.",
     image: "/aisejong.png",
     contributions: [
-      "Integrated GPT-4 Turbo and Pinecone vector embeddings for accurate translations",
-      "Implemented retrieval-augmented generation (RAG) for contextual understanding",
-      "Deployed on Vercel with PostgreSQL and AWS S3 storage"
+      "Designed and implemented AI-Wrapper using GPT-4 Turbo and Pinecone vector embeddings",
+      "Developed a retrieval-augmented generation (RAG) system for enhanced contextual accuracy",
+      "Integrated PostgreSQL database with structured document processing capabilities",
+      "Optimized deployment on Vercel with AWS S3 for efficient document storage"
     ],
     techStack: [SiNextdotjs, FaDatabase, SiTailwindcss, FaCloud],
     link: "https://www.aisejong.com",

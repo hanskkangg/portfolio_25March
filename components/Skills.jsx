@@ -90,7 +90,6 @@
 
     {/* added after ai wrapper projet */}
     <SkillItem icon={<FaDatabase className="text-gray-500" />} name="PostgreSQL" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]"/>
-    <SkillItem icon={<FaDatabase className="text-green-700" />} name="Pinecone (Vector DB)" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]"/>
   </Category>
 
 
@@ -117,16 +116,15 @@
     <SkillItem icon={<FaCloud className="text-blue-500" />} name="AWS S3" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
           </Category>
         </div>
-        <Category number="06" title="APIs & Auths" className="xl:mt-[-24] xl:mb-[10]">
-    <SkillItem icon={<FaCloud className="text-gray-700" />} name="OpenAI API (LLM)" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]"  />
-    <SkillItem icon={<SiFirebase className="text-blue-600" />} name="Google Maps API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]"   />
-    <SkillItem icon={<SiPostman className="text-orange-500" />} name="Stripe API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]"  />
-    <SkillItem icon={<SiPostman className="text-orange-500" />} name="PayPal API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]"   />
-    <SkillItem icon={<SiPostman className="text-blue-500" />} name="Clerk API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]" />
-    <SkillItem icon={<FaDatabase className="text-green-700" />} name="Pinecone API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]"  />
-    <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase Auth" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]" />
-    <SkillItem icon={<FaTerminal className="text-blue-500" />} name="JWT Auth" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-24] xl:mb-[10]" />
-    <SkillItem icon={<FaCloud className="text-gray-700" />} name="OAuth 2.0" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-24] xl:mb-[10]" />
+        <Category number="06" title="APIs & Auths" className="xl:mt-[-10%] xl:mb-[10]">
+    <SkillItem icon={<FaCloud className="text-gray-700" />} name="OpenAI API (LLM)" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"  />
+    <SkillItem icon={<SiFirebase className="text-blue-600" />} name="Google Maps API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"   />
+    <SkillItem icon={<SiPostman className="text-orange-500" />} name="Stripe API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"  />
+    <SkillItem icon={<SiPostman className="text-orange-500" />} name="PayPal API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"   />
+    <SkillItem icon={<SiPostman className="text-blue-500" />} name="Clerk API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]" />
+    <SkillItem icon={<FaDatabase className="text-green-700" />} name="Pinecone API"  className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]"  />
+    <SkillItem icon={<FaTerminal className="text-blue-500" />} name="JWT Auth" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%]  xl:mt-[-10%] xl:mb-[10]" />
+    <SkillItem icon={<FaCloud className="text-gray-700" />} name="OAuth 2.0" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]" />
 </Category>
 
 
@@ -141,7 +139,7 @@
     whileInView={{ opacity: 1 }}
     transition={{ duration: 0.6, delay: 0.1 }}
     className="flex flex-col border-b border-black dark:border-gray-600 pb-5
-    xl:flex-row xl:items-center xl:justify-start xl:gap-2 xl:w-[100%] xl:pb-8 xl:pt-2 xl:mb-0 xl:mt-1" 
+    xl:flex-row xl:items-center xl:justify-start xl:gap-2 xl:w-[100%] xl:pb-8 xl:pt-1 xl:mb-0 xl:mt-0" 
   >
       {/* Number with stroke effect */}
       <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
@@ -159,7 +157,7 @@
   const SkillItem = ({ icon, name, className = "" }) => (
     <div
       
-      className={`flex font-montserrat items-center gap-1 p-1 border border-dashed border-black  mx-18  dark:border-[#EFB920]
+      className={`flex font-montserrat items-center gap-1 p-1 border border-dashed border-black mx-18  dark:border-[#EFB920]
                     rounded-3xl hover:scale-105 transition-transform text-xs
                     xl:w-[120px] xl:h-12 xl:gap-22 ${className}`}
     >
