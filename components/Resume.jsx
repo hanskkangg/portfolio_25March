@@ -136,7 +136,7 @@ const Resume = () => {
         Education & Experience
         </p>
         <p className="text-sm md:text-lg text-gray-500 dark:text-gray-300 mt-2 font-ovo">
-        Code, design, deploy—engineering excellence at every step
+        Education never ends—exploring AI, mastering new frameworks, and pushing boundaries
         </p>
         
 
