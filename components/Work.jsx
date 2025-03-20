@@ -16,7 +16,7 @@ const projects = [
       "Integrated PostgreSQL database with structured document processing capabilities",
       "Optimized deployment on Vercel with AWS S3 for efficient document storage"
     ],
-    techStack: [SiNextdotjs, FaDatabase, SiTailwindcss, FaCloud],
+    techStack: [SiNextdotjs, FaDatabase, SiTailwindcss, FaCloud, ],
     link: "https://www.aisejong.com",
   },
 
