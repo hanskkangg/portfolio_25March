@@ -343,7 +343,7 @@ const Projects = () => {
           {/* Tech Stack Icons + Names */}
           <div className="flex flex-wrap gap-4 mt-4 xl:ml-[-25%]">
             {projects[currentIndex].techStack.map((tech, i) => (
-              <div key={i} className="flex items-center gap-2 border border-dashed border-gray-800 px-2 py-1 rounded-full">
+              <div key={i} className="flex items-center gap-2 border border-dashed border-gray-800 px-2 py-1 rounded-full dark:border-[#EFB920]">
                 <div className="text-xl text-gray-700 dark:text-gray-300">{tech.icon}</div>
                 <span className="text-gray-700 dark:text-gray-300 xl:text-sm lg:text-xs text-xs">{tech.name}</span>
               </div>
@@ -352,7 +352,7 @@ const Projects = () => {
 
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-2 inline-block mt-[10%] 
              text-black dark:border-[#EFB920] hover:text-white bg-[#EFB920]
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-50%] ml-[25%] md:ml-[38%] dark:text-[#EFB920] xl:mb-[5%] xl:mt-[10%] lg:ml-[-50%] ">View Live</a>
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-50%] ml-[25%] md:ml-[38%]xl:mb-[5%] xl:mt-[10%] lg:ml-[-50%] dark:text-black">View Live</a>
             </div>
           </motion.div>
         
