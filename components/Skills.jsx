@@ -115,7 +115,7 @@
             
     <SkillItem icon={<FaCloud className="text-blue-500" />} name="AWS S3" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
           </Category>
-        </div>
+          
         <Category number="06" title="APIs & Auths" className="xl:mt-[-10%] xl:mb-[10]">
     <SkillItem icon={<FaCloud className="text-gray-700" />} name="OpenAI API (LLM)" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"  />
     <SkillItem icon={<SiFirebase className="text-blue-600" />} name="Google Maps API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]"   />
@@ -126,7 +126,7 @@
     <SkillItem icon={<FaTerminal className="text-blue-500" />} name="JWT Auth" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]" />
     <SkillItem icon={<FaCloud className="text-gray-700" />} name="OAuth 2.0" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%]  xl:mt-[-10%] xl:mb-[10]" />
 </Category>
-
+</div>
 
       </motion.div>
     );
