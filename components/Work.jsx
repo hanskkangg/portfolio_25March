@@ -5,6 +5,20 @@ import { FaReact, FaNodeJs, FaPhp, FaDatabase, FaStripe, FaPaypal, FaCloud } fro
 import { SiMongodb, SiMysql, SiExpress, SiTailwindcss, SiVercel, SiNextdotjs, SiFirebase } from "react-icons/si";
 
 const projects = [
+
+  {
+    title: "AI-Powered PDF Translator",
+    description: "Developed an AI-powered SaaS application that assists immigrants and non-native English speakers in translating official documents.",
+    image: "/aisejong.gif",
+    contributions: [
+      "Integrated GPT-4 Turbo and Pinecone vector embeddings for accurate translations",
+      "Implemented retrieval-augmented generation (RAG) for contextual understanding",
+      "Deployed on Vercel with PostgreSQL and AWS S3 storage"
+    ],
+    techStack: [SiNextdotjs, FaDatabase, SiTailwindcss, FaCloud],
+    link: "https://www.aisejong.com",
+  },
+  
   {
     title: "Delivery Sushi",
     description: "Maintaining and enhancing a food business locator and Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",

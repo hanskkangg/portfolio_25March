@@ -81,12 +81,13 @@
     <SkillItem icon={<FaJava className="text-red-500" />} name="Java" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[20] xl:mb-[10] " />
   </Category>
 
-          <Category number="03" title="Database">
+          <Category number="03" title="Database & Storage">
     <SkillItem icon={<SiMysql className="text-blue-700"/>} name="MySQL" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
     <SkillItem icon={<FaDatabase className="text-orange-500 dark:text-white" />} name="Oracle" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
-    <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]"/>
-    <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
-    <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
+    <SkillItem icon={<SiMongodb className="text-green-500" />} name="Mongo DB" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
+    <SkillItem icon={<FaDatabase className="text-blue-500" />} name="SQL Server" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+    <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="Firebase" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
+    <SkillItem icon={<SiFirebase className="text-yellow-500" />} name="DRIZZLE ORM" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
 
     {/* added after ai wrapper projet */}
     <SkillItem icon={<FaDatabase className="text-gray-500" />} name="PostgreSQL" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]"/>
@@ -117,8 +118,7 @@
     <SkillItem icon={<FaCloud className="text-blue-500" />} name="AWS S3" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
           </Category>
         </div>
-
-        <Category number="06" title="APIs & Auths">
+        <Category number="06" title="APIs & Auths" className="xl:pt-2 xl:pb-0">
     <SkillItem icon={<FaCloud className="text-gray-700" />} name="OpenAI API (LLM)" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-10]" />
     <SkillItem icon={<SiFirebase className="text-blue-600" />} name="Google Maps API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-10]"  />
     <SkillItem icon={<SiPostman className="text-orange-500" />} name="Stripe API" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-10]"  />
