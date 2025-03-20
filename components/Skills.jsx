@@ -152,7 +152,7 @@
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-3 xl:grid-cols-4 xl:w-full xl:gap-12 ">{children}</div>
     </motion.div>
-
+  );
 
   const SkillItem = ({ icon, name, className = "" }) => (
     <div
