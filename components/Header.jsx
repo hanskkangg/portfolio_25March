@@ -201,7 +201,7 @@ const Header = () => {
             text-gray-500 dark:text-gray-300 leading-relaxed mt-8
              xl:absolute xl:top-[50%] xl:left-[35%] xl:w-[65%] xl:text-left"
         >
-        Based in Ottawa, Canada 🌍 | Turning ideas into seamless web & mobile experiences 🚀 | Passionate about AI & Innovation 💡✨
+        Based in Ottawa, Canada 🍁  | Turning ideas into seamless web & mobile experiences 🚀 | Passionate about AI & Innovation 💡✨
         </motion.p>
 {/* Experience Stats Section - Perfect Alignment */}
 <motion.div
@@ -219,7 +219,7 @@ const Header = () => {
   {[
     { number: "1", label: "Years of Experience" },
     { number: "4", label: "Happy Customers" },
-    { number: "6", label: "Projects Done" }
+    { number: "7", label: "Projects Done" }
   ].map(({ number, label }, index) => (
     <div key={index} className="flex items-center gap-1 w-[80px] xl:text-7xl ml-[8px] dark:text-[#000000]">
       {/* Number - Shift Left on Small Screens */}
