@@ -139,7 +139,7 @@
     whileInView={{ opacity: 1 }}
     transition={{ duration: 0.6, delay: 0.1 }}
     className="flex flex-col border-b border-black dark:border-gray-600 pb-5
-    xl:flex-row xl:items-center xl:justify-start xl:gap-2 xl:w-[100%] xl:pb-8 xl:pt-1 xl:mb-0 xl:mt-0" 
+    xl:flex-row xl:items-center xl:justify-start xl:gap-2 xl:w-[100%] xl:pb-8 xl:pt-2 xl:mb-0 xl:mt-1" 
   >
       {/* Number with stroke effect */}
       <div className="flex items-center xl:flex-row xl:items-center xl:w-full">
@@ -152,7 +152,7 @@
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-3 xl:grid-cols-4 xl:w-full xl:gap-12 ">{children}</div>
     </motion.div>
-  );
+
 
   const SkillItem = ({ icon, name, className = "" }) => (
     <div
