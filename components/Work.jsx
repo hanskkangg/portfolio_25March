@@ -1,13 +1,19 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { FaReact, FaNodeJs, FaPhp, FaDatabase, FaStripe, FaPaypal, FaCloud } from "react-icons/fa";
-import { SiMongodb, SiMysql, SiExpress, SiTailwindcss, SiVercel, SiNextdotjs, SiFirebase } from "react-icons/si";
-
+import { 
+  FaReact, FaNodeJs, FaPhp, FaDatabase, FaStripe, FaPaypal, FaCloud ,FaJs,FaTerminal,FaGitAlt,
+} from "react-icons/fa";
+import { 
+  SiMongodb, SiMysql, SiExpress, SiTailwindcss, SiVercel, SiNextdotjs, SiFirebase, SiTypescript, 
+  SiJavascript, SiJquery,SiXampp,SiCpanel,SiRender,
+  SiHtml5,
+  SiCss3,SiGnubash,
+} from "react-icons/si";
+// Define projects array with correctly formatted tech stack
 const projects = [
-
   {
-    title: "AI-Powered PDF Translator",
+    title: "AI PDF Reader",
     description: "Developed an AI-powered SaaS application that assists immigrants and non-native English speakers in translating official documents.",
     image: "/aisejong.png",
     contributions: [
@@ -15,9 +21,19 @@ const projects = [
       "Developed a retrieval-augmented generation (RAG) system for enhanced contextual accuracy",
       "Integrated PostgreSQL database with structured document processing capabilities",
       "Optimized deployment on Vercel with AWS S3 for efficient document storage"
-    ],
-    techStack: [SiNextdotjs, FaDatabase, SiTailwindcss, FaCloud, ],
-    link: "https://www.aisejong.com",
+    ],   
+    techStack: [
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <SiTypescript />, name: "TypeScript" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <FaCloud />, name: "OpenAI API (LLM)" },
+      { icon: <FaDatabase />, name: "PostgreSQL" },
+      { icon: <SiFirebase />, name: "Drizzle ORM" },
+      { icon: <FaDatabase />, name: "Pinecone (Vector DB)" },
+      { icon: <FaCloud />, name: "AWS S3" },
+      { icon: <SiVercel />, name: "Vercel" },
+    
+    ],  link: "https://www.aisejong.com",
   },
 
   {
@@ -25,7 +41,17 @@ const projects = [
     description: "Maintaining and enhancing a food business locator and Implemented menu updates, price adjustments, tax changes (HST), and promotional banners.",
     image: "/deli.gif",
     contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
-    techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
+    techStack: [
+      { icon: <FaPhp />, name: "PHP" },
+      { icon: <FaJs />, name: "JavaScript" },
+      { icon: <SiJquery />, name: "jQuery" },
+      { icon: <FaDatabase />, name: "MySQL" },
+      { icon: <SiFirebase />, name: "phpMyAdmin" },
+      { icon: <SiXampp />, name: "XAMPP" },
+      { icon: <SiCpanel />, name: "cPanel" },
+      { icon: <FaCloud />, name: "HostGator" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" }
+    ],
     link: "https://www.ottawadeliverysushi.com",
   },
   {
@@ -33,7 +59,20 @@ const projects = [
     description: "Built a full-stack e-commerce web app using the MERV stack with a REST API for CRUD operations. Integrated Stripe, PayPal, and e-Transfer for secure payments.",
     image: "/bae.gif",
     contributions: ["Implemented secure transactions", "Built admin panel for order tracking", "Optimized for mobile devices"],
-    techStack: [FaReact, FaNodeJs, SiMongodb, SiExpress, SiTailwindcss, FaStripe, FaPaypal],
+    techStack: [
+      { icon: <FaReact />, name: "React" },
+      { icon: <FaNodeJs />, name: "Node.js" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiExpress />, name: "Express.js" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <FaStripe />, name: "Stripe" },
+      { icon: <FaPaypal />, name: "PayPal" },
+      { icon: <FaTerminal />, name: "JWT Authentication" },
+      { icon: <SiFirebase />, name: "bcryptjs" },
+      { icon: <FaCloud />, name: "Multer" },
+      { icon: <SiFirebase />, name: "Cloudinary" },
+      { icon: <SiVercel />, name: "Vercel" }
+    ],
     link: "https://baeyondfrontend.vercel.app/",
   },
   {
@@ -41,17 +80,51 @@ const projects = [
     description: "Built a full-stack e-commerce web app using the MERV stack with a REST API for CRUD operations. Integrated Stripe, PayPal, and e-Transfer for secure payments.",
     image: "/On1.png",
     contributions: ["Added new menu items", "Updated HST pricing", "Enhanced performance stability"],
-    techStack: [FaPhp, FaDatabase, SiMysql, SiTailwindcss, SiFirebase],
+   
+    techStack: [
+      { icon: <FaReact />, name: "React" },
+      { icon: <FaNodeJs />, name: "Node.js" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiExpress />, name: "Express.js" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <FaStripe />, name: "Stripe" },
+      { icon: <FaPaypal />, name: "PayPal" },
+      { icon: <FaTerminal />, name: "JWT Authentication" },
+      { icon: <SiFirebase />, name: "bcryptjs" },
+      { icon: <FaCloud />, name: "Multer" },
+      { icon: <SiFirebase />, name: "Cloudinary" },
+      { icon: <SiVercel />, name: "Vercel" }
+    ],
     link: "https://www.onpapier.com/",
   },
   {
     title: "Personal Blog",
-    description: "Developed a personal blog platform with role-based access control (RBAC), allowing admins to create and manage posts, while users can read and comment.",
+    description: "Developed a full-stack personal blog platform with role-based access control (RBAC), allowing admins to create and manage posts, while users can read and comment.",
     image: "/blog.gif",
-    contributions: ["Implemented RBAC system", "Enhanced UI/UX design", "Deployed on Render with monitoring"],
-    techStack: [FaReact, FaNodeJs, SiMongodb, SiExpress, SiTailwindcss],
+    contributions: [
+      "Implemented RBAC system (Admin & User roles)",
+      "Integrated Firebase Google Authentication & JWT for secure access",
+      "Designed and built a responsive UI/UX for both desktop and mobile",
+      "Deployed on Render with UptimeRobot monitoring"
+    ],
+    techStack: [
+      { icon: <FaReact />, name: "React" },
+      { icon: <FaNodeJs />, name: "Node.js" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiExpress />, name: "Express.js" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <SiFirebase />, name: "Firebase Auth" },
+      { icon: <FaTerminal />, name: "JWT Authentication" },
+      { icon: <SiFirebase />, name: "bcryptjs" },
+      { icon: <FaCloud />, name: "Multer" },
+      { icon: <SiFirebase />, name: "Cloudinary" },
+      { icon: <FaCloud />, name: "Web3Forms" },
+      { icon: <SiRender />, name: "Render" },
+      { icon: <FaCloud />, name: "UptimeRobot" }
+    ],
     link: "https://personal-blog-lboi.onrender.com",
   },
+  
   {
     title: "Personal Portfolio",
     description: "Developed my personal portfolio website using Next.js, React, and Tailwind CSS, featuring animations, dark mode, and CI/CD deployment.",
@@ -78,19 +151,43 @@ const projects = [
         </a>
       </>
     ],
-    techStack: [FaReact, SiNextdotjs, SiTailwindcss, SiVercel],
+    techStack: [
+      { icon: <FaReact />, name: "React" },
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <FaNodeJs />, name: "Node.js" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiExpress />, name: "Express.js" },
+      { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+      { icon: <SiVercel />, name: "Vercel" },
+
+    ],
     link: "https:hanskang.com",
   }
   
 ,  
-  {
-    title: "CCNA Blog",
-    description: "Developed a CCNA study guide web app hosted on Azure Web App, dynamically fetching and displaying study materials from MongoDB JSON files.",
-    image: "/CCNA.gif",
-    contributions: ["Implemented dynamic data fetching", "Added CI/CD automation", "Deployed on Azure Web App"],
-    techStack: [FaReact, FaCloud, SiMongodb, SiTailwindcss],
-    link: "https://hansdevhub-cxa3cba5hmhdhyb0.canadacentral-01.azurewebsites.net/",
-  },
+{
+  title: "CCNA Blog",
+  description: "Developed a CCNA study guide web app hosted on Azure Web App, dynamically fetching and displaying study materials from MongoDB JSON files.",
+  image: "/CCNA.gif",
+  contributions: [
+    "Implemented dynamic data fetching for CCNA study materials",
+    "Integrated MongoDB JSON files for structured data storage",
+    "Designed and built a responsive UI using HTML & CSS",
+    "Implemented CI/CD automation with GitHub Actions & Bash scripts",
+    "Deployed on Azure Web App for seamless cloud hosting"
+  ],
+  techStack: [
+    { icon: <SiJavascript />, name: "JavaScript" },
+    { icon: <SiHtml5 />, name: "HTML" },
+    { icon: <SiCss3 />, name: "CSS" },
+    { icon: <SiMongodb />, name: "MongoDB" },
+    { icon: <FaCloud />, name: "Azure Web App" },
+    { icon: <FaGitAlt />, name: "GitHub Actions" },
+    { icon: <SiGnubash />, name: "Bash" }
+  ],
+  link: "https://hansdevhub-cxa3cba5hmhdhyb0.canadacentral-01.azurewebsites.net/",
+},
+
 ];
 
 const Projects = () => {
@@ -154,9 +251,9 @@ const Projects = () => {
 <button
   onClick={prevSlide}
   className="absolute left-4 -translate-y-1/2 transform text-gray-600 dark:text-[#EFB920] bg-white p-3 rounded-full  z-10  dark:bg-[#272626] 
-        
- top-[24%] xl:top-[41%] xl:ml-[10%] md:top-[30%]
- lg:top-[45%]" 
+      
+ top-[17%] xl:top-[40%] xl:ml-[10%] md:top-[30%]
+ lg:top-[30%]" 
 >
   ❮
 </button>
@@ -164,9 +261,9 @@ const Projects = () => {
   onClick={nextSlide}
   className="absolute right-4 -translate-y-1/2 transform text-gray-600  bg-white  p-3 rounded-full dark:text-[#EFB920] z-10  dark:bg-[#272626] 
         
- top-[24%] xl:top-[41%] xl:mr-[10%] md:top-[30%]
+ top-[17%] xl:top-[40%] xl:mr-[10%] md:top-[30%]
  
- lg:top-[45%]" 
+ lg:top-[30%] lg:mr-[45%]" 
 >
   ❯
 </button>
@@ -202,10 +299,10 @@ const Projects = () => {
     bg-white  dark:bg-[#272626] 
          p-8 xl:p-12 rounded-2xl
     w-[110%] sm:w-[120%] md:w-[130%] lg:w-[140%] xl:w-[150%] max-w-none 
-    h-[800px] sm:h-[750px] md:h-[800px] xl:h-[500px] 
+    h-[1100px] sm:h-[750px] md:h-[950px] xl:h-[600px] 
     -mx-10 sm:-mx-12 md:-mx-16 lg:-mx-20 xl:-mx-24 
     
-    lg:h-[550px]
+    lg:h-[750px]
     
     "
 
@@ -224,17 +321,18 @@ const Projects = () => {
   />
 </div>
 <div className="w-full lg:w-full text-left relative ">
+
   {/* Title  */}
-  <h3 className="absolute text-2xl mt-[-108%] left-1/2 -translate-x-1/2 
+  <h3 className="absolute text-2xl mt-[-100%] left-1/2 -translate-x-1/2 
                  font-lora font-bold xl:text-6xl text-gray-600 
                  text-center whitespace-nowrap max-w-[100%] xl:max-w-[600px] 
-                 overflow-hidden text-ellipsis mb-6 xl:mt-[-78%] xl:ml-[-80%] md:top-[80%] 
+                 overflow-hidden text-ellipsis mb-6 xl:mt-[-50%] xl:ml-[-80%] md:top-[80%] 
                  md:text-6xl
-                 lg:top-[65%] lg:ml-[-80%] lg:text-2xl dark:text-[#EFB920]">
+                 lg:top-[39%] lg:ml-[-140%] lg:text-2xl dark:text-[#EFB920]">
     {projects[currentIndex].title}
 </h3>
 
-            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-25%] xl:mt-[30%] lg:mt-[60%]
+            <p className="font-montserrat text-gray-600 dark:text-gray-300 mt-2 xl:ml-[-25%] xl:mt-[50%] lg:mt-[10%]
             ">{projects[currentIndex].description}</p>
             <ul className="font-montserrat mt-4 text-gray-900 dark:text-gray-300 text-sm xl:ml-[-25%] xl:mb-5">
               {projects[currentIndex].contributions.map((item, i) => (
@@ -242,29 +340,19 @@ const Projects = () => {
               ))}
             </ul>
 
-            <div className="flex flex-wrap gap-4 mt-4 xl:ml-[-23%]">
-  {projects[currentIndex].techStack.map((Icon, i) => {
-    const techName =
-      Object.keys(techNames).find((key) => Icon.name && Icon.name.includes(key)) || "Unknown";
+          {/* Tech Stack Icons + Names */}
+          <div className="flex flex-wrap gap-4 mt-4 xl:ml-[-25%]">
+            {projects[currentIndex].techStack.map((tech, i) => (
+              <div key={i} className="flex items-center gap-2 border border-dashed border-gray-800 px-2 py-1 rounded-full">
+                <div className="text-xl text-gray-700 dark:text-gray-300">{tech.icon}</div>
+                <span className="text-gray-700 dark:text-gray-300 xl:text-sm lg:text-xs text-xs">{tech.name}</span>
+              </div>
+            ))}
+          </div>
 
-    return (
-      <div key={i} className="relative group flex flex-col items-center">
-        <div className="text-2xl text-gray-700 dark:text-gray-300 xl:mb-1">
-          {<Icon />}
-        </div>
-
-        {/* Tooltip with tech name */}
-        <span className="absolute bottom-[-30px] hidden group-hover:block bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow-xl">
-          {techNames[techName] || "Unknown"}
-        </span>
-      </div>
-    );
-  })}
-</div>
-
-              <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-1 inline-block mt-4 
-             text-gray-600 dark:border-[#EFB920] hover:text-white 
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-25%] ml-[-1%] md:ml-[38%] dark:text-[#EFB920]">View Live</a>
+              <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-2 inline-block mt-[10%] 
+             text-black dark:border-[#EFB920] hover:text-white bg-[#EFB920]
+             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-50%] ml-[25%] md:ml-[38%] dark:text-[#EFB920] xl:mb-[5%] xl:mt-[10%] lg:ml-[-50%] ">View Live</a>
             </div>
           </motion.div>
         
