@@ -70,7 +70,7 @@ const Header = () => {
         {/* Social Links */}
         {[
           { icon: <FaGithub />, url: "https://github.com/hanskkangg" },
-          { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hanskkangg" },
+          { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/hanskkang" },
           { icon: <FaInstagram />, url: "https://www.instagram.com/hanskkangg" },
           { icon: <FaFacebook />, url: "https://www.facebook.com/hanskkangg" },
         ].map(({ icon, url }, index) => (
