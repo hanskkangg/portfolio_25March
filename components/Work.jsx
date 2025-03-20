@@ -13,7 +13,7 @@ import {
 // Define projects array with correctly formatted tech stack
 const projects = [
   {
-    title: "AI PDF Reader",
+    title: "Ai PDF Reader",
     description: "Developed an AI-powered SaaS application that assists immigrants and non-native English speakers in translating official documents.",
     image: "/aisejong.png",
     contributions: [
@@ -252,7 +252,7 @@ const Projects = () => {
   onClick={prevSlide}
   className="absolute left-4 -translate-y-1/2 transform text-gray-600 dark:text-[#EFB920] bg-white p-3 rounded-full  z-10  dark:bg-[#272626] 
       
- top-[17%] xl:top-[40%] xl:ml-[10%] md:top-[30%]
+ top-[19%] xl:top-[40%] xl:ml-[10%] md:top-[30%]
  lg:top-[30%]" 
 >
   ❮
@@ -261,7 +261,7 @@ const Projects = () => {
   onClick={nextSlide}
   className="absolute right-4 -translate-y-1/2 transform text-gray-600  bg-white  p-3 rounded-full dark:text-[#EFB920] z-10  dark:bg-[#272626] 
         
- top-[17%] xl:top-[40%] xl:mr-[10%] md:top-[30%]
+ top-[19%] xl:top-[40%] xl:mr-[10%] md:top-[30%]
  
  lg:top-[30%] lg:mr-[45%]" 
 >
