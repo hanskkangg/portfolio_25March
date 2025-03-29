@@ -3,7 +3,7 @@
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPhp, FaJava, FaDatabase, FaCloud, FaTerminal, FaGitAlt, FaMicrosoft
   } from "react-icons/fa";
   import {
-    SiTailwindcss, SiNextdotjs, SiJquery, SiExpress, SiMysql, SiMongodb, SiFirebase, SiCpanel, SiVercel, SiNetlify, SiRender, SiPostman, SiGnubash, SiGithubactions, SiApache, SiNginx, SiXampp,
+    SiTailwindcss, SiNextdotjs, SiJquery, SiExpress, SiMysql, SiMongodb, SiFirebase, SiCpanel, SiVercel, SiNetlify, SiRender, SiPostman, SiGnubash, SiGithubactions, SiApache, SiNginx, SiXampp,SiJenkins, SiDocker,SiKubernetes
   } from "react-icons/si";
 
 
@@ -93,13 +93,17 @@
   </Category>
 
 
-          <Category number="04" title="Tools">
+          <Category number="04" title="CI/CD Automation & Tools">
     <SkillItem icon={<FaGitAlt className="text-black" />} name="Git" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
     <SkillItem icon={<SiGithubactions className="text-black dark:text-white" />} name="GitHub Actions" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
     <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
     <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+
+    <SkillItem icon={<SiJenkins className="text-red-600" />} name="Jenkins" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+    <SkillItem icon={<SiDocker className="text-blue-400" />} name="Docker" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+    <SkillItem icon={<SiKubernetes className="text-blue-500" />} name="Kubernetes" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+
     <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
-    <SkillItem icon={<FaMicrosoft className="text-blue-600" />} name="Visual Studio" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
     <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
     
     <SkillItem icon={<SiNginx className="text-green-500" />} name="Nginx" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]"/>
@@ -113,6 +117,7 @@
             <SkillItem icon={<SiNetlify className="text-teal-500" />} name="Netlify" className="xl:ml-[-80%] flex justify-center items-center xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
             <SkillItem icon={<SiRender className="text-black" />} name="Render" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
             
+    <SkillItem icon={<FaCloud className="text-blue-500" />} name="AWS EC2" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
     <SkillItem icon={<FaCloud className="text-blue-500" />} name="AWS S3" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
           </Category>
           
