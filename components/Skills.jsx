@@ -99,14 +99,15 @@
     <SkillItem icon={<SiGnubash className="text-gray-500" />} name="Bash Script" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]"/>
     <SkillItem icon={<FaTerminal className="text-blue-500" />} name="Power Shell" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
 
-    <SkillItem icon={<SiJenkins className="text-red-600" />} name="Jenkins" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
-    <SkillItem icon={<SiDocker className="text-blue-400" />} name="Docker" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
-    <SkillItem icon={<SiKubernetes className="text-blue-500" />} name="Kubernetes" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[10]" />
+    <SkillItem icon={<SiJenkins className="text-red-600" />} name="Jenkins" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
+    <SkillItem icon={<SiDocker className="text-blue-400" />} name="Docker" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
+    <SkillItem icon={<SiKubernetes className="text-blue-500" />} name="Kubernetes" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[10]" />
 
-    <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[100%] xl:mt-[-24]" />
-    <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]" />
+    <SkillItem icon={<SiPostman className="text-orange-500" />} name="Postman" className="xl:ml-[-80%] flex justify-center items-center   xl:w-[140%] xl:h-[120%] xl:mt-[-24]" />
+
+    <SkillItem icon={<SiXampp className="text-orange-600" />} name="XAMPP" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]" />
     
-    <SkillItem icon={<SiNginx className="text-green-500" />} name="Nginx" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[100%] xl:mt-[-24] xl:mb-[10]"/>
+    <SkillItem icon={<SiNginx className="text-green-500" />} name="Nginx" className="xl:ml-[-80%] flex justify-center items-center  xl:w-[140%] xl:h-[120%] xl:mt-[-24] xl:mb-[10]"/>
   </Category>
 
           <Category number="05" title="Cloud & Deployment">
