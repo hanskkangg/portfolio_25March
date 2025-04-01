@@ -53,7 +53,7 @@ BLOGS
             href={blog.blogUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            className="border  border-gray-500 shadow-2xl rounded-lg overflow-hidden  hover:shadow-xl transition-transform transform hover:-translate-y-2"
           >
             <img
               src={blog.imageUrl}
