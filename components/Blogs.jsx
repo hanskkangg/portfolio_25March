@@ -10,7 +10,7 @@ const Blogs = ({ isDarkMode }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      id="resume"
+      id="blog"
       className="  w-[90%] sm:w-[85%] md:w-[95%] lg:w-[63%] xl:w-[67%] 
         max-w-[1000px]
         min-h-[400px] sm:min-h-[500px] relative mx-auto 

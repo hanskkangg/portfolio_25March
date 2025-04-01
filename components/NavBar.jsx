@@ -40,7 +40,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
   useEffect(() => {
       const handleScroll = () => {
-        const sections = ["about", "skills", "resume", "projects", "contact"];
+        const sections = ["about", "skills", "resume", "projects", "blog","contact"];
         const scrollPosition = window.pageYOffset;
         const documentHeight = document.documentElement.scrollHeight;
         const viewportHeight = window.innerHeight;
@@ -106,10 +106,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* Unified Navigation Bar (Mobile & Desktop) */}
       <div
-        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 transition-opacity duration-300 text-xs  xl:hidden 
+        className={`fixed top-5 left-1/2 transform -translate-x-1/2 flex gap-1 z-50 transition-opacity duration-300 text-xs  xl:hidden 
         ${isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"} lg:w-auto lg:p-4`}
       >
-        {["about", "skills", "resume", "projects", "contact"].map((section) => (
+        {["about", "skills", "resume", "projects", "blog", "contact"].map((section) => (
           <div key={section} className="relative flex items-center stroke-text_m">
             {/* Spinning Dot */}
             <span
@@ -182,7 +182,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         
         <div className="flex flex-col items-center py-6 px-8">
           <ul className="flex flex-col w-full relative font-inter text-[14px] ">
-            {["about", "skills", "resume", "projects", "contact"].map((section) => (
+            {["about", "skills", "resume", "projects","blog" ,"contact"].map((section) => (
               <li key={section} className="w-full flex items-center justify-start relative">
                 {/* Navigation Link */}
                 <a

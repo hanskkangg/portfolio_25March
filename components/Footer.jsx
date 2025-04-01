@@ -68,8 +68,8 @@ const Footer = ({ isDarkMode }) => {
 
         {/* Navigation Links */}
         <div className="font-alfa  text-center sm:flex items-center justify-between border-t border-white mx-[5%] mt py-6 xl:w-[85%] xl:top-[1%] xl:mx-[10%] ">
-          <ul className="flex text-xs xl:text-sm gap-3 justify-center xl:justify-end sm:mt-0 font-montserrat w-full relative top-[-20px] ">
-            {["about", "skills", "resume", "projects", "contact"].map((section) => (
+          <ul className="flex text-xs xl:text-sm gap-2 justify-center xl:justify-end sm:mt-0 font-montserrat w-full relative top-[-20px] ">
+            {["about", "skills", "resume", "projects", "blog", "contact"].map((section) => (
               <li key={section}>
                 <button
                   onClick={() => handleScroll(section)}
