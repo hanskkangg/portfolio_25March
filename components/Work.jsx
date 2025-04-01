@@ -239,7 +239,7 @@ const Projects = () => {
         xl:flex xl:flex-col xl:items-left xl:justify-left overflow-hidden"
   >
     
-<p className="mt-2 stroke-text text-xs md:text-xs xl:text-6xl text-gray-700 dark:text-gray-300 ont-ovo xl:absolute xl:top-[54px] xl:left-[7%]">
+<p className="stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[60%] dark:text-[#EFB920] ">
           PORTFOLIO
         </p>
       
@@ -351,8 +351,8 @@ const Projects = () => {
           </div>
 
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-6 py-2 inline-block mt-[10%] 
-             text-black dark:border-[#EFB920] hover:text-white bg-[#EFB920]
-             hover:bg-black transition-all duration-300 ease-in-out xl:ml-[-50%] ml-[25%] md:ml-[38%]xl:mb-[5%] xl:mt-[10%] lg:ml-[-50%] dark:text-black">View Live</a>
+             text-black dark:border-[#EFB920] hover:text-black bg-[#EFB920]
+              transition-all duration-300 ease-in-out xl:ml-[-50%] ml-[25%] md:ml-[38%]xl:mb-[5%] xl:mt-[10%] lg:ml-[-50%] dark:text-black hover:bg-gray-100">View Live</a>
             </div>
           </motion.div>
         

@@ -8,8 +8,9 @@ import Services from "@/components/Resume";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import CursorEffect from "@/components/CursorEffect"; // Import
+import CursorEffect from "@/components/CursorEffect";
 import Resume from "@/components/Resume";
+import Blogs from "@/components/Blogs";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -45,6 +46,7 @@ export default function Home() {
       <Skills isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Resume isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Work isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Blogs isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Contact isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </div>

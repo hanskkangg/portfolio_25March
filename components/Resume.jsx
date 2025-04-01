@@ -128,7 +128,7 @@ const Resume = () => {
       >
 
       <p className="hidden xl:block text-sm md:text-lg xl:text-xs xl:font-bold font-bold font-ovo text-gray-900 dark:text-white
-        xl:mt-[11%] xl:ml-[-158%] xl:font-sans">
+        xl:mt-[7%] xl:ml-[-108%] xl:font-sans">
           // RESUME
         </p>
         
