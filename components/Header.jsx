@@ -201,7 +201,7 @@ const Header = () => {
             text-gray-500 dark:text-gray-300 leading-relaxed mt-8
              xl:absolute xl:top-[50%] xl:left-[35%] xl:w-[65%] xl:text-left"
         >
-        Based in Ottawa, Canada 🍁  | Turning ideas into seamless web & mobile experiences 🚀 | Passionate about AI & Innovation 💡✨
+        Based in Ottawa, Canada 🍁 Turning ideas into seamless web & cloud experiences 🚀 Exploring SRE, DevOps, and AI-driven innovation ✨💡
         </motion.p>
 {/* Experience Stats Section - Perfect Alignment */}
 <motion.div
