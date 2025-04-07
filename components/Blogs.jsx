@@ -73,7 +73,7 @@ BLOG
                       </div>
       
     </div>
-    <div> <a href="https://hans-blogs.onrender.com/home" target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-10 py-2 inline-block mt-[10%] 
+    <div> <a href="https://hans-blog-new-repo.onrender.com/" target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-10 py-2 inline-block mt-[10%] 
              text-black dark:border-[#EFB920] hover:text-black bg-[#EFB920]
              hover:bg-gray-100 black transition-all duration-300 ease-in-out xl:ml-[10%] 
              ml-[1%] md:ml-[1%] xl:mb-[5%] xl:mt-[10%] lg:ml-[10%] dark:text-black">Visit_Blog</a>
