@@ -28,7 +28,7 @@ const Blogs = ({ isDarkMode }) => {
 
       
 
-<p className=" stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[74%] dark:text-[#EFB920] ">
+<p className=" stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[77%] dark:text-[#EFB920] ">
 
     
 BLOG
