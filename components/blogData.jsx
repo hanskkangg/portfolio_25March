@@ -16,7 +16,19 @@ const blogData = [
       title: "Troubleshooting Safari Access Issues: cPanel and .htaccess",
       imageUrl: "./safari1.png",
       blogUrl: "https://hans-blogs.onrender.com/post/troubleshooting-safari-access-issues:-cpanel-and-.htaccess"
-    }
+    },
+    {
+      id: 4,
+      title: "Automating My Website to Stay Active with a Bash Script",
+      imageUrl: "./bash.png",
+      blogUrl: "https://hans-blogs.onrender.com/post/how-i-automated-my-website-to-stay-awake-using-a-bash-script"
+    },
+    {
+      id: 5,
+      title: "Removing .env Files from Git History: My Experience with BFG Repo-Cleaner",
+      imageUrl: "./H.png",
+      blogUrl: "https://hans-blogs.onrender.com/post/how-i-removed-sensitive-.env-files-from-git-history-using-bfg-repo-cleaner"
+    },
   ];
   
   export default blogData;

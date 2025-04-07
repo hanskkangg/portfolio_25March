@@ -31,16 +31,16 @@ const Blogs = ({ isDarkMode }) => {
 <p className=" stroke-text_m text-xs md:text-xs xl:text-6xl text-gray-700 mt-3 font-ovo xl:absolute xl:top-[50px] xl:right-[74%] dark:text-[#EFB920] ">
 
     
-BLOGS
+BLOG
 </p>
           <p className="hidden xl:block text-sm md:text-lg xl:text-xs xl:font-bold font-bold font-ovo text-gray-900 dark:text-white
           xl:mt-[6%] xl:ml-[-89%] xl:font-sans">
-            // BLOGS
+            // BLOG
           </p>
           
     <div className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'} dark:bg-[#272626] ` }>
 
-      <h2 className="text-2xl font-bold md:text-5xl text-center font-ovo dark:text-gray-300">My Recent Blogs</h2>
+      <h2 className="text-2xl font-bold md:text-5xl text-center font-ovo dark:text-gray-300">My Recent Blog</h2>
       
       <p className="text-sm md:text-lg text-gray-500 dark:text-gray-300 mt-2 font-ovo">
       Here, I write about things I’ve learned and found interesting. You're welcome to explore my blog!
@@ -65,18 +65,19 @@ BLOGS
               
               <p className="border border-dashed border-gray-800 rounded-full px-12 py-2 inline-block mt-[10%] 
              text-black dark:border-[#EFB920] hover:text-white 
-             hover:bg-gray-500 transition-all duration-300 ease-in-out  dark:text-gray-300 text-sm">Click to read
+             hover:bg-gray-500 transition-all duration-300 ease-in-out dark:text-gray-300 text-sm">Read
 </p>
             </div>
           </a>
         ))}
-                <div> <a href="https://hans-blogs.onrender.com/home" target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-10 py-2 inline-block mt-[10%] 
-             text-black dark:border-[#EFB920] hover:text-black bg-[#EFB920]
-             hover:bg-gray-100 black transition-all duration-300 ease-in-out xl:ml-[130%] ml-[1%] md:ml-[38%]xl:mb-[5%] xl:mt-[10%] lg:ml-[120%] dark:text-black">Visit_Blog</a>
-            </div>
-      </div>
+                      </div>
+      
     </div>
-    
+    <div> <a href="https://hans-blogs.onrender.com/home" target="_blank" rel="noopener noreferrer" className="border border-dashed border-gray-800 rounded-full px-10 py-2 inline-block mt-[10%] 
+             text-black dark:border-[#EFB920] hover:text-black bg-[#EFB920]
+             hover:bg-gray-100 black transition-all duration-300 ease-in-out xl:ml-[10%] 
+             ml-[1%] md:ml-[1%] xl:mb-[5%] xl:mt-[10%] lg:ml-[10%] dark:text-black">Visit_Blog</a>
+            </div>
   </motion.div>
   );
   
