@@ -67,12 +67,6 @@ Just push your changes to GitHub and Vercel handles the rest.
 
 ---
 
-```
-
-```
-
----
-
 ## 🙋‍♂️ About Me
 
 Hi, I'm Hans Kang – a full-stack developer passionate about building modern, scalable, and responsive web apps.
