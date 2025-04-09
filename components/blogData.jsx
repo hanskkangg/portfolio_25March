@@ -29,6 +29,12 @@ const blogData = [
       imageUrl: "./H.png",
       blogUrl: "https://hans-blog-new-repo.onrender.com/post/how-i-removed-sensitive-.env-files-from-git-history-using-bfg-repo-cleaner"
     },
+    {
+      id: 6,
+      title: "Containerizing My Full-Stack Blog Project Using Docker and Nginx",
+      imageUrl: "./doc.jpg",
+      blogUrl: "https://hans-blog-new-repo.onrender.com/post/containerizing-my-full-stack-blog-project-using-docker-and-nginx"
+    },
   ];
   
   export default blogData;
