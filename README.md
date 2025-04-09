@@ -1,6 +1,7 @@
 # 🌐 Personal Portfolio Website
 
 Welcome! This is the source code for my **personal portfolio website**, designed to showcase my work, skills, and projects as a full-stack developer. Built with a modern tech stack and optimized for performance and responsiveness.
+![hans_profile](https://github.com/user-attachments/assets/36278d01-3fa1-4d19-a68d-59288d3e2526)
 
 🔗 **Live Portfolio Versions**
 - 🌟 [Latest Portfolio (hanskang.com)](https://hanskang.com)
