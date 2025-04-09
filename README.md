@@ -1,7 +1,7 @@
 # 🌐 Personal Portfolio Website
 
 Welcome! This is the source code for my **personal portfolio website**, designed to showcase my work, skills, and projects as a full-stack developer. Built with a modern tech stack and optimized for performance and responsiveness.
-![hans_profile](https://github.com/user-attachments/assets/36278d01-3fa1-4d19-a68d-59288d3e2526)
+![hans_por](https://github.com/user-attachments/assets/54d8da31-aa8f-4ab0-a729-9dce07e93943)
 
 🔗 **Live Portfolio Versions**
 - 🌟 [Latest Portfolio (hanskang.com)](https://hanskang.com)
@@ -66,10 +66,6 @@ This project is deployed on **Vercel** with automatic CI/CD integration.
 Just push your changes to GitHub and Vercel handles the rest.
 
 ---
-
-## 📸 Screenshots
-
-![hans_profile](https://github.com/user-attachments/assets/85bc807c-f312-4667-b7d5-22041942fd1d)
 
 ```
 
