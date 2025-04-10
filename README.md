@@ -27,7 +27,7 @@ Welcome! This is the source code for my **personal portfolio website**, designed
 - **MongoDB**
 
 ### Deployment
-- **Vercel** – CI/CD hosting & deployment
+- **Netlify** – CI/CD hosting & deployment
 
 ---
 
@@ -38,7 +38,7 @@ Welcome! This is the source code for my **personal portfolio website**, designed
 - 🌀 **Smooth Animations** – UI enhancements and transitions
 - 🧰 **Project Showcase** – Highlights of freelance and personal projects
 - 📬 **Contact Form** – Functional email form (optional backend service)
-- ⚙️ **CI/CD Pipeline** – Auto-deploy with GitHub → Vercel integration
+- ⚙️ **CI/CD Pipeline** – Auto-deploy with GitHub → Netlify integration
 
 ---
 
@@ -66,8 +66,8 @@ Add a `.env.local` file for MongoDB or any required backend services if applicab
 
 ### 🚀 Deployment
 
-This project is deployed on **Vercel** with automatic CI/CD integration.  
-Just push your changes to GitHub and Vercel handles the rest.
+This project is deployed on **Netlify** with automatic CI/CD integration.  
+Just push your changes to GitHub and Netlify handles the rest.
 
 ---
 
