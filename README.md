@@ -56,8 +56,8 @@ Welcome! This is the source code for my **personal portfolio website**, designed
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/hanskkangg/portfolio_25March.git
+cd portfolio_25March
 npm install
 ```
 
