@@ -206,7 +206,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </ul>
 
           {/* Spotify Playlist Embed (Desktop) */}
-          <div className="mt-20 flex justify-center">
+          <div className="mt-10 flex justify-center">
             <iframe
               id="spotify-embed"
               className="rounded-xl w-[310px] h-[380px]"
